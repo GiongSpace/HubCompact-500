@@ -1,47 +1,53 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hub Services — So sánh 500m² vs 3000m²</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hub Services — Quy mô đầu tư 500m² vs 3000m²</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<!-- HEADER -->
-<div class="page-header">
-  <div style="max-width:1200px;margin:0 auto;padding:0;">
-    <div class="header-label">Giong Space · Hub Services Analysis</div>
-    <h1>So sánh quy mô<br><em>500m²</em> vs <em>3.000m²</em></h1>
-    <p class="header-sub">Phân tích cấu trúc phân khu công năng, dự toán đầu tư CapEx, cấu trúc doanh thu và lộ trình triển khai để lựa chọn quy mô phù hợp.</p>
+  <!-- HEADER -->
+  <div class="page-header">
+    <div style="max-width:1200px;margin:0 auto;padding:0;">
+      <div class="header-label">Giong Space · Hub Services Analysis</div>
+      <h1>Quy mô đầu tư<br><em>500m²</em> vs <em>3.000m²</em></h1>
+      <p class="header-sub">Cấu trúc phân khu công năng, dự toán đầu tư CapEx, cấu trúc doanh thu và lộ trình
+        triển khai để lựa chọn quy mô phù hợp.</p>
+    </div>
   </div>
-</div>
 
-<!-- TABS -->
-<div class="tabs-wrap">
-  <div class="tabs">
-    <button class="tab" onclick="switchTab('intro', event)">🌱 Giới thiệu dự án</button>
-    <button class="tab" onclick="switchTab('market', event)">📊 Phân tích thị trường</button>
-    <button class="tab active" onclick="switchTab('zones', event)">📐 Phân khu diện tích</button>
-    <button class="tab" onclick="switchTab('capex', event)">💰 Dự toán CapEx</button>
-    <button class="tab" onclick="switchTab('revenue', event)">📈 Doanh thu CS & Lấp đầy</button>
-    <button class="tab" onclick="switchTab('revtotal', event)">📊 Cấu trúc doanh thu (Tổng)</button>
-    <button class="tab" onclick="switchTab('breakeven', event)">⚖️ Breakeven & ROI</button>
-    <button class="tab" onclick="switchTab('summary', event)">🎯 Tổng kết & Khuyến nghị</button>
+  <!-- TABS -->
+  <div class="tabs-wrap">
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab('intro', event)">🌱 Giới thiệu dự án</button>
+      <button class="tab" onclick="switchTab('market', event)">📊 Phân tích thị trường</button>
+      <button class="tab" onclick="switchTab('zones', event)">📐 Phân khu diện tích</button>
+      <button class="tab" onclick="switchTab('capex', event)">💰 Dự toán CapEx</button>
+      <button class="tab" onclick="switchTab('revenue', event)">📈 Doanh thu CS & Lấp đầy</button>
+      <button class="tab" onclick="switchTab('revtotal', event)">📊 Cấu trúc doanh thu (Tổng)</button>
+      <button class="tab" onclick="switchTab('breakeven', event)">⚖️ Breakeven & ROI</button>
+      <button class="tab" onclick="switchTab('summary', event)">🎯 Tổng kết & Khuyến nghị</button>
+    </div>
   </div>
-</div>
 
-<!-- TAB CONTENT CONTAINERS -->
-<div class="section-panel" id="tab-intro"></div>
-<div class="section-panel" id="tab-market"></div>
-<div class="section-panel active" id="tab-zones"></div>
-<div class="section-panel" id="tab-capex"></div>
-<div class="section-panel" id="tab-revenue"></div>
-<div class="section-panel" id="tab-revtotal"></div>
-<div class="section-panel" id="tab-breakeven"></div>
-<div class="section-panel" id="tab-summary"></div>
+  <!-- TAB CONTENT CONTAINERS -->
+  <div class="section-panel active" id="tab-intro"></div>
+  <div class="section-panel" id="tab-market"></div>
+  <div class="section-panel" id="tab-zones"></div>
+  <div class="section-panel" id="tab-capex"></div>
+  <div class="section-panel" id="tab-revenue"></div>
+  <div class="section-panel" id="tab-revtotal"></div>
+  <div class="section-panel" id="tab-breakeven"></div>
+  <div class="section-panel" id="tab-summary"></div>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>

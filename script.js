@@ -37,7 +37,7 @@ function loadTab(id) {
         return res.text();
       })
       .then(function(html) {
-        container.innerHTML = html;
+        container.innerHTML = '<div class="container">' + html + '</div>';
         loadedTabs[id] = true;
         // Execute any inline scripts in the loaded HTML
         var scripts = container.querySelectorAll('script');
@@ -150,14 +150,13 @@ function renderZones() {
 }
 
 // ═══════════════════════════════════════════════
-// INITIAL LOAD — load default tab (zones)
+// INITIAL LOAD — load default tab (intro)
 // ═══════════════════════════════════════════════
 document.addEventListener('DOMContentLoaded', function() {
-  loadTab('zones').then(function() {
-    renderZones();
-    // Khởi tạo tab đang active trong HTML là zones
+  loadTab('intro').then(function() {
+    // Khởi tạo tab đang active trong HTML là intro
     document.querySelectorAll('.tab').forEach(function(t) { t.classList.remove('active'); });
-    var activeTabBtns = document.querySelectorAll('.tab[onclick*="zones"]');
+    var activeTabBtns = document.querySelectorAll('.tab[onclick*="intro"]');
     if(activeTabBtns.length > 0) activeTabBtns[0].classList.add('active');
   });
 });
