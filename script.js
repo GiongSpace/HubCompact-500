@@ -8,8 +8,10 @@ var tabFiles = {
   'zones':     'tabs/zones.html',
   'capex':     'tabs/capex.html',
   'revenue':   'tabs/revenue.html',
-  'revtotal':  'tabs/revtotal.html',
+  'cashflow':  'tabs/cashflow.html',
+
   'breakeven': 'tabs/breakeven.html',
+  'sm':        'tabs/sm.html',
   'summary':   'tabs/summary.html'
 };
 

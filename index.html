@@ -16,8 +16,9 @@
   <!-- HEADER -->
   <div class="page-header">
     <div style="max-width:1200px;margin:0 auto;padding:0;">
-      <div class="header-label">Giong Space · Hub Services Analysis</div>
-      <h1>Quy mô đầu tư<br><em>500m²</em> vs <em>3.000m²</em></h1>
+      <div class="header-label">Giong Space · Hub Services Pitch deck</div>
+      <h1>Giong Space</h1>
+      <h1><em>Mô hình Hub Services </em></h1>
       <p class="header-sub">Cấu trúc phân khu công năng, dự toán đầu tư CapEx, cấu trúc doanh thu và lộ trình
         triển khai để lựa chọn quy mô phù hợp.</p>
     </div>
@@ -30,9 +31,11 @@
       <button class="tab" onclick="switchTab('market', event)">📊 Phân tích thị trường</button>
       <button class="tab" onclick="switchTab('zones', event)">📐 Phân khu diện tích</button>
       <button class="tab" onclick="switchTab('capex', event)">💰 Dự toán CapEx</button>
-      <button class="tab" onclick="switchTab('revenue', event)">📈 Doanh thu CS & Lấp đầy</button>
-      <button class="tab" onclick="switchTab('revtotal', event)">📊 Cấu trúc doanh thu (Tổng)</button>
-      <button class="tab" onclick="switchTab('breakeven', event)">⚖️ Breakeven & ROI</button>
+      <button class="tab" onclick="switchTab('revenue', event)">📈 Doanh thu CS &amp; Lấp đầy</button>
+      <button class="tab" onclick="switchTab('cashflow', event)">💹 Dòng tiền 12 tháng</button>
+
+      <button class="tab" onclick="switchTab('breakeven', event)">⚖️ Breakeven &amp; ROI</button>
+      <button class="tab" onclick="switchTab('sm', event)">📣 Chi phí S&amp;M</button>
       <button class="tab" onclick="switchTab('summary', event)">🎯 Tổng kết & Khuyến nghị</button>
     </div>
   </div>
@@ -43,8 +46,10 @@
   <div class="section-panel" id="tab-zones"></div>
   <div class="section-panel" id="tab-capex"></div>
   <div class="section-panel" id="tab-revenue"></div>
-  <div class="section-panel" id="tab-revtotal"></div>
+  <div class="section-panel" id="tab-cashflow"></div>
+
   <div class="section-panel" id="tab-breakeven"></div>
+  <div class="section-panel" id="tab-sm"></div>
   <div class="section-panel" id="tab-summary"></div>
 
   <script src="script.js"></script>

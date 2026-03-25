@@ -1,653 +1,680 @@
-﻿<div class="section">
-  <div class="section-label">Doanh thu theo công suất sử dụng</div>
-  <div class="section-title">Diện tích khai thác → Giá cost-up → Cân đối OpEx</div>
-  <p class="section-sub">Doanh thu từ không gian vật lý (Private Office, Coworking, Event, Meeting) được định giá theo công thức cost-up và kiểm chứng khả năng bù đắp toàn bộ chi phí vận hành + khấu hao CapEx theo từng kịch bản công suất.</p>
-
-  <!-- NOTE BOX -->
-  <div style="padding:16px 20px;background:rgba(184,134,11,0.08);border-left:3px solid var(--gold);border-radius:0 6px 6px 0;margin-bottom:36px;">
-    <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">Phạm vi phân tích này</div>
-    <div style="font-size:13px;line-height:1.7;color:var(--ink);">Chỉ tính doanh thu từ <strong>không gian vật lý</strong>: Private Office, Coworking, Event, Meeting Rooms. <em>Không tính</em> Membership, Biz Services, Add-on — đây là "lớp phòng thủ thứ hai" nếu công suất chưa đạt kỳ vọng.</div>
-  </div>
-
-  <!-- ══ 500m² ══ -->
-  <div style="margin-bottom:56px;">
-    <div style="display:flex;align-items:center;gap:16px;margin-bottom:24px;">
-      <div style="background:var(--blush);border:1px solid rgba(201,123,114,0.3);border-radius:6px;padding:10px 20px;">
-        <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--rose-deep);">Hub Compact</div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:var(--rose-deep);line-height:1;">500m²</div>
-      </div>
-      <div style="flex:1;height:1px;background:var(--border);"></div>
-      <div style="font-size:12px;color:var(--muted);font-weight:600;">Diện tích khai thác: <strong style="color:var(--ink);">365m²</strong> / 500m² · Circulation & hỗ trợ: 135m²</div>
-    </div>
-
-
-    <!-- PRICING DERIVATION 500m2 -->
-    <div style="border:1px solid rgba(61,90,128,0.25);border-radius:8px;overflow:hidden;margin-bottom:20px;background:rgba(61,90,128,0.03);">
-      <div style="padding:12px 20px;background:var(--blue);color:#fff;display:flex;align-items:center;gap:12px;">
-        <div style="font-size:16px;">🧮</div>
-        <div>
-          <div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;opacity:0.6;margin-bottom:2px;">Phương pháp định giá</div>
-          <div style="font-size:13px;font-weight:700;">Cost-up Pricing = (OpEx + Khấu hao CapEx 36 tháng) ÷ Diện tích × Tỷ lệ phân bổ + 10% lợi nhuận</div>
-        </div>
-      </div>
-      <div style="padding:16px 20px;">
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:14px;">
-          <div style="background:#fff;border:1px solid var(--border);border-radius:6px;padding:12px;">
-            <div style="font-size:10px;font-weight:700;letter-spacing:1px;color:var(--muted);text-transform:uppercase;margin-bottom:6px;">CapEx thuần avg</div>
-            <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:var(--ink);">3,1 tỷ</div>
-            <div style="font-size:10px;color:var(--muted);margin-top:2px;">Thi công + thiết bị + phần mềm</div>
-          </div>
-          <div style="background:#fff;border:1px solid var(--border);border-radius:6px;padding:12px;">
-            <div style="font-size:10px;font-weight:700;letter-spacing:1px;color:var(--muted);text-transform:uppercase;margin-bottom:6px;">Khấu hao/tháng</div>
-            <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:var(--blue);">86tr</div>
-            <div style="font-size:10px;color:var(--muted);margin-top:2px;">3.100tr ÷ 36 tháng</div>
-          </div>
-          <div style="background:#fff;border:1px solid var(--border);border-radius:6px;padding:12px;">
-            <div style="font-size:10px;font-weight:700;letter-spacing:1px;color:var(--muted);text-transform:uppercase;margin-bottom:6px;">OpEx/tháng (TT)</div>
-            <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:var(--rose-deep);">370tr</div>
-            <div style="font-size:10px;color:var(--muted);margin-top:2px;">Thuê + nhân sự + vận hành</div>
-          </div>
-          <div style="background:var(--ink);border-radius:6px;padding:12px;">
-            <div style="font-size:10px;font-weight:700;letter-spacing:1px;color:rgba(255,255,255,0.5);text-transform:uppercase;margin-bottom:6px;">Tổng chi phí cần bù</div>
-            <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:#fff;">456tr/tháng</div>
-            <div style="font-size:10px;color:rgba(255,255,255,0.45);margin-top:2px;">Nền tính giá sàn</div>
-          </div>
-        </div>
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;">
-          <div style="padding:10px 12px;background:rgba(168,94,86,0.08);border-radius:6px;border-left:3px solid var(--rose-deep);">
-            <div style="font-size:10px;color:var(--muted);font-weight:600;margin-bottom:4px;">🏠 Private Office · 52% chi phí</div>
-            <div style="font-size:13px;font-weight:800;color:var(--rose-deep);">237tr ÷ 9 phòng × 1.1</div>
-            <div style="font-size:14px;font-weight:900;color:var(--ink);margin-top:4px;">= <span style="color:var(--rose-deep);">29tr</span>/phòng/tháng</div>
-            <div style="font-size:10px;color:var(--muted);margin-top:2px;">Market TT: 20–35tr ✓</div>
-          </div>
-          <div style="padding:10px 12px;background:rgba(232,180,172,0.15);border-radius:6px;border-left:3px solid #E8B4AC;">
-            <div style="font-size:10px;color:var(--muted);font-weight:600;margin-bottom:4px;">💼 Coworking · 22% chi phí</div>
-            <div style="font-size:13px;font-weight:800;color:var(--rose-deep);">100tr ÷ 35 subs × 1.1</div>
-            <div style="font-size:14px;font-weight:900;color:var(--ink);margin-top:4px;">= <span style="color:var(--rose-deep);">3,2tr</span>/sub/tháng</div>
-            <div style="font-size:10px;color:var(--muted);margin-top:2px;">Market TT: 2,5–4tr ✓</div>
-          </div>
-          <div style="padding:10px 12px;background:rgba(122,63,60,0.08);border-radius:6px;border-left:3px solid #7A3F3C;">
-            <div style="font-size:10px;color:var(--muted);font-weight:600;margin-bottom:4px;">🎤 Event · 16% chi phí</div>
-            <div style="font-size:13px;font-weight:800;color:var(--rose-deep);">75tr ÷ 8 buổi × 1.1</div>
-            <div style="font-size:14px;font-weight:900;color:var(--ink);margin-top:4px;">= <span style="color:var(--rose-deep);">10tr</span>/buổi avg</div>
-            <div style="font-size:10px;color:var(--muted);margin-top:2px;">Market TT: 8–15tr ✓</div>
-          </div>
-          <div style="padding:10px 12px;background:rgba(212,133,122,0.1);border-radius:6px;border-left:3px solid #D4857A;">
-            <div style="font-size:10px;color:var(--muted);font-weight:600;margin-bottom:4px;">📋 Meeting · 10% chi phí</div>
-            <div style="font-size:13px;font-weight:800;color:var(--rose-deep);">44tr ÷ 264h × 1.1</div>
-            <div style="font-size:14px;font-weight:900;color:var(--ink);margin-top:4px;">= sàn 182k → <span style="color:var(--rose-deep);">350k</span>/giờ</div>
-            <div style="font-size:10px;color:var(--muted);margin-top:2px;">Market TT: 300–500k ✓</div>
-          </div>
-        </div>
-        <div style="margin-top:12px;padding:10px 14px;background:rgba(74,124,89,0.08);border-radius:6px;border-left:3px solid var(--green);font-size:12px;color:var(--ink);line-height:1.6;">
-          ✅ <strong>Kiểm chứng:</strong> Ở 85% công suất, tổng doanh thu không gian = <strong>~464tr ≈ tổng chi phí 456tr</strong> — tức giá trên đã tự bù đắp toàn bộ OpEx + khấu hao CapEx mà không cần đến Membership. Trên 85% CS là lợi nhuận thuần.
-        </div>
-      </div>
-    </div>
-
-    <!-- Revenue zone table 500m2 -->
-    <div style="border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:24px;">
-      <div style="display:grid;grid-template-columns:2fr 60px 90px 90px 90px 90px 90px;background:var(--rose-deep);color:#fff;">
-        <div style="padding:12px 16px;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;">Công năng</div>
-        <div style="padding:12px 8px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;text-align:center;">m²</div>
-        <div style="padding:12px 8px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;text-align:center;">Đơn vị & Đơn giá</div>
-        <div style="padding:12px 8px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;text-align:center;">CS 50%</div>
-        <div style="padding:12px 8px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;text-align:center;">CS 70%</div>
-        <div style="padding:12px 8px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;text-align:center;background:rgba(255,255,255,0.12);">CS 85%</div>
-        <div style="padding:12px 8px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;text-align:center;">CS 95%</div>
-      </div>
-      <!-- PO row -->
-      <div style="display:grid;grid-template-columns:2fr 60px 90px 90px 90px 90px 90px;border-bottom:1px solid var(--border);background:#fff;">
-        <div style="padding:14px 16px;">
-          <div style="display:flex;align-items:center;gap:8px;">
-            <div style="width:8px;height:8px;border-radius:2px;background:#A85E56;flex-shrink:0;"></div>
-            <div>
-              <div style="font-size:13px;font-weight:700;">Private Office ⭐</div>
-              <div style="font-size:11px;color:var(--muted);">9 phòng × avg 21m² · doanh thu cố định hàng tháng</div>
-              <div style="font-size:10px;color:var(--blue);margin-top:2px;font-weight:600;">Giá sàn cost-up: 26.4tr → giá bán 29tr/phòng · Market Q.1: 20–35tr</div>
-            </div>
-          </div>
-        </div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:700;color:var(--rose-deep);">190</div>
-        <div style="padding:14px 8px;text-align:center;font-size:11px;color:var(--muted);line-height:1.4;">9 phòng<br><strong style="color:var(--rose-deep);">29tr/phòng</strong></div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:600;">130.5tr</div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:600;">182.7tr</div>
-        <div style="padding:14px 8px;text-align:center;font-size:14px;font-weight:800;color:var(--rose-deep);background:rgba(242,224,220,0.5);">221.9tr</div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:600;">247.9tr</div>
-      </div>
-      <!-- Coworking row — SUBSCRIPTION MODEL -->
-      <div style="display:grid;grid-template-columns:2fr 60px 90px 90px 90px 90px 90px;border-bottom:1px solid var(--border);background:rgba(250,247,245,0.5);">
-        <div style="padding:14px 16px;">
-          <div style="display:flex;align-items:center;gap:8px;">
-            <div style="width:8px;height:8px;border-radius:2px;background:#E8B4AC;flex-shrink:0;"></div>
-            <div>
-              <div style="font-size:13px;font-weight:700;">Coworking — Subscription 🔄</div>
-              <div style="font-size:11px;color:var(--muted);">22 seats vật lý × <strong>1,6x oversell</strong> = 35 subs · thành viên vắng vẫn tính phí</div>
-              <div style="font-size:10px;color:var(--blue);margin-top:2px;font-weight:600;">Giá sàn cost-up: 2,85tr → giá bán 3,2tr/sub · Market Q.1: 2,5–4tr</div>
-            </div>
-          </div>
-        </div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:700;color:var(--rose-deep);">80</div>
-        <div style="padding:14px 8px;text-align:center;font-size:11px;color:var(--muted);line-height:1.4;">35 subs<br><strong style="color:var(--rose-deep);">3,2tr/sub</strong></div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:600;">56tr</div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:600;">78.4tr</div>
-        <div style="padding:14px 8px;text-align:center;font-size:14px;font-weight:800;color:var(--rose-deep);background:rgba(242,224,220,0.5);">95.2tr</div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:600;">106.4tr</div>
-      </div>
-      <!-- Event row -->
-      <div style="display:grid;grid-template-columns:2fr 60px 90px 90px 90px 90px 90px;border-bottom:1px solid var(--border);background:#fff;">
-        <div style="padding:14px 16px;">
-          <div style="display:flex;align-items:center;gap:8px;">
-            <div style="width:8px;height:8px;border-radius:2px;background:#7A3F3C;flex-shrink:0;"></div>
-            <div>
-              <div style="font-size:13px;font-weight:700;">Event / Workshop</div>
-              <div style="font-size:11px;color:var(--muted);">8 buổi/tháng thực tế · tiềm năng tối đa 12 buổi</div>
-              <div style="font-size:10px;color:var(--blue);margin-top:2px;font-weight:600;">Giá sàn cost-up: 10,3tr/buổi → giá bán 10tr avg · Market Q.1: 8–15tr/buổi</div>
-            </div>
-          </div>
-        </div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:700;color:var(--rose-deep);">60</div>
-        <div style="padding:14px 8px;text-align:center;font-size:11px;color:var(--muted);line-height:1.4;">8 buổi<br><strong style="color:var(--rose-deep);">10tr/buổi</strong></div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:600;">40tr</div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:600;">56tr</div>
-        <div style="padding:14px 8px;text-align:center;font-size:14px;font-weight:800;color:var(--rose-deep);background:rgba(242,224,220,0.5);">68tr</div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:600;">76tr</div>
-      </div>
-      <!-- Meeting row -->
-      <div style="display:grid;grid-template-columns:2fr 60px 90px 90px 90px 90px 90px;border-bottom:2px solid var(--rose-light);background:rgba(250,247,245,0.5);">
-        <div style="padding:14px 16px;">
-          <div style="display:flex;align-items:center;gap:8px;">
-            <div style="width:8px;height:8px;border-radius:2px;background:#D4857A;flex-shrink:0;"></div>
-            <div>
-              <div style="font-size:13px;font-weight:700;">Meeting Rooms</div>
-              <div style="font-size:11px;color:var(--muted);">3 phòng · avg 4h/ngày/phòng · 22 ngày = 264h/tháng</div>
-              <div style="font-size:10px;color:var(--blue);margin-top:2px;font-weight:600;">Giá sàn cost-up: 182k/h → giá bán 350k/h · Market Q.1: 300–500k/giờ</div>
-            </div>
-          </div>
-        </div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:700;color:var(--rose-deep);">35</div>
-        <div style="padding:14px 8px;text-align:center;font-size:11px;color:var(--muted);line-height:1.4;">264h/tháng<br><strong style="color:var(--rose-deep);">350k/giờ</strong></div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:600;">46.2tr</div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:600;">64.7tr</div>
-        <div style="padding:14px 8px;text-align:center;font-size:14px;font-weight:800;color:var(--rose-deep);background:rgba(242,224,220,0.5);">78.5tr</div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:600;">87.7tr</div>
-      </div>
-      <!-- TOTAL ROW -->
-      <div style="display:grid;grid-template-columns:2fr 60px 90px 90px 90px 90px 90px;background:var(--blush);">
-        <div style="padding:14px 16px;">
-          <div style="font-size:13px;font-weight:800;">TỔNG DOANH THU KHÔNG GIAN</div>
-          <div style="font-size:10px;color:var(--rose-deep);margin-top:3px;font-weight:600;">★ BEP từ space: 85% CS · Trên 85% = lợi nhuận thuần</div>
-        </div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:700;color:var(--muted);">365m²</div>
-        <div style="padding:14px 8px;"></div>
-        <div style="padding:14px 8px;text-align:center;font-size:14px;font-weight:800;color:var(--rose-deep);">272.7tr</div>
-        <div style="padding:14px 8px;text-align:center;font-size:14px;font-weight:800;color:var(--rose-deep);">381.8tr</div>
-        <div style="padding:14px 8px;text-align:center;font-size:15px;font-weight:900;color:var(--rose-deep);background:rgba(201,123,114,0.15);">463.6tr ≈ Cost</div>
-        <div style="padding:14px 8px;text-align:center;font-size:14px;font-weight:800;color:var(--rose-deep);">518tr</div>
-      </div>
-    </div>
-
-    <!-- OpEx vs Revenue 500m2 -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
-      <!-- OpEx table -->
-      <div style="border:1px solid var(--border);border-radius:8px;overflow:hidden;">
-        <div style="padding:14px 18px;background:var(--ink);color:#fff;">
-          <div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;opacity:0.5;margin-bottom:4px;">Chi phí vận hành / tháng</div>
-          <div style="font-size:14px;font-weight:700;">3 kịch bản vị trí · giá thực tế TP.HCM</div>
-        </div>
-        <table style="width:100%;border-collapse:collapse;">
-          <thead>
-            <tr style="background:rgba(0,0,0,0.04);">
-              <th style="padding:10px 14px;text-align:left;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border);">Khoản mục</th>
-              <th style="padding:10px 8px;text-align:center;font-size:10px;font-weight:700;color:var(--orange);border-bottom:1px solid var(--border);">Bán TT<br><span style="font-weight:400;opacity:0.7;">Q.7/Tân Bình<br>~280k/m²</span></th>
-              <th style="padding:10px 8px;text-align:center;font-size:10px;font-weight:700;color:var(--rose-deep);border-bottom:1px solid var(--border);background:rgba(168,94,86,0.07);">★ Trung tâm<br><span style="font-weight:400;opacity:0.7;">Q.1/Q.3<br>~500k/m²</span></th>
-              <th style="padding:10px 8px;text-align:center;font-size:10px;font-weight:700;color:#6B21A8;border-bottom:1px solid var(--border);">CBD Premium<br><span style="font-weight:400;opacity:0.7;">Thủ Thiêm/BT<br>~700k/m²</span></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="border-bottom:1px solid var(--border);">
-              <td style="padding:10px 14px;font-size:12px;font-weight:600;">Thuê mặt bằng<br><span style="font-size:10px;color:var(--muted);font-weight:400;">500m² × giá/m²</span></td>
-              <td style="padding:10px 8px;text-align:center;font-size:13px;font-weight:800;color:var(--orange);">140tr</td>
-              <td style="padding:10px 8px;text-align:center;font-size:13px;font-weight:800;color:var(--rose-deep);background:rgba(168,94,86,0.06);">250tr</td>
-              <td style="padding:10px 8px;text-align:center;font-size:13px;font-weight:800;color:#6B21A8;">350tr</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);background:rgba(250,247,245,0.5);">
-              <td style="padding:10px 14px;font-size:12px;font-weight:600;">Nhân sự (6 người)<br><span style="font-size:10px;color:var(--muted);font-weight:400;">Incl. BHXH/BHYT ~22%</span></td>
-              <td colspan="3" style="padding:10px 8px;text-align:center;font-size:13px;font-weight:700;">68tr</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);">
-              <td style="padding:10px 14px;font-size:12px;font-weight:600;">Điện · Nước · Internet<br><span style="font-size:10px;color:var(--muted);font-weight:400;">AC cường độ cao, WiFi, server</span></td>
-              <td colspan="3" style="padding:10px 8px;text-align:center;font-size:13px;font-weight:700;">28tr</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);background:rgba(250,247,245,0.5);">
-              <td style="padding:10px 14px;font-size:12px;font-weight:600;">Vệ sinh · Bảo trì<br><span style="font-size:10px;color:var(--muted);font-weight:400;">Outsource hoặc nhân viên thuê ngoài</span></td>
-              <td colspan="3" style="padding:10px 8px;text-align:center;font-size:13px;font-weight:700;">10tr</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);">
-              <td style="padding:10px 14px;font-size:12px;font-weight:600;">Marketing · Vận hành · Phần mềm<br><span style="font-size:10px;color:var(--muted);font-weight:400;">Ads, PMS, CRM, văn phòng phẩm</span></td>
-              <td colspan="3" style="padding:10px 8px;text-align:center;font-size:13px;font-weight:700;">14tr</td>
-            </tr>
-            <tr style="border-bottom:2px solid var(--blue);background:rgba(61,90,128,0.05);">
-              <td style="padding:10px 14px;font-size:12px;font-weight:600;color:var(--blue);">📉 Khấu hao CapEx (3,1 tỷ ÷ 36 tháng)<br><span style="font-size:10px;color:var(--muted);font-weight:400;">Phân bổ CapEx đầu tư vào chi phí tháng · chi phí kế toán + dự phòng tái đầu tư</span></td>
-              <td colspan="3" style="padding:10px 8px;text-align:center;font-size:14px;font-weight:800;color:var(--blue);">86tr</td>
-            </tr>
-            <tr style="background:rgba(0,0,0,0.03);">
-              <td style="padding:10px 14px;font-size:12px;font-weight:700;">OpEx thuần (chưa khấu hao)</td>
-              <td style="padding:10px 8px;text-align:center;font-size:13px;font-weight:700;color:var(--orange);">260tr</td>
-              <td style="padding:10px 8px;text-align:center;font-size:13px;font-weight:700;color:var(--rose-deep);background:rgba(168,94,86,0.06);">370tr</td>
-              <td style="padding:10px 8px;text-align:center;font-size:13px;font-weight:700;color:#6B21A8;">470tr</td>
-            </tr>
-            <tr style="background:var(--blush);">
-              <td style="padding:12px 14px;font-size:13px;font-weight:800;">TỔNG CHI PHÍ THỰC TẾ (incl. khấu hao)</td>
-              <td style="padding:12px 8px;text-align:center;font-size:15px;font-weight:900;color:var(--orange);">346tr</td>
-              <td style="padding:12px 8px;text-align:center;font-size:15px;font-weight:900;color:var(--rose-deep);background:rgba(168,94,86,0.1);">456tr ★</td>
-              <td style="padding:12px 8px;text-align:center;font-size:15px;font-weight:900;color:#6B21A8;">556tr</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- Balance visual 500m2 -->
-      <div style="border:1px solid var(--border);border-radius:8px;overflow:hidden;">
-        <div style="padding:14px 18px;background:var(--rose-deep);color:#fff;">
-          <div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;opacity:0.5;margin-bottom:4px;">Cân đối Thu – Chi</div>
-          <div style="font-size:14px;font-weight:700;">DT không gian max 188tr (95% CS) — phụ thuộc vị trí</div>
-        </div>
-        <div style="padding:18px;">
-          <div style="display:flex;flex-direction:column;gap:16px;">
-
-            <div>
-              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-                <div style="font-size:12px;font-weight:700;color:var(--orange);">📍 Bán TT (OpEx: 260tr)</div>
-                <div style="font-size:11px;background:rgba(196,98,45,0.12);color:var(--orange);padding:3px 10px;border-radius:10px;font-weight:700;">Space max &lt; OpEx · thiếu 72tr</div>
-              </div>
-              <div style="position:relative;height:28px;background:rgba(0,0,0,0.06);border-radius:4px;overflow:hidden;">
-                <div style="position:absolute;left:0;top:0;height:100%;width:100%;background:var(--orange);opacity:0.5;border-radius:4px;display:flex;align-items:center;padding-left:8px;">
-                  <span style="font-size:10px;font-weight:700;color:#fff;">DT space max 188tr &lt; OpEx 260tr — thiếu 72tr/tháng</span>
-                </div>
-              </div>
-              <div style="font-size:11px;color:var(--muted);margin-top:5px;">⚠️ Cần 72tr từ Membership + Add-on · ~80 thành viên Growth hoặc 8 Team plan</div>
-            </div>
-
-            <div style="border:2px solid var(--rose-deep);border-radius:8px;overflow:hidden;">
-              <div style="padding:8px 14px;background:var(--rose-deep);color:#fff;font-size:11px;font-weight:700;letter-spacing:1px;">★ KỊCH BẢN ĐÃ CHỌN</div>
-              <div style="padding:12px 14px;">
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-                  <div style="font-size:12px;font-weight:700;color:var(--rose-deep);">📍 Trung tâm Q.1/Q.3 (OpEx: 370tr)</div>
-                  <div style="font-size:11px;background:rgba(168,94,86,0.12);color:var(--rose-deep);padding:3px 10px;border-radius:10px;font-weight:700;">Thiếu 182tr — cần Membership</div>
-                </div>
-                <div style="position:relative;height:28px;background:rgba(0,0,0,0.06);border-radius:4px;overflow:hidden;">
-                  <div style="position:absolute;left:0;top:0;height:100%;width:51%;background:var(--rose-deep);opacity:0.8;border-radius:4px;display:flex;align-items:center;padding-left:8px;">
-                    <span style="font-size:10px;font-weight:700;color:#fff;">Space: 188tr (51%)</span>
-                  </div>
-                  <div style="position:absolute;left:51%;top:0;height:100%;width:49%;background:var(--rose-light);opacity:0.6;display:flex;align-items:center;padding-left:8px;">
-                    <span style="font-size:10px;font-weight:700;color:var(--rose-deep);">Cần từ Membership: 182tr</span>
-                  </div>
-                </div>
-                <div style="font-size:11px;color:var(--muted);margin-top:8px;line-height:1.6;">⚠️ Space chỉ đóng góp 51% OpEx — <strong>cần 182tr/tháng từ VPA Membership + Add-on</strong> · tương đương ~60 thành viên Team (9,999k) hoặc 200 thành viên Growth (2,999k) ngay từ tháng 1</div>
-              </div>
-            </div>
-
-            <div>
-              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-                <div style="font-size:12px;font-weight:700;color:#6B21A8;">📍 CBD Premium Thủ Thiêm (OpEx: 470tr)</div>
-                <div style="font-size:11px;background:rgba(107,33,168,0.1);color:#6B21A8;padding:3px 10px;border-radius:10px;font-weight:700;">Thiếu 282tr</div>
-              </div>
-              <div style="position:relative;height:28px;background:rgba(0,0,0,0.06);border-radius:4px;overflow:hidden;">
-                <div style="position:absolute;left:0;top:0;height:100%;width:100%;background:#6B21A8;opacity:0.35;border-radius:4px;display:flex;align-items:center;padding-left:8px;">
-                  <span style="font-size:10px;font-weight:700;color:#fff;">DT space max 188tr &lt; OpEx 470tr — chênh 282tr</span>
-                </div>
-              </div>
-              <div style="font-size:11px;color:var(--muted);margin-top:5px;">🏆 Phù hợp khi đã build được 300+ thành viên VPA và hệ sinh thái dịch vụ mạnh</div>
-            </div>
-
-            <div style="padding:14px;background:rgba(168,94,86,0.07);border-radius:6px;border-left:3px solid var(--rose-deep);margin-top:4px;">
-              <div style="font-size:11px;font-weight:700;color:var(--rose-deep);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">💡 Kế hoạch bù đắp 182tr/tháng tại Trung tâm</div>
-              <div style="display:flex;flex-direction:column;gap:6px;">
-                <div style="font-size:12px;color:var(--ink);">🎫 VPA Growth (2,999k) × 200 thành viên = <strong>60tr/tháng</strong></div>
-                <div style="font-size:12px;color:var(--ink);">🎫 Team Plan (9,999k) × 12 team = <strong>120tr/tháng</strong></div>
-                <div style="font-size:12px;color:var(--ink);">🧾 Add-on Services (Tax/Legal/Grow) = <strong>30–50tr/tháng</strong></div>
-                <div style="font-size:12px;font-weight:700;color:var(--rose-deep);border-top:1px solid var(--border);padding-top:6px;margin-top:2px;">→ Tổng cần ~200–230tr · hoàn toàn khả thi từ tháng 6–9 nếu pre-sell VPA</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- DIVIDER -->
-  <div style="height:1px;background:var(--border);margin:8px 0 48px;"></div>
-
-  <!-- ══ 3000m² ══ -->
+<div class="section">
   <div>
+
+    <!-- NOTE BOX -->
     <div style="display:flex;align-items:center;gap:16px;margin-bottom:24px;">
       <div style="background:var(--rose-deep);border-radius:6px;padding:10px 20px;">
-        <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--rose-light);">Hub Flagship</div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:#fff;line-height:1;">3.000m²</div>
+        <div
+          style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--rose-light);">
+          Hub Flagship</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:#fff;line-height:1;">
+          3.000m²</div>
       </div>
       <div style="flex:1;height:1px;background:var(--border);"></div>
-      <div style="font-size:12px;color:var(--muted);font-weight:600;">Diện tích khai thác: <strong style="color:var(--ink);">2.490m²</strong> / 3.000m² · Circulation & hỗ trợ: 510m²</div>
+      <div style="font-size:12px;color:var(--muted);font-weight:600;">Diện tích khai thác: <strong
+          style="color:var(--ink);">2.490m²</strong> / 3.000m² · Circulation & hỗ trợ: 510m²</div>
     </div>
 
+    <!-- ══ DOANH THU & P/L ══ -->
+    <div class="section-label">Doanh thu theo Pitch Deck</div>
+    <h2 class="section-title" style="font-size:clamp(20px,2.8vw,36px);margin-bottom:6px;">Doanh thu &amp; P/L</h2>
+    <p class="section-sub" style="margin-bottom:32px;">3.000m² NLA · 597 seats (PO 500 × 3,0m² + CW 60 × 5,0m² + DD 37
+      × 4,0m²) · 900 VPA (= NLA × 0,3) · PO 2,5tr · CW 3,0tr · DD 4,0tr.</p>
 
-    <!-- PRICING DERIVATION 3000m2 -->
-    <div style="border:1px solid rgba(61,90,128,0.25);border-radius:8px;overflow:hidden;margin-bottom:20px;background:rgba(61,90,128,0.03);">
-      <div style="padding:12px 20px;background:var(--blue);color:#fff;display:flex;align-items:center;gap:12px;">
-        <div style="font-size:16px;">🧮</div>
-        <div>
-          <div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;opacity:0.6;margin-bottom:2px;">Phương pháp định giá — Hub Flagship</div>
-          <div style="font-size:13px;font-weight:700;">Cost-up Pricing = (OpEx 2.025tr + Khấu hao 519tr) ÷ 2.310m² × tỷ lệ công năng + 10%</div>
-        </div>
-      </div>
-      <div style="padding:16px 20px;">
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:14px;">
-          <div style="background:#fff;border:1px solid var(--border);border-radius:6px;padding:12px;">
-            <div style="font-size:10px;font-weight:700;letter-spacing:1px;color:var(--muted);text-transform:uppercase;margin-bottom:6px;">CapEx thuần avg</div>
-            <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:var(--ink);">18,7 tỷ</div>
-            <div style="font-size:10px;color:var(--muted);margin-top:2px;">Thi công + thiết bị + phần mềm</div>
-          </div>
-          <div style="background:#fff;border:1px solid var(--border);border-radius:6px;padding:12px;">
-            <div style="font-size:10px;font-weight:700;letter-spacing:1px;color:var(--muted);text-transform:uppercase;margin-bottom:6px;">Khấu hao/tháng</div>
-            <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:var(--blue);">519tr</div>
-            <div style="font-size:10px;color:var(--muted);margin-top:2px;">18.700tr ÷ 36 tháng</div>
-          </div>
-          <div style="background:#fff;border:1px solid var(--border);border-radius:6px;padding:12px;">
-            <div style="font-size:10px;font-weight:700;letter-spacing:1px;color:var(--muted);text-transform:uppercase;margin-bottom:6px;">OpEx/tháng (TT)</div>
-            <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:var(--rose-deep);">2.025tr</div>
-            <div style="font-size:10px;color:var(--muted);margin-top:2px;">Thuê + nhân sự + vận hành</div>
-          </div>
-          <div style="background:var(--ink);border-radius:6px;padding:12px;">
-            <div style="font-size:10px;font-weight:700;letter-spacing:1px;color:rgba(255,255,255,0.5);text-transform:uppercase;margin-bottom:6px;">Tổng chi phí cần bù</div>
-            <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:#fff;">2.544tr/tháng</div>
-            <div style="font-size:10px;color:rgba(255,255,255,0.45);margin-top:2px;">Nền tính giá sàn</div>
-          </div>
-        </div>
-        <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px;">
-          <div style="padding:10px 12px;background:rgba(168,94,86,0.08);border-radius:6px;border-left:3px solid var(--rose-deep);">
-            <div style="font-size:10px;color:var(--muted);font-weight:600;margin-bottom:4px;">🏠 PO · 65% chi phí</div>
-            <div style="font-size:12px;font-weight:800;color:var(--rose-deep);">1.652tr ÷ 65 × 1.1</div>
-            <div style="font-size:14px;font-weight:900;color:var(--ink);margin-top:4px;">= <span style="color:var(--rose-deep);">28tr</span>/phòng</div>
-            <div style="font-size:10px;color:var(--muted);margin-top:2px;">Market: 20–40tr ✓</div>
-          </div>
-          <div style="padding:10px 12px;background:rgba(232,180,172,0.15);border-radius:6px;border-left:3px solid #E8B4AC;">
-            <div style="font-size:10px;color:var(--muted);font-weight:600;margin-bottom:4px;">💼 CW · 13% chi phí</div>
-            <div style="font-size:12px;font-weight:800;color:var(--rose-deep);">330tr ÷ 133 × 1.1</div>
-            <div style="font-size:14px;font-weight:900;color:var(--ink);margin-top:4px;">= sàn 2,7tr → <span style="color:var(--rose-deep);">3tr</span></div>
-            <div style="font-size:10px;color:var(--muted);margin-top:2px;">Market: 2,5–4tr ✓</div>
-          </div>
-          <div style="padding:10px 12px;background:rgba(201,123,114,0.1);border-radius:6px;border-left:3px solid #C97B72;">
-            <div style="font-size:10px;color:var(--muted);font-weight:600;margin-bottom:4px;">🤝 Dedicated · 6.5%</div>
-            <div style="font-size:12px;font-weight:800;color:var(--rose-deep);">165tr ÷ 40 × 1.1</div>
-            <div style="font-size:14px;font-weight:900;color:var(--ink);margin-top:4px;">= <span style="color:var(--rose-deep);">4,5tr</span>/desk</div>
-            <div style="font-size:10px;color:var(--muted);margin-top:2px;">Market: 3,5–6tr ✓</div>
-          </div>
-          <div style="padding:10px 12px;background:rgba(122,63,60,0.08);border-radius:6px;border-left:3px solid #7A3F3C;">
-            <div style="font-size:10px;color:var(--muted);font-weight:600;margin-bottom:4px;">🎤 Event Hall · 10.4%</div>
-            <div style="font-size:12px;font-weight:800;color:var(--rose-deep);">264tr ÷ 16 × 1.1</div>
-            <div style="font-size:14px;font-weight:900;color:var(--ink);margin-top:4px;">= sàn 18tr → <span style="color:var(--rose-deep);">15tr</span></div>
-            <div style="font-size:10px;color:var(--muted);margin-top:2px;">Corp event: 10–25tr ✓</div>
-          </div>
-          <div style="padding:10px 12px;background:rgba(212,133,122,0.1);border-radius:6px;border-left:3px solid #D4857A;">
-            <div style="font-size:10px;color:var(--muted);font-weight:600;margin-bottom:4px;">📋 Meeting · 5.2%</div>
-            <div style="font-size:12px;font-weight:800;color:var(--rose-deep);">132tr ÷ 704h × 1.1</div>
-            <div style="font-size:14px;font-weight:900;color:var(--ink);margin-top:4px;">= sàn 207k → <span style="color:var(--rose-deep);">450k</span>/h</div>
-            <div style="font-size:10px;color:var(--muted);margin-top:2px;">Market premium: 400–600k ✓</div>
-          </div>
-        </div>
-        <div style="margin-top:12px;padding:10px 14px;background:rgba(74,124,89,0.08);border-radius:6px;border-left:3px solid var(--green);font-size:12px;color:var(--ink);line-height:1.6;">
-          ✅ <strong>Kiểm chứng:</strong> Ở 90% công suất, doanh thu không gian ≈ <strong>2.660tr ≈ tổng chi phí 2.544tr + biên 4,6%</strong>. Space tự bù đắp toàn bộ bao gồm khấu hao CapEx — Membership + Biz Services là lợi nhuận thêm vào.
-        </div>
-      </div>
+    <div
+      style="padding:16px 20px;background:rgba(184,134,11,0.08);border-left:3px solid var(--gold);border-radius:0 6px 6px 0;margin-bottom:36px;">
+      <div
+        style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">
+        Phạm vi phân tích này</div>
+      <div style="font-size:13px;line-height:1.7;color:var(--ink);">Chỉ tính doanh thu từ <strong>không gian vật
+          lý</strong>: Private Office, Coworking, Event, Meeting Rooms. <em>Không tính</em> Membership, Biz Services,
+        Add-on — đây là "lớp phòng thủ thứ hai" nếu công suất chưa đạt kỳ vọng.</div>
+    </div>
+    <!-- DT Diện tích -->
+    <h3 class="be-subsection-title">Doanh thu Diện tích theo phân khu (88% desk occ)</h3>
+    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+      <table class="summary-table" style="min-width:640px;">
+        <thead>
+          <tr>
+            <th>Phân khu</th>
+            <th style="text-align:center;">Seats/Đơn vị</th>
+            <th style="text-align:center;">Occ/Util</th>
+            <th style="text-align:center;">Đơn giá</th>
+            <th style="text-align:center;">DT/th</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-weight:700;">🏢 Private Office</td>
+            <td style="text-align:center;">500 seats</td>
+            <td style="text-align:center;">90% (450)</td>
+            <td style="text-align:center;font-weight:700;">2,5 tr/seat</td>
+            <td style="text-align:center;font-weight:800;color:var(--green);">1.125 tr</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700;">💻 Coworking (team ≥5)</td>
+            <td style="text-align:center;">60 seats</td>
+            <td style="text-align:center;">85% (51)</td>
+            <td style="text-align:center;font-weight:700;">3,0 tr/seat</td>
+            <td style="text-align:center;font-weight:800;color:var(--green);">153 tr</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700;">📋 Dedicated Desk (cá nhân)</td>
+            <td style="text-align:center;">37 seats</td>
+            <td style="text-align:center;">88% (32)</td>
+            <td style="text-align:center;font-weight:700;">4,0 tr/seat</td>
+            <td style="text-align:center;font-weight:800;color:var(--green);">128 tr</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700;">🤝 Meeting (8 phòng)</td>
+            <td style="text-align:center;">8 phòng</td>
+            <td style="text-align:center;">55%</td>
+            <td style="text-align:center;">250K/h</td>
+            <td style="text-align:center;font-weight:800;color:var(--green);">121 tr</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700;">🎤 Event Hall</td>
+            <td style="text-align:center;">12 event/th</td>
+            <td style="text-align:center;">—</td>
+            <td style="text-align:center;">3 tr/event</td>
+            <td style="text-align:center;font-weight:800;color:var(--green);">36 tr</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700;">📣 Biz Promote / Showroom</td>
+            <td style="text-align:center;">10 booths (12m²)</td>
+            <td style="text-align:center;">70%</td>
+            <td style="text-align:center;">10 tr/booth</td>
+            <td style="text-align:center;font-weight:800;color:var(--green);">70 tr</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700;">☕ F&amp;B / Café (cho thuê)</td>
+            <td style="text-align:center;">150m²</td>
+            <td style="text-align:center;">—</td>
+            <td style="text-align:center;">500K/m²</td>
+            <td style="text-align:center;font-weight:800;color:var(--green);">75 tr</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700;">🛎 Ancillary</td>
+            <td style="text-align:center;">Print, locker...</td>
+            <td style="text-align:center;">—</td>
+            <td style="text-align:center;">—</td>
+            <td style="text-align:center;font-weight:800;color:var(--green);">20 tr</td>
+          </tr>
+          <tr style="background:rgba(168,94,86,0.12);">
+            <td style="font-weight:800;font-size:14px;">TỔNG DT DIỆN TÍCH</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="text-align:center;font-weight:900;font-size:16px;color:var(--rose-deep);">1.728 tr/th</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
-    <!-- Revenue zone table 3000m2 -->
-    <div style="border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:24px;">
-      <div style="display:grid;grid-template-columns:2fr 70px 100px 100px 100px 100px 100px;background:var(--rose-deep);color:#fff;">
-        <div style="padding:12px 16px;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;">Công năng</div>
-        <div style="padding:12px 8px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;text-align:center;">m²</div>
-        <div style="padding:12px 8px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;text-align:center;">Đơn vị & Đơn giá</div>
-        <div style="padding:12px 8px;font-size:10px;font-weight:700;text-transform:uppercase;text-align:center;">CS 50%</div>
-        <div style="padding:12px 8px;font-size:10px;font-weight:700;text-transform:uppercase;text-align:center;">CS 70%</div>
-        <div style="padding:12px 8px;font-size:10px;font-weight:700;text-transform:uppercase;text-align:center;background:rgba(255,255,255,0.12);">CS 80%</div>
-        <div style="padding:12px 8px;font-size:10px;font-weight:700;text-transform:uppercase;text-align:center;">CS 90%</div>
+    <div class="zones-metrics" style="margin-top:20px;margin-bottom:40px;">
+      <div class="zones-metric zones-metric--highlight">
+        <div class="zones-metric__label">DT Diện tích</div>
+        <div class="zones-metric__value">1.728 tr</div>
+        <div class="zones-metric__note">= 20,7 tỷ/năm</div>
       </div>
-      <!-- PO row -->
-      <div style="display:grid;grid-template-columns:2fr 70px 100px 100px 100px 100px 100px;border-bottom:1px solid var(--border);background:#fff;">
-        <div style="padding:14px 16px;">
-          <div style="display:flex;align-items:center;gap:8px;">
-            <div style="width:8px;height:8px;border-radius:2px;background:#A85E56;flex-shrink:0;"></div>
-            <div>
-              <div style="font-size:13px;font-weight:700;">Private Office ⭐</div>
-              <div style="font-size:11px;color:var(--muted);">65 phòng × avg 23m² · anchor dòng tiền</div>
-            </div>
-          </div>
-        </div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:700;color:var(--rose-deep);">1.500</div>
-        <div style="padding:14px 8px;text-align:center;font-size:11px;color:var(--muted);line-height:1.4;">65 phòng<br><strong style="color:var(--rose-deep);">28tr/phòng</strong><br><span style="font-size:9px;">sàn 26,4tr</span></div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:600;">910tr</div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:600;">1.274tr</div>
-        <div style="padding:14px 8px;text-align:center;font-size:14px;font-weight:800;color:var(--rose-deep);background:rgba(242,224,220,0.5);">1.456tr</div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:600;">1.638tr</div>
+      <div class="zones-metric">
+        <div class="zones-metric__label">Desk revenue</div>
+        <div class="zones-metric__value">1.406 tr</div>
+        <div class="zones-metric__note">81% (PO 1.125 + CW 153 + DD 128)</div>
       </div>
-      <!-- Coworking row — SUBSCRIPTION MODEL -->
-      <div style="display:grid;grid-template-columns:2fr 70px 100px 100px 100px 100px 100px;border-bottom:1px solid var(--border);background:rgba(250,247,245,0.5);">
-        <div style="padding:14px 16px;">
-          <div style="display:flex;align-items:center;gap:8px;">
-            <div style="width:8px;height:8px;border-radius:2px;background:#E8B4AC;flex-shrink:0;"></div>
-            <div>
-              <div style="font-size:13px;font-weight:700;">Coworking — Subscription 🔄</div>
-              <div style="font-size:11px;color:var(--muted);">83 seats vật lý × <strong>1,6x oversell</strong> = 133 thành viên · avg 2tr/member/tháng</div>
-              <div style="font-size:10px;color:var(--blue);margin-top:3px;font-weight:600;">📌 CS% = % của 133 suất subscription đã bán</div>
-            </div>
-          </div>
-        </div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:700;color:var(--rose-deep);">300</div>
-        <div style="padding:14px 8px;text-align:center;font-size:11px;color:var(--muted);line-height:1.4;">133 subs<br><strong style="color:var(--rose-deep);">3tr/sub</strong><br><span style="font-size:9px;">sàn 2,73tr</span></div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:600;">199.5tr</div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:600;">279.3tr</div>
-        <div style="padding:14px 8px;text-align:center;font-size:14px;font-weight:800;color:var(--rose-deep);background:rgba(242,224,220,0.5);">319.2tr</div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:600;">359.1tr</div>
-      </div>
-      <!-- Dedicated row -->
-      <div style="display:grid;grid-template-columns:2fr 70px 100px 100px 100px 100px 100px;border-bottom:1px solid var(--border);background:#fff;">
-        <div style="padding:14px 16px;">
-          <div style="display:flex;align-items:center;gap:8px;">
-            <div style="width:8px;height:8px;border-radius:2px;background:#C97B72;flex-shrink:0;"></div>
-            <div>
-              <div style="font-size:13px;font-weight:700;">Dedicated Desk</div>
-              <div style="font-size:11px;color:var(--muted);">40 desks · phí tháng 3.5tr/desk</div>
-            </div>
-          </div>
-        </div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:700;color:var(--rose-deep);">150</div>
-        <div style="padding:14px 8px;text-align:center;font-size:11px;color:var(--muted);line-height:1.4;">40 desks<br><strong style="color:var(--rose-deep);">4,5tr/desk</strong><br><span style="font-size:9px;">sàn 4,1tr</span></div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:600;">90tr</div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:600;">126tr</div>
-        <div style="padding:14px 8px;text-align:center;font-size:14px;font-weight:800;color:var(--rose-deep);background:rgba(242,224,220,0.5);">144tr</div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:600;">162tr</div>
-      </div>
-      <!-- Event row -->
-      <div style="display:grid;grid-template-columns:2fr 70px 100px 100px 100px 100px 100px;border-bottom:1px solid var(--border);background:rgba(250,247,245,0.5);">
-        <div style="padding:14px 16px;">
-          <div style="display:flex;align-items:center;gap:8px;">
-            <div style="width:8px;height:8px;border-radius:2px;background:#7A3F3C;flex-shrink:0;"></div>
-            <div>
-              <div style="font-size:13px;font-weight:700;">Event / Conference Hall</div>
-              <div style="font-size:11px;color:var(--muted);">20 buổi/tháng tiềm năng · 3tr avg/buổi</div>
-            </div>
-          </div>
-        </div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:700;color:var(--rose-deep);">240</div>
-        <div style="padding:14px 8px;text-align:center;font-size:11px;color:var(--muted);line-height:1.4;">16 buổi TT<br><strong style="color:var(--rose-deep);">15tr/buổi</strong><br><span style="font-size:9px;">corp event</span></div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:600;">120tr</div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:600;">168tr</div>
-        <div style="padding:14px 8px;text-align:center;font-size:14px;font-weight:800;color:var(--rose-deep);background:rgba(242,224,220,0.5);">192tr</div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:600;">216tr</div>
-      </div>
-      <!-- Meeting row -->
-      <div style="display:grid;grid-template-columns:2fr 70px 100px 100px 100px 100px 100px;border-bottom:2px solid var(--rose-light);background:#fff;">
-        <div style="padding:14px 16px;">
-          <div style="display:flex;align-items:center;gap:8px;">
-            <div style="width:8px;height:8px;border-radius:2px;background:#D4857A;flex-shrink:0;"></div>
-            <div>
-              <div style="font-size:13px;font-weight:700;">Meeting Rooms</div>
-              <div style="font-size:11px;color:var(--muted);">8 phòng · 350k/giờ · avg 4h/ngày/phòng</div>
-            </div>
-          </div>
-        </div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:700;color:var(--rose-deep);">120</div>
-        <div style="padding:14px 8px;text-align:center;font-size:11px;color:var(--muted);line-height:1.4;">704h/tháng<br><strong style="color:var(--rose-deep);">450k/giờ</strong><br><span style="font-size:9px;">sàn 207k</span></div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:600;">158.4tr</div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:600;">221.8tr</div>
-        <div style="padding:14px 8px;text-align:center;font-size:14px;font-weight:800;color:var(--rose-deep);background:rgba(242,224,220,0.5);">253.4tr</div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:600;">285.1tr</div>
-      </div>
-      <!-- TOTAL ROW -->
-      <div style="display:grid;grid-template-columns:2fr 70px 100px 100px 100px 100px 100px;background:var(--blush);">
-        <div style="padding:14px 16px;">
-          <div style="font-size:13px;font-weight:800;">TỔNG DOANH THU KHÔNG GIAN</div>
-          <div style="font-size:10px;color:var(--rose-deep);margin-top:3px;font-weight:600;">★ BEP từ space: 90% CS · Trên 90% = lợi nhuận + Membership là bonus</div>
-        </div>
-        <div style="padding:14px 8px;text-align:center;font-size:13px;font-weight:700;color:var(--muted);">2.310m²</div>
-        <div style="padding:14px 8px;"></div>
-        <div style="padding:14px 8px;text-align:center;font-size:14px;font-weight:800;color:var(--rose-deep);">1.478tr</div>
-        <div style="padding:14px 8px;text-align:center;font-size:14px;font-weight:800;color:var(--rose-deep);">2.069tr</div>
-        <div style="padding:14px 8px;text-align:center;font-size:15px;font-weight:900;color:var(--rose-deep);background:rgba(201,123,114,0.15);">2.364tr</div>
-        <div style="padding:14px 8px;text-align:center;font-size:14px;font-weight:800;color:var(--rose-deep);">2.660tr ≈ Cost</div>
+      <div class="zones-metric">
+        <div class="zones-metric__label">Non-desk</div>
+        <div class="zones-metric__value">322 tr</div>
+        <div class="zones-metric__note">21% (Meeting + Event + Showroom + Café + Anc)</div>
       </div>
     </div>
 
-    <!-- OpEx vs Revenue 3000m2 -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
-      <!-- OpEx table -->
-      <div style="border:1px solid var(--border);border-radius:8px;overflow:hidden;">
-        <div style="padding:14px 18px;background:var(--ink);color:#fff;">
-          <div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;opacity:0.5;margin-bottom:4px;">Chi phí vận hành / tháng</div>
-          <div style="font-size:14px;font-weight:700;">3 kịch bản vị trí · giá thực tế TP.HCM</div>
-        </div>
-        <table style="width:100%;border-collapse:collapse;">
-          <thead>
-            <tr style="background:rgba(0,0,0,0.04);">
-              <th style="padding:10px 14px;text-align:left;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border);">Khoản mục</th>
-              <th style="padding:10px 8px;text-align:center;font-size:10px;font-weight:700;color:var(--orange);border-bottom:1px solid var(--border);">Bán TT<br><span style="font-weight:400;opacity:0.7;">Q.7/Tân Bình<br>~280k/m²</span></th>
-              <th style="padding:10px 8px;text-align:center;font-size:10px;font-weight:700;color:var(--rose-deep);border-bottom:1px solid var(--border);background:rgba(168,94,86,0.07);">★ Trung tâm<br><span style="font-weight:400;opacity:0.7;">Q.1/Q.3<br>~500k/m²</span></th>
-              <th style="padding:10px 8px;text-align:center;font-size:10px;font-weight:700;color:#6B21A8;border-bottom:1px solid var(--border);">CBD Premium<br><span style="font-weight:400;opacity:0.7;">Thủ Thiêm/BT<br>~700k/m²</span></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="border-bottom:1px solid var(--border);">
-              <td style="padding:10px 14px;font-size:12px;font-weight:600;">Thuê mặt bằng<br><span style="font-size:10px;color:var(--muted);font-weight:400;">3.000m² × giá/m²</span></td>
-              <td style="padding:10px 8px;text-align:center;font-size:13px;font-weight:800;color:var(--orange);">840tr</td>
-              <td style="padding:10px 8px;text-align:center;font-size:13px;font-weight:800;color:var(--rose-deep);background:rgba(168,94,86,0.06);">1.500tr</td>
-              <td style="padding:10px 8px;text-align:center;font-size:13px;font-weight:800;color:#6B21A8;">2.100tr</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);background:rgba(250,247,245,0.5);">
-              <td style="padding:10px 14px;font-size:12px;font-weight:600;">Nhân sự (25 người)<br><span style="font-size:10px;color:var(--muted);font-weight:400;">Avg 13tr/người incl. BHXH/BHYT</span></td>
-              <td colspan="3" style="padding:10px 8px;text-align:center;font-size:13px;font-weight:700;">325tr</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);">
-              <td style="padding:10px 14px;font-size:12px;font-weight:600;">Điện · Nước · Internet · BMS<br><span style="font-size:10px;color:var(--muted);font-weight:400;">Hệ thống HVAC toà nhà, server, fiber</span></td>
-              <td colspan="3" style="padding:10px 8px;text-align:center;font-size:13px;font-weight:700;">105tr</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);background:rgba(250,247,245,0.5);">
-              <td style="padding:10px 14px;font-size:12px;font-weight:600;">Vệ sinh · Bảo trì · Bảo vệ<br><span style="font-size:10px;color:var(--muted);font-weight:400;">Outsource đội vệ sinh + bảo vệ 24/7</span></td>
-              <td colspan="3" style="padding:10px 8px;text-align:center;font-size:13px;font-weight:700;">35tr</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);">
-              <td style="padding:10px 14px;font-size:12px;font-weight:600;">Marketing · Vận hành · Phần mềm<br><span style="font-size:10px;color:var(--muted);font-weight:400;">Ads, ERP, PMS, CRM, văn phòng phẩm</span></td>
-              <td colspan="3" style="padding:10px 8px;text-align:center;font-size:13px;font-weight:700;">60tr</td>
-            </tr>
-            <tr style="border-bottom:2px solid var(--blue);background:rgba(61,90,128,0.05);">
-              <td style="padding:10px 14px;font-size:12px;font-weight:600;color:var(--blue);">📉 Khấu hao CapEx (18,7 tỷ ÷ 36 tháng)<br><span style="font-size:10px;color:var(--muted);font-weight:400;">Phân bổ CapEx đầu tư vào chi phí tháng · chi phí kế toán + dự phòng tái đầu tư</span></td>
-              <td colspan="3" style="padding:10px 8px;text-align:center;font-size:14px;font-weight:800;color:var(--blue);">519tr</td>
-            </tr>
-            <tr style="background:rgba(0,0,0,0.03);">
-              <td style="padding:10px 14px;font-size:12px;font-weight:700;">OpEx thuần (chưa khấu hao)</td>
-              <td style="padding:10px 8px;text-align:center;font-size:13px;font-weight:700;color:var(--orange);">1.365tr</td>
-              <td style="padding:10px 8px;text-align:center;font-size:13px;font-weight:700;color:var(--rose-deep);background:rgba(168,94,86,0.06);">2.025tr</td>
-              <td style="padding:10px 8px;text-align:center;font-size:13px;font-weight:700;color:#6B21A8;">2.625tr</td>
-            </tr>
-            <tr style="background:var(--blush);">
-              <td style="padding:12px 14px;font-size:13px;font-weight:800;">TỔNG CHI PHÍ THỰC TẾ (incl. khấu hao)</td>
-              <td style="padding:12px 8px;text-align:center;font-size:15px;font-weight:900;color:var(--orange);">1.884tr</td>
-              <td style="padding:12px 8px;text-align:center;font-size:15px;font-weight:900;color:var(--rose-deep);background:rgba(168,94,86,0.1);">2.544tr ★</td>
-              <td style="padding:12px 8px;text-align:center;font-size:15px;font-weight:900;color:#6B21A8;">3.144tr</td>
-            </tr>
-          </tbody>
-        </table>
+    <!-- DT Add-on -->
+    <h3 class="be-subsection-title">Dự toán Doanh thu Add-on Services (Phễu VPA)</h3>
+    <p style="font-size:14px;line-height:1.8;margin-bottom:12px;max-width:800px;color:var(--muted);">VPA = NLA × 0,3
+      (900 VPA cho 3.000m²). VPA 0đ là lead magnet — mỗi DN đăng ký GPKD miễn phí đều là warm lead có nhu cầu dịch vụ
+      ngay lập tức. <b style="color:var(--ink);">1 location phục vụ ~1.092 DN</b> (900 VPA + 66 DN ngồi Hub) — lead
+      pool lớn hơn nhiều so với chỉ tính trên diện tích vật lý.</p>
+
+    <div class="be-note" style="margin-bottom:20px;">
+      <b>Phễu Pitch Deck:</b> 900 VPA 0đ → 30% convert trả phí → ARR ~800 tr/năm chỉ từ membership. Dưới đây là doanh
+      thu add-on từ <b>toàn bộ phễu 1.092 DN</b>, tính theo giá Pitch Deck, conversion bảo thủ, hoa hồng theo thỏa
+      thuận đối tác.
+    </div>
+
+    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+      <table class="summary-table" style="min-width:700px;">
+        <thead>
+          <tr>
+            <th>Nhóm DV</th>
+            <th style="text-align:center;">Lead pool</th>
+            <th style="text-align:center;">Conversion</th>
+            <th style="text-align:center;">Giá &amp; HH</th>
+            <th style="text-align:center;">DT Giong/th</th>
+            <th>Căn cứ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-weight:700;">💳 Membership upgrade</td>
+            <td style="text-align:center;">900 VPA</td>
+            <td style="text-align:center;font-weight:700;">30% → 150 DN</td>
+            <td style="text-align:center;">TB ~450K/DN/th</td>
+            <td style="text-align:center;font-weight:800;color:var(--green);">122 tr</td>
+            <td style="font-size:11px;color:var(--muted);"><b>Pitch Deck:</b> ARR ~800 tr/năm từ VPA→trả phí</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700;">🧾 Giong Tax</td>
+            <td style="text-align:center;">900 VPA + 66 Hub</td>
+            <td style="text-align:center;">30% VPA + 50% Hub</td>
+            <td style="text-align:center;">2 tr/th × HH 15%</td>
+            <td style="text-align:center;font-weight:800;color:var(--green);">116 tr</td>
+            <td style="font-size:11px;color:var(--muted);">100% DN bắt buộc KT (Luật KT); 183 clients</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700;">📈 Giong Grow</td>
+            <td style="text-align:center;">900 VPA + 66 Hub</td>
+            <td style="text-align:center;">10% VPA + 20% Hub</td>
+            <td style="text-align:center;">4–10 tr/th × HH 20%</td>
+            <td style="text-align:center;font-weight:800;color:var(--green);">148 tr</td>
+            <td style="font-size:11px;color:var(--muted);">SME chi 5–10% DT cho MKT; 63 clients</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700;">📣 Giong Promote</td>
+            <td style="text-align:center;">Hub + Network</td>
+            <td style="text-align:center;">4 events/th</td>
+            <td style="text-align:center;">3–15 tr/event</td>
+            <td style="text-align:center;font-weight:800;color:var(--green);">70 tr</td>
+            <td style="font-size:11px;color:var(--muted);">Trade events + Pitching Day + BM fees</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700;">⚖️ Giong Legal</td>
+            <td style="text-align:center;">900 VPA (ĐKKD)</td>
+            <td style="text-align:center;">50% ĐKKD + 20%/năm</td>
+            <td style="text-align:center;">3–5 tr/case × HH 15%</td>
+            <td style="text-align:center;font-weight:800;color:var(--green);">36 tr</td>
+            <td style="font-size:11px;color:var(--muted);">VPA = khách hàng ĐKKD tự nhiên</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700;">🤖 Giong AI</td>
+            <td style="text-align:center;">900 VPA + 66 Hub</td>
+            <td style="text-align:center;">8% VPA + 15% Hub</td>
+            <td style="text-align:center;">1,2 tr/th × HH 25%</td>
+            <td style="text-align:center;font-weight:800;color:var(--green);">144 tr</td>
+            <td style="font-size:11px;color:var(--muted);">SaaS pen. 10–15% SME VN</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700;">🤝 Giong Connect</td>
+            <td style="text-align:center;">566 ecosystem</td>
+            <td style="text-align:center;">8%</td>
+            <td style="text-align:center;">15 tr/deal × HH 15%</td>
+            <td style="text-align:center;font-weight:800;color:var(--green);">24 tr</td>
+            <td style="font-size:11px;color:var(--muted);">B2B marketplace 1.092 DN</td>
+          </tr>
+          <tr style="background:rgba(168,94,86,0.12);">
+            <td style="font-weight:800;font-size:14px;">TỔNG ADD-ON</td>
+            <td style="text-align:center;font-weight:700;">1.092 DN</td>
+            <td></td>
+            <td></td>
+            <td style="text-align:center;font-weight:900;font-size:17px;color:var(--rose-deep);">~546 tr/th</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="be-note be-note--highlight" style="margin-top:16px;">
+      <b>Insight quan trọng:</b> DT add-on (~546 tr/th) gần bằng DT diện tích (1.510 tr/th) — nhưng margin add-on là
+      <b>85%</b> (chủ yếu hoa hồng, không tốn m²) vs 55% diện tích. Mỗi đồng add-on đóng góp vào NOI gấp 1,5× so với 1
+      đồng diện tích. Đây là lý do mô hình Hub Services vượt trội coworking truyền thống.
+    </div>
+
+    <div class="zones-metrics" style="margin-top:20px;">
+      <div class="zones-metric">
+        <div class="zones-metric__label">DT Add-on</div>
+        <div class="zones-metric__value" style="color:var(--green);">546 tr</div>
+        <div class="zones-metric__note">= 6,56 tỷ/năm · thuần hoa hồng</div>
       </div>
-
-      <!-- Balance visual 3000m2 -->
-      <div style="border:1px solid var(--border);border-radius:8px;overflow:hidden;">
-        <div style="padding:14px 18px;background:var(--rose-deep);color:#fff;">
-          <div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;opacity:0.5;margin-bottom:4px;">Cân đối Thu – Chi</div>
-          <div style="font-size:14px;font-weight:700;">★ Chọn Trung tâm Q.1/Q.3 — DT space max 1.342tr, OpEx 2.025tr</div>
-        </div>
-        <div style="padding:18px;">
-          <div style="display:flex;flex-direction:column;gap:16px;">
-
-            <div>
-              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-                <div style="font-size:12px;font-weight:700;color:var(--orange);">📍 Bán TT (OpEx: 1.365tr)</div>
-                <div style="font-size:11px;background:rgba(196,98,45,0.12);color:var(--orange);padding:3px 10px;border-radius:10px;font-weight:700;">BEP ~91% CS ⚠️</div>
-              </div>
-              <div style="position:relative;height:28px;background:rgba(0,0,0,0.06);border-radius:4px;overflow:hidden;">
-                <div style="position:absolute;left:0;top:0;height:100%;width:91%;background:var(--orange);opacity:0.65;border-radius:4px;display:flex;align-items:center;padding-left:8px;">
-                  <span style="font-size:10px;font-weight:700;color:#fff;">Cần 91% CS · khả thi từ tháng 12–18 với pre-sell PO</span>
-                </div>
-              </div>
-              <div style="font-size:11px;color:var(--muted);margin-top:5px;">⚠️ Space gần đủ bù nếu 91% CS, cần thêm 100–200tr từ Membership trong giai đoạn đầu</div>
-            </div>
-
-            <div style="border:2px solid var(--rose-deep);border-radius:8px;overflow:hidden;">
-              <div style="padding:8px 14px;background:var(--rose-deep);color:#fff;font-size:11px;font-weight:700;letter-spacing:1px;">★ KỊCH BẢN ĐÃ CHỌN</div>
-              <div style="padding:12px 14px;">
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-                  <div style="font-size:12px;font-weight:700;color:var(--rose-deep);">📍 Trung tâm Q.1/Q.3 (OpEx: 2.025tr)</div>
-                  <div style="font-size:11px;background:rgba(168,94,86,0.12);color:var(--rose-deep);padding:3px 10px;border-radius:10px;font-weight:700;">Thiếu 683tr — cần Membership + Services</div>
-                </div>
-                <div style="position:relative;height:28px;background:rgba(0,0,0,0.06);border-radius:4px;overflow:hidden;">
-                  <div style="position:absolute;left:0;top:0;height:100%;width:66%;background:var(--rose-deep);opacity:0.8;border-radius:4px;display:flex;align-items:center;padding-left:8px;">
-                    <span style="font-size:10px;font-weight:700;color:#fff;">Space max: 1.342tr (66%)</span>
-                  </div>
-                  <div style="position:absolute;left:66%;top:0;height:100%;width:34%;background:var(--rose-light);opacity:0.7;display:flex;align-items:center;padding-left:8px;">
-                    <span style="font-size:10px;font-weight:700;color:var(--rose-deep);">Cần: 683tr</span>
-                  </div>
-                </div>
-                <div style="font-size:11px;color:var(--muted);margin-top:8px;line-height:1.6;">⚠️ Space đóng góp 66% OpEx — cần <strong>683tr/tháng từ VPA Membership + Biz Services</strong> · hoàn toàn khả thi với quy mô lớn (xem kế hoạch bên dưới)</div>
-              </div>
-            </div>
-
-            <div>
-              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-                <div style="font-size:12px;font-weight:700;color:#6B21A8;">📍 CBD Premium Thủ Thiêm (OpEx: 2.625tr)</div>
-                <div style="font-size:11px;background:rgba(107,33,168,0.1);color:#6B21A8;padding:3px 10px;border-radius:10px;font-weight:700;">Thiếu 1.283tr</div>
-              </div>
-              <div style="position:relative;height:28px;background:rgba(0,0,0,0.06);border-radius:4px;overflow:hidden;">
-                <div style="position:absolute;left:0;top:0;height:100%;width:51%;background:#6B21A8;opacity:0.4;border-radius:4px;display:flex;align-items:center;padding-left:8px;">
-                  <span style="font-size:10px;font-weight:700;color:#fff;">Space: 1.342tr / OpEx: 2.625tr</span>
-                </div>
-              </div>
-              <div style="font-size:11px;color:var(--muted);margin-top:5px;">🏆 Phase 4 — chỉ triển khai khi đã có 500+ VPA member + brand flagship đã định vị</div>
-            </div>
-
-            <div style="padding:14px;background:rgba(168,94,86,0.07);border-radius:6px;border-left:3px solid var(--rose-deep);margin-top:4px;">
-              <div style="font-size:11px;font-weight:700;color:var(--rose-deep);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">💡 Kế hoạch bù đắp 683tr/tháng tại Trung tâm Q.1/Q.3</div>
-              <div style="display:flex;flex-direction:column;gap:6px;">
-                <div style="font-size:12px;color:var(--ink);">🎫 VPA Growth (2,999k) × 500 thành viên = <strong>150tr/tháng</strong></div>
-                <div style="font-size:12px;color:var(--ink);">🎫 Team Plan (9,999k) × 30 team = <strong>300tr/tháng</strong></div>
-                <div style="font-size:12px;color:var(--ink);">🧾 Biz Tax + Legal + Grow (hoa hồng avg 15%) = <strong>120tr/tháng</strong></div>
-                <div style="font-size:12px;color:var(--ink);">📣 Biz Promote + Event sponsorship = <strong>80–120tr/tháng</strong></div>
-                <div style="font-size:12px;font-weight:700;color:var(--rose-deep);border-top:1px solid var(--border);padding-top:6px;margin-top:2px;">→ Tổng ~650–690tr · đạt được từ tháng 12–18 với chiến lược pre-sell VPA và Event từ ngày 1</div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="zones-metric zones-metric--highlight">
+        <div class="zones-metric__label">DT GROSS TỔNG</div>
+        <div class="zones-metric__value">2.274 tr</div>
+        <div class="zones-metric__note">DT 1.728 + Add-on 546 = 27,3 tỷ/năm</div>
+      </div>
+      <div class="zones-metric">
+        <div class="zones-metric__label">Tỷ trọng</div>
+        <div class="zones-metric__value">76 / 24</div>
+        <div class="zones-metric__note">Diện tích 76% · Add-on 24%</div>
       </div>
     </div>
   </div>
+  <!-- Payback -->
+  <h3 class="be-subsection-title" style="margin-top:32px;">Payback đầu tư</h3>
+  <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+    <table class="summary-table" style="min-width:520px;">
+      <thead>
+        <tr>
+          <th>Năm</th>
+          <th style="text-align:center;">NOI/năm</th>
+          <th style="text-align:center;">NOI lũy kế</th>
+          <th style="text-align:center;">Trạng thái</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-weight:700;">Năm 1 (Pre-Sales + ramp)</td>
+          <td style="text-align:center;font-weight:700;color:var(--green);">+6,45 tỷ</td>
+          <td style="text-align:center;">6,45 tỷ</td>
+          <td
+            style="text-align:center;font-size:11px;background:rgba(196,98,45,0.1);color:var(--orange);padding:4px 8px;border-radius:4px;">
+            Giong tự mở · không Sys/Roy</td>
+        </tr>
+        <tr style="background:rgba(74,124,89,0.1);">
+          <td style="font-weight:800;">Cuối năm 2 (~T22)</td>
+          <td style="text-align:center;font-weight:800;color:var(--green);">+16,20 tỷ</td>
+          <td style="text-align:center;font-weight:800;color:var(--green);">22,65 tỷ</td>
+          <td style="text-align:center;font-size:11px;font-weight:700;color:var(--green);">HÒA VỐN ĐẦU TƯ ✓</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700;">Năm 3</td>
+          <td style="text-align:center;font-weight:700;color:var(--green);">+16,20 tỷ</td>
+          <td style="text-align:center;color:var(--green);">38,85 tỷ</td>
+          <td style="text-align:center;font-size:11px;font-weight:700;color:var(--green);">Lợi nhuận +18,0 tỷ</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700;">Năm 5</td>
+          <td style="text-align:center;font-weight:700;color:var(--green);">+16,20 tỷ</td>
+          <td style="text-align:center;color:var(--green);">71,25 tỷ</td>
+          <td style="text-align:center;font-size:11px;font-weight:700;color:var(--green);">Lợi nhuận +50,4 tỷ</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-</div>
+  <div class="zones-metrics" style="margin-top:20px;margin-bottom:40px;">
+    <div class="zones-metric zones-metric--highlight">
+      <div class="zones-metric__label">Payback</div>
+      <div class="zones-metric__value">~1,3 năm</div>
+      <div class="zones-metric__note">CapEx 20,81 tỷ · Không Sys/Roy</div>
+    </div>
+    <div class="zones-metric">
+      <div class="zones-metric__label">NOI/năm</div>
+      <div class="zones-metric__value" style="color:var(--green);">16,20 tỷ</div>
+      <div class="zones-metric__note">NOI 1.350 tr/th · Margin 50%</div>
+    </div>
+    <div class="zones-metric">
+      <div class="zones-metric__label">ROI (ổn định)</div>
+      <div class="zones-metric__value" style="color:var(--green);">~78%</div>
+      <div class="zones-metric__note">16,20 tỷ ÷ 20,81 tỷ</div>
+    </div>
+  </div>
+
+  <!-- Giá trị cho Chủ nhà -->
+  <h3 class="be-subsection-title">③ Giá trị cho Chủ nhà — Tại sao nên cho Giong thuê?</h3>
+  <p style="font-size:14px;line-height:1.8;margin-bottom:16px;max-width:800px;color:var(--muted);">Giong thuê nguyên
+    block 3.000m² với HĐ dài hạn 3–5 năm:</p>
+  <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+    <table class="summary-table" style="min-width:560px;">
+      <thead>
+        <tr>
+          <th>Chỉ số (góc nhìn Chủ nhà)</th>
+          <th style="text-align:center;">Cho thuê lẻ (TT)</th>
+          <th style="text-align:center;">Cho Giong Space thuê</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-weight:700;">Công suất</td>
+          <td style="text-align:center;color:var(--rose-deep);font-weight:700;">75% (biến động)</td>
+          <td style="text-align:center;font-weight:700;color:var(--green);">100% nguyên block</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700;">Rent thu về/tháng</td>
+          <td style="text-align:center;">843 tr</td>
+          <td style="text-align:center;font-weight:700;color:var(--green);">1.125 tr</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700;">OPEX quản lý CĐT</td>
+          <td style="text-align:center;">~150 tr</td>
+          <td style="text-align:center;color:var(--green);">~50 tr (Giong tự VH)</td>
+        </tr>
+        <tr style="background:rgba(74,124,89,0.1);">
+          <td style="font-weight:800;">NOI Chủ nhà/tháng</td>
+          <td style="text-align:center;font-weight:700;">693 tr</td>
+          <td style="text-align:center;font-weight:900;font-size:15px;color:var(--green);">1.075 tr (+55%)</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700;">Rủi ro vacancy</td>
+          <td style="text-align:center;color:var(--rose-deep);">Cao · 20–30%/năm</td>
+          <td style="text-align:center;color:var(--green);">0% · Giong chịu</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700;">HĐ thuê</td>
+          <td style="text-align:center;">1 năm · dễ churn</td>
+          <td style="text-align:center;color:var(--green);">3–5 năm · ổn định</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700;">Cọc</td>
+          <td style="text-align:center;">1–2 tháng</td>
+          <td style="text-align:center;color:var(--green);">3 tháng (3,38 tỷ)</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700;">Fit-out CĐT</td>
+          <td style="text-align:center;">0</td>
+          <td style="text-align:center;color:var(--green);">0 (Giong đầu tư 13,5 tỷ)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- DT Giong tự mở 1 location -->
+  <h3 class="be-subsection-title" style="margin-top:32px;">Doanh thu Giong từ 1 location Tự mở</h3>
+  <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+    <table class="summary-table" style="min-width:560px;">
+      <thead>
+        <tr>
+          <th>Khoản mục</th>
+          <th style="text-align:center;">Cách tính</th>
+          <th style="text-align:center;">/tháng</th>
+          <th style="text-align:center;">/năm</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-weight:700;">DT Diện tích</td>
+          <td style="text-align:center;">8 nguồn DT</td>
+          <td style="text-align:center;font-weight:700;">1.728 tr</td>
+          <td style="text-align:center;font-weight:700;">20,7 tỷ</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700;">DT Add-on (thuần HH)</td>
+          <td style="text-align:center;">7 nhóm DV</td>
+          <td style="text-align:center;font-weight:700;">973 tr</td>
+          <td style="text-align:center;font-weight:700;">11,68 tỷ</td>
+        </tr>
+        <tr style="background:rgba(242,224,220,0.6);">
+          <td style="font-weight:800;">DT GROSS</td>
+          <td></td>
+          <td style="text-align:center;font-weight:800;font-size:15px;">2.701 tr</td>
+          <td style="text-align:center;font-weight:800;font-size:15px;">32,4 tỷ</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700;color:var(--rose-deep);">Rent ($15/m²)</td>
+          <td style="text-align:center;">Cố định</td>
+          <td style="text-align:center;">−1.125 tr</td>
+          <td style="text-align:center;">−13,5 tỷ</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700;">OPEX Location ($2,5/m²)</td>
+          <td style="text-align:center;">Cố định</td>
+          <td style="text-align:center;">−188 tr</td>
+          <td style="text-align:center;">−2,25 tỷ</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700;">S&amp;M ($0,5/m²)</td>
+          <td style="text-align:center;">Marketing, BD</td>
+          <td style="text-align:center;">−38 tr</td>
+          <td style="text-align:center;">−0,45 tỷ</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700;color:var(--muted);">Sys 5% + Roy 7%</td>
+          <td style="text-align:center;color:var(--muted);">Giong = HQ</td>
+          <td style="text-align:center;color:var(--muted);">0</td>
+          <td style="text-align:center;color:var(--muted);">0</td>
+        </tr>
+        <tr style="background:rgba(74,124,89,0.1);">
+          <td style="font-weight:800;">NOI Giong</td>
+          <td></td>
+          <td style="text-align:center;font-weight:900;font-size:16px;color:var(--green);">1.350 tr</td>
+          <td style="text-align:center;font-weight:900;font-size:16px;color:var(--green);">16,20 tỷ</td>
+        </tr>
+        <tr>
+          <td>Khấu hao (13,5 tỷ / 36th)</td>
+          <td style="text-align:center;">Chỉ Fit-out</td>
+          <td style="text-align:center;">−375 tr</td>
+          <td style="text-align:center;">−4,5 tỷ</td>
+        </tr>
+        <tr style="background:rgba(74,124,89,0.1);">
+          <td style="font-weight:800;">LN sau KH</td>
+          <td></td>
+          <td style="text-align:center;font-weight:800;font-size:15px;color:var(--green);">975 tr</td>
+          <td style="text-align:center;font-weight:800;font-size:15px;color:var(--green);">11,70 tỷ</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="zones-metrics" style="margin-top:20px;margin-bottom:40px;">
+    <div class="zones-metric zones-metric--highlight">
+      <div class="zones-metric__label">NOI / tháng</div>
+      <div class="zones-metric__value">1.350 tr</div>
+      <div class="zones-metric__note">Margin 50% · Không Sys/Roy</div>
+    </div>
+    <div class="zones-metric">
+      <div class="zones-metric__label">CapEx</div>
+      <div class="zones-metric__value">20,81 tỷ</div>
+      <div class="zones-metric__note">Fit-out + Cọc + Rent 3th + Buffer</div>
+    </div>
+    <div class="zones-metric">
+      <div class="zones-metric__label">Payback / ROI</div>
+      <div class="zones-metric__value" style="color:var(--green);">1,3y · 78%</div>
+      <div class="zones-metric__note">Giong giữ 100% NOI</div>
+    </div>
+  </div>
+
+  <!-- DT Franchise -->
+  <h3 class="be-subsection-title">Doanh thu Giong HQ từ Franchise (1 location)</h3>
+  <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+    <table class="summary-table" style="min-width:580px;">
+      <thead>
+        <tr>
+          <th>Khoản thu</th>
+          <th style="text-align:center;">Loại</th>
+          <th style="text-align:center;">Cách tính</th>
+          <th style="text-align:center;">Số tiền</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-weight:700;">Initial Franchise Fee (IFF)</td>
+          <td style="text-align:center;">1 lần</td>
+          <td style="text-align:center;">Cố định</td>
+          <td style="text-align:center;font-weight:800;color:var(--green);">500 tr</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700;">① Sys Fee (Platform, IT, HQ)</td>
+          <td style="text-align:center;">Hàng tháng</td>
+          <td style="text-align:center;">5% × DT Gross 2.701</td>
+          <td style="text-align:center;font-weight:800;color:var(--green);">135 tr/th</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700;">② Royalty Fee (Brand)</td>
+          <td style="text-align:center;">Hàng tháng</td>
+          <td style="text-align:center;">7% × DT Gross 2.701</td>
+          <td style="text-align:center;font-weight:800;color:var(--green);">189 tr/th</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700;">③ OPEX Location markup ($0,5/m²)</td>
+          <td style="text-align:center;">Hàng tháng</td>
+          <td style="text-align:center;">($3 − $2,5) × 3.000m²</td>
+          <td style="text-align:center;font-weight:800;color:var(--green);">38 tr/th</td>
+        </tr>
+        <tr style="background:rgba(242,224,220,0.6);">
+          <td style="font-weight:800;">Tổng DT recurring</td>
+          <td style="text-align:center;">Hàng tháng</td>
+          <td style="text-align:center;">Sys + Roy + OPEX markup</td>
+          <td style="text-align:center;font-weight:800;color:var(--rose-deep);">362 tr/th = 4,34 tỷ/năm</td>
+        </tr>
+        <tr style="background:rgba(74,124,89,0.1);">
+          <td style="font-weight:800;">Giong CapEx</td>
+          <td style="text-align:center;">—</td>
+          <td style="text-align:center;">Franchisee đầu tư</td>
+          <td style="text-align:center;font-weight:900;font-size:15px;color:var(--green);">0</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="be-note" style="margin-bottom:32px;">
+    <b>So sánh:</b> Tự mở → NOI <b>1.350 tr/th</b> (CapEx 20,81 tỷ). Franchise → <b>362 tr/th</b> (CapEx 0). Tự mở lãi
+    gấp 3,7× nhưng cần vốn. 4 franchise ≈ 1 tự mở về doanh thu.
+  </div>
+
+  <!-- 3 Phương thức -->
+  <h3 class="be-subsection-title">3 Phương thức Phát triển</h3>
+  <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+    <table class="summary-table" style="min-width:680px;">
+      <thead>
+        <tr>
+          <th>Chỉ số</th>
+          <th style="text-align:center;">A. Đi thuê $15/m²<br><span style="font-weight:400;font-size:9px;">Giong tự vận
+              hành</span></th>
+          <th style="text-align:center;">B. Franchise<br><span style="font-weight:400;font-size:9px;">Franchisee thuê
+              MB</span></th>
+          <th style="text-align:center;">C. Chủ nhà + Franchise ★<br><span style="font-weight:400;font-size:9px;">Chủ
+              nhà = Franchisee</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:rgba(0,0,0,0.03);">
+          <td colspan="4"
+            style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:8px 14px 4px;">
+            Doanh thu &amp; Chi phí</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700;">DT Gross/th</td>
+          <td style="text-align:center;">2.701 tr</td>
+          <td style="text-align:center;">2.701 tr</td>
+          <td style="text-align:center;">2.701 tr</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700;">Rent</td>
+          <td style="text-align:center;">1.125 tr (Giong trả)</td>
+          <td style="text-align:center;">1.125 tr (Franchisee trả)</td>
+          <td style="text-align:center;color:var(--green);font-weight:700;">0 (sở hữu MB)</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700;">OPEX + S&amp;M + Sys + Roy</td>
+          <td style="text-align:center;">226 tr (OPEX+S&amp;M)</td>
+          <td style="text-align:center;">587 tr</td>
+          <td style="text-align:center;">587 tr</td>
+        </tr>
+        <tr style="background:rgba(74,124,89,0.1);">
+          <td style="font-weight:800;">NOI tổng/th</td>
+          <td style="text-align:center;font-weight:900;font-size:15px;color:var(--green);">1.350 tr</td>
+          <td style="text-align:center;font-weight:800;color:var(--green);">989 tr</td>
+          <td style="text-align:center;font-weight:900;font-size:15px;color:var(--green);">2.114 tr</td>
+        </tr>
+        <tr style="background:rgba(242,224,220,0.4);">
+          <td colspan="4"
+            style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:8px 14px 4px;">
+            Góc nhìn Giong Space</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700;">Giong nhận/th</td>
+          <td style="text-align:center;font-weight:700;">1.350 tr (100% NOI)</td>
+          <td style="text-align:center;font-weight:700;">362 tr</td>
+          <td style="text-align:center;font-weight:700;">362 tr</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700;">CapEx Giong</td>
+          <td style="text-align:center;color:var(--rose-deep);font-weight:700;">20,81 tỷ</td>
+          <td style="text-align:center;color:var(--green);font-weight:700;">0</td>
+          <td style="text-align:center;color:var(--green);font-weight:700;">0</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700;">Payback Giong</td>
+          <td style="text-align:center;">~1,3 năm</td>
+          <td style="text-align:center;color:var(--green);">Ngay lập tức</td>
+          <td style="text-align:center;color:var(--green);">Ngay lập tức</td>
+        </tr>
+        <tr style="background:rgba(242,224,220,0.4);">
+          <td colspan="4"
+            style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:8px 14px 4px;">
+            Góc nhìn Đối tác</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700;">Đối tác nhận/th</td>
+          <td style="text-align:center;color:var(--muted);">—</td>
+          <td style="text-align:center;">989 tr</td>
+          <td style="text-align:center;font-weight:800;font-size:15px;color:var(--green);">2.114 tr</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700;">CapEx Đối tác</td>
+          <td style="text-align:center;color:var(--muted);">0</td>
+          <td style="text-align:center;">21,43 tỷ</td>
+          <td style="text-align:center;">14,68 tỷ</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700;">Payback Đối tác</td>
+          <td style="text-align:center;color:var(--muted);">—</td>
+          <td style="text-align:center;">~1,8 năm</td>
+          <td style="text-align:center;color:var(--green);font-weight:700;">~0,6 năm</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700;">vs cho thuê thô (693 tr)</td>
+          <td style="text-align:center;">CĐT: +55%</td>
+          <td style="text-align:center;color:var(--muted);">N/A</td>
+          <td style="text-align:center;color:var(--green);font-weight:700;">+205%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="zones-metrics" style="margin-top:20px;margin-bottom:16px;">
+    <div class="zones-metric">
+      <div class="zones-metric__label">A. Đi thuê</div>
+      <div class="zones-metric__value">1.350 tr</div>
+      <div class="zones-metric__note">Giong NOI · CapEx 20,81 tỷ · PB 1,3y</div>
+    </div>
+    <div class="zones-metric">
+      <div class="zones-metric__label">B. Franchise</div>
+      <div class="zones-metric__value" style="color:var(--green);">362 tr</div>
+      <div class="zones-metric__note">Giong DT · CapEx 0 · IFF 500 tr/loc</div>
+    </div>
+    <div class="zones-metric zones-metric--highlight">
+      <div class="zones-metric__label">C. Chủ nhà + Franchise</div>
+      <div class="zones-metric__value">362 tr + ★</div>
+      <div class="zones-metric__note">Giong 362 + CN 2.114 · Win-win</div>
+    </div>
+  </div>
+  <div class="be-note" style="margin-bottom:10px;"><b>A. Đi thuê:</b> Giong chịu toàn bộ rủi ro + CapEx nhưng giữ 100%
+    NOI. CĐT vẫn lợi: NOI +55% so với cho thuê thô.</div>
+  <div class="be-note" style="margin-bottom:10px;"><b>B. Franchise:</b> Franchisee thuê MB + vận hành + CapEx. Giong
+    nhận Sys+Roy+markup = 362 tr/th + IFF 500 tr. CapEx = 0.</div>
+  <div class="be-note be-note--highlight" style="margin-bottom:32px;"><b>C. Chủ nhà + Franchise ★:</b> Chủ nhà sở hữu MB
+    → rent = 0 → NOI 2.114 tr/th. CapEx 14,68 tỷ, payback 0,6 năm. Giong vẫn nhận 362 tr/th.</div>
+
+  <!-- Tổng hợp 1 location -->
+  <h3 class="be-subsection-title" style="font-size:clamp(16px,2vw,20px);">Tổng hợp 1 location — Giong HQ</h3>
+  <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+    <table class="summary-table" style="min-width:500px;">
+      <thead>
+        <tr>
+          <th>Phương thức</th>
+          <th style="text-align:center;">Giong NOI/th</th>
+          <th style="text-align:center;">Giong NOI/năm</th>
+          <th style="text-align:center;">Giong CapEx</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-weight:700;">A. Tự thuê $15/m²</td>
+          <td style="text-align:center;">1.350 tr</td>
+          <td style="text-align:center;font-weight:800;color:var(--green);">16,20 tỷ</td>
+          <td style="text-align:center;color:var(--rose-deep);font-weight:700;">20,81 tỷ</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700;">B. Franchise</td>
+          <td style="text-align:center;">362 tr</td>
+          <td style="text-align:center;font-weight:800;color:var(--green);">4,34 tỷ</td>
+          <td style="text-align:center;color:var(--green);font-weight:700;">0</td>
+        </tr>
+        <tr style="background:rgba(74,124,89,0.1);">
+          <td style="font-weight:800;">C. Chủ nhà + Franchise ★</td>
+          <td style="text-align:center;font-weight:700;">362 tr</td>
+          <td style="text-align:center;font-weight:800;color:var(--green);">4,34 tỷ</td>
+          <td style="text-align:center;color:var(--green);font-weight:700;">0</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 </div>

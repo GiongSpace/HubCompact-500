@@ -1078,3 +1078,95 @@ body {
   animation: growBar 1.2s ease forwards;
   width: var(--w);
 }
+
+/* ── ZONE METRICS SUMMARY ── */
+.zones-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.zones-metric {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px 24px;
+  background: var(--card);
+}
+
+.zones-metric--highlight {
+  background: rgba(168, 94, 86, 0.08);
+  border-color: rgba(168, 94, 86, 0.3);
+}
+
+.zones-metric__label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.zones-metric__value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: var(--rose-deep);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.zones-metric__note {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+/* ── ZONE NOTE BOX ── */
+.zones-note {
+  margin-top: 16px;
+  padding: 16px 20px;
+  background: rgba(184, 134, 11, 0.07);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 6px 6px 0;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--ink);
+}
+
+@media (max-width: 768px) {
+  .zones-metrics {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── BREAKEVEN DETAIL SECTION ── */
+.be-subsection-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(16px, 2vw, 22px);
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: var(--rose-deep);
+  margin-bottom: 12px;
+  margin-top: 32px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.be-note {
+  margin-top: 16px;
+  padding: 14px 20px;
+  background: rgba(0, 0, 0, 0.03);
+  border-left: 3px solid var(--muted);
+  border-radius: 0 6px 6px 0;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--ink);
+}
+
+.be-note--highlight {
+  background: rgba(168, 94, 86, 0.06);
+  border-left-color: var(--rose-deep);
+}
