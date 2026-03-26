@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Pitch Static Server",
+      "runtimeExecutable": "C:\\Users\\Surface\\AppData\\Local\\ms-playwright-go\\1.50.1\\node.exe",
+      "runtimeArgs": [".claude/serve.js"],
+      "port": 8080,
+      "autoPort": true
+    }
+  ]
+}
