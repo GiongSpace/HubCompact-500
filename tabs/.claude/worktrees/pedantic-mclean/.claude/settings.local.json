@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:chatgpt.com)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(where node:*)",
+      "Read(//c/Program Files/nodejs/**)",
+      "Read(//c/Users/Surface/AppData/Local/ms-playwright-go/1.50.1/**)"
+    ]
+  }
+}

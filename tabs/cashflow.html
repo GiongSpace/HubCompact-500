@@ -27,28 +27,48 @@
         <!--
           Cost = Rent + OPEX(188×CS%) + S&M_biến_động
 
-          COMMISSION — phân bổ từ tổng phase sm.html (trả khi KH ký, tỷ lệ ΔCS):
-            Aggressive tổng 880 tr (tổng ΔCS T1-T3 = 35%): T1(15/35)=377 · T2(10/35)=251 · T3(10/35)=251
-            Growth     tổng 495 tr (tổng ΔCS T4-T7 = 35%): T4(10/35)=141 · T5(10/35)=141 · T6(7/35)=99  · T7(8/35)=113
-            Retention  tổng 330 tr (tổng ΔCS T8-T12= 18%): T8(7/18)=128 · T9(5/18)=92  · T10(3/18)=55 · T11(2/18)=37 · T12(1/18)=18
-          DIGITAL = 28,5×vacancy% (3.000m²×vac%×9,5K/m²)
-          Events+BD: Aggressive 20tr · Growth 13tr · Retention 6,5tr · Fixed 22tr
+          S&M = Commission + Digital + Events + BD + Fixed(22)
 
-          T1(15%): S&M=377+24+20+22=443 → Cost=0+28+443=471
-          T2(25%): S&M=251+21+20+22=314 → Cost=0+47+314=361
-          T3(35%): S&M=251+19+20+22=312 → Cost=0+66+312=378
-          T4(45%): S&M=141+16+13+22=192 → Cost=1.125+85+192=1.402
-          T5(55%): S&M=141+13+13+22=189 → Cost=1.125+103+189=1.417
-          T6(62%): S&M=99+11+13+22=145  → Cost=1.125+117+145=1.387
-          T7(70%): S&M=113+9+13+22=157  → Cost=1.125+132+157=1.414
-          T8(77%): S&M=128+7+6,5+22=164 → Cost=1.125+145+164=1.434
-          T9(82%): S&M=92+5+6,5+22=126  → Cost=1.125+154+126=1.405
-          T10(85%):S&M=55+4+6,5+22=88   → Cost=1.125+160+88=1.373
-          T11(87%):S&M=37+4+6,5+22=70   → Cost=1.125+164+70=1.359
-          T12(88%):S&M=18+3+6,5+22=50   → Cost=1.125+165+50=1.340
+          COMMISSION = ΔCS_area × 733K × Xth (trả khi KH ký HĐ, monthly)
+            Aggressive (CS 0–40%): ΔCS×1500m²×733K×2th  → Agg total 880tr (600m²×733K×2th)
+            Growth     (CS 40–70%): ΔCS×1500m²×733K×1,5th → Gr total 495tr (450m²×733K×1,5th)
+            Retention  (CS >70%):   ΔCS×1500m²×733K×1th   → Ret total 330tr (450m²×733K×1th)
+            T1(15%): 225m²×733K×2=330  T2(10%): 150m²×733K×2=220  T3(10%): 220
+            T4(10%): 150m²×733K×1,5=165  T5: 165  T6(7%): 105m²×733K×1,5=115  T7(8%): 120m²×733K×1,5=132
+            T8(7%): 105m²×733K×1=77  T9(5%):55  T10(3%):33  T11(2%):22  T12(1%):11
+
+          DIGITAL = 3.000m²×vacancy%×9,5K/m² = 28,5×(1–CS%) tr
+            Brand 3.000×vac%×2,5K + Lead Gen 3.000×vac%×7K
+            T1(vac85%):24  T2(75%):21  T3(65%):19  T4(55%):16  T5(45%):13
+            T6(38%):11  T7(30%):9  T8(23%):7  T9(18%):5  T10(15%):4  T11(13%):4  T12(12%):3
+
+          EVENTS (sm.html ② Variable, interpolate trong range theo vacancy%):
+            Aggressive 8–12tr (vac 60–100%): T1(85%)=11  T2(75%)=10  T3(65%)=9
+            Growth     5–8tr  (vac 30–60%):  T4(55%)=8   T5(45%)=7   T6(38%)=6   T7(30%)=5
+            Retention  3–5tr  (vac <30%):    T8(23%)=5   T9(18%)=4   T10(15%)=4  T11(13%)=4  T12(12%)=4
+
+          BD PUSH (sm.html ② Variable, interpolate trong range theo vacancy%):
+            Aggressive 8–12tr (vac 60–100%): T1(85%)=11  T2(75%)=10  T3(65%)=9
+            Growth     5–8tr  (vac 30–60%):  T4(55%)=8   T5(45%)=7   T6(38%)=6   T7(30%)=5
+            Retention  2–3tr  (vac <30%):    T8(23%)=3   T9(18%)=3   T10(15%)=3  T11(13%)=2  T12(12%)=2
+
+          FIXED = 22tr/th (CRM 2,5 + Content/SEO 6 + BD base 10 + KOL/PR 3)
+
+          T1(15%): S&M=330+24+11+11+22=398 → Cost=0+28+398=426
+          T2(25%): S&M=220+21+10+10+22=283 → Cost=0+47+283=330
+          T3(35%): S&M=220+19+9+9+22=279   → Cost=0+66+279=345
+          T4(45%): S&M=165+16+8+8+22=219   → Cost=1.125+85+219=1.429
+          T5(55%): S&M=165+13+7+7+22=214   → Cost=1.125+103+214=1.442
+          T6(62%): S&M=115+11+6+6+22=160   → Cost=1.125+117+160=1.402
+          T7(70%): S&M=132+9+5+5+22=173    → Cost=1.125+132+173=1.430
+          T8(77%): S&M=77+7+5+3+22=114     → Cost=1.125+145+114=1.384
+          T9(82%): S&M=55+5+4+3+22=89      → Cost=1.125+154+89=1.368
+          T10(85%):S&M=33+4+4+3+22=66      → Cost=1.125+160+66=1.351
+          T11(87%):S&M=22+4+4+2+22=54      → Cost=1.125+164+54=1.343
+          T12(88%):S&M=11+3+4+2+22=42      → Cost=1.125+165+42=1.332
         -->
 
-        <!-- T1: Cost=471, NOI=192-471=-279, Cum=-279 -->
+        <!-- T1: NOI=192-426=-234, Cum=-234 -->
         <tr style="background:rgba(0,0,0,0.03);">
           <td style="text-align:center;font-weight:700;">T1</td>
           <td style="text-align:center;font-size:10px;color:var(--muted);">Pre-Sales</td>
@@ -56,14 +76,14 @@
           <td style="text-align:center;">192</td>
           <td style="text-align:center;color:var(--muted);">0</td>
           <td style="text-align:center;">192</td>
-          <td style="text-align:center;">471</td>
-          <td style="text-align:center;font-weight:700;color:var(--rose-deep);">−279</td>
+          <td style="text-align:center;">426</td>
+          <td style="text-align:center;font-weight:700;color:var(--rose-deep);">−234</td>
           <td style="text-align:center;font-weight:700;color:var(--rose-deep);">+375</td>
-          <td style="text-align:center;color:var(--rose-deep);">−279</td>
+          <td style="text-align:center;color:var(--rose-deep);">−234</td>
           <td style="text-align:center;color:var(--muted);">0</td>
-          <td style="text-align:center;font-weight:700;color:var(--rose-deep);">−279</td>
+          <td style="text-align:center;font-weight:700;color:var(--rose-deep);">−234</td>
         </tr>
-        <!-- T2: Cost=361, NOI=320-361=-41, Cum=-320 -->
+        <!-- T2: NOI=320-330=-10, Cum=-244 -->
         <tr style="background:rgba(0,0,0,0.03);">
           <td style="text-align:center;font-weight:700;">T2</td>
           <td style="text-align:center;font-size:10px;color:var(--muted);">Pre-Sales</td>
@@ -71,14 +91,14 @@
           <td style="text-align:center;">320</td>
           <td style="text-align:center;color:var(--muted);">0</td>
           <td style="text-align:center;">320</td>
-          <td style="text-align:center;">361</td>
-          <td style="text-align:center;font-weight:700;color:var(--rose-deep);">−41</td>
+          <td style="text-align:center;">330</td>
+          <td style="text-align:center;font-weight:700;color:var(--rose-deep);">−10</td>
           <td style="text-align:center;font-weight:700;color:var(--rose-deep);">+250</td>
-          <td style="text-align:center;color:var(--rose-deep);">−320</td>
+          <td style="text-align:center;color:var(--rose-deep);">−244</td>
           <td style="text-align:center;color:var(--muted);">0</td>
-          <td style="text-align:center;font-weight:700;color:var(--rose-deep);">−41</td>
+          <td style="text-align:center;font-weight:700;color:var(--rose-deep);">−10</td>
         </tr>
-        <!-- T3: Cost=378, NOI=447-378=+69, Cum=-251 -->
+        <!-- T3: NOI=447-345=+102, Cum=-142 -->
         <tr style="background:rgba(0,0,0,0.03);">
           <td style="text-align:center;font-weight:700;">T3</td>
           <td style="text-align:center;font-size:10px;color:var(--muted);">Pre-Sales</td>
@@ -86,14 +106,14 @@
           <td style="text-align:center;">447</td>
           <td style="text-align:center;color:var(--muted);">0</td>
           <td style="text-align:center;">447</td>
-          <td style="text-align:center;">378</td>
-          <td style="text-align:center;font-weight:700;color:var(--green);">+69</td>
+          <td style="text-align:center;">345</td>
+          <td style="text-align:center;font-weight:700;color:var(--green);">+102</td>
           <td style="text-align:center;font-weight:700;color:var(--rose-deep);">+250</td>
-          <td style="text-align:center;color:var(--rose-deep);">−251</td>
+          <td style="text-align:center;color:var(--rose-deep);">−142</td>
           <td style="text-align:center;color:var(--muted);">0</td>
-          <td style="text-align:center;font-weight:700;color:var(--green);">+69</td>
+          <td style="text-align:center;font-weight:700;color:var(--green);">+102</td>
         </tr>
-        <!-- T4: Cost=1.402, NOI=1.113-1.402=-289, Cum=-540 -->
+        <!-- T4: NOI=1.113-1.429=-316, Cum=-458 -->
         <tr>
           <td style="text-align:center;font-weight:700;">T4</td>
           <td style="text-align:center;font-size:10px;color:var(--muted);">Vận hành</td>
@@ -101,14 +121,14 @@
           <td style="text-align:center;">968</td>
           <td style="text-align:center;">145</td>
           <td style="text-align:center;">1.113</td>
-          <td style="text-align:center;">1.402</td>
-          <td style="text-align:center;font-weight:700;color:var(--rose-deep);">−289</td>
+          <td style="text-align:center;">1.429</td>
+          <td style="text-align:center;font-weight:700;color:var(--rose-deep);">−316</td>
           <td style="text-align:center;font-weight:700;color:var(--rose-deep);">+232</td>
-          <td style="text-align:center;color:var(--rose-deep);">−540</td>
+          <td style="text-align:center;color:var(--rose-deep);">−458</td>
           <td style="text-align:center;">375</td>
-          <td style="text-align:center;font-weight:700;color:var(--rose-deep);">−664</td>
+          <td style="text-align:center;font-weight:700;color:var(--rose-deep);">−691</td>
         </tr>
-        <!-- T5: Cost=1.417, NOI=1.411-1.417=-6, Cum=-546 -->
+        <!-- T5: NOI=1.411-1.442=-31, Cum=-489 -->
         <tr>
           <td style="text-align:center;font-weight:700;">T5</td>
           <td style="text-align:center;font-size:10px;color:var(--muted);">Vận hành</td>
@@ -116,14 +136,14 @@
           <td style="text-align:center;">1.168</td>
           <td style="text-align:center;">243</td>
           <td style="text-align:center;">1.411</td>
-          <td style="text-align:center;">1.417</td>
-          <td style="text-align:center;font-weight:700;color:var(--rose-deep);">−6</td>
+          <td style="text-align:center;">1.442</td>
+          <td style="text-align:center;font-weight:700;color:var(--rose-deep);">−31</td>
           <td style="text-align:center;font-weight:700;color:var(--rose-deep);">+232</td>
-          <td style="text-align:center;color:var(--rose-deep);">−546</td>
+          <td style="text-align:center;color:var(--rose-deep);">−489</td>
           <td style="text-align:center;">375</td>
-          <td style="text-align:center;font-weight:700;color:var(--rose-deep);">−381</td>
+          <td style="text-align:center;font-weight:700;color:var(--rose-deep);">−406</td>
         </tr>
-        <!-- T6: BEP VH · Cost=1.387, NOI=1.643-1.387=+256, Cum=-290 -->
+        <!-- T6: BEP VH · NOI=1.643-1.402=+241, Cum=-248 -->
         <tr style="background:rgba(242,224,220,0.5);">
           <td style="text-align:center;font-weight:700;">T6</td>
           <td style="text-align:center;font-size:10px;color:var(--muted);">Vận hành</td>
@@ -131,14 +151,14 @@
           <td style="text-align:center;">1.303</td>
           <td style="text-align:center;">340</td>
           <td style="text-align:center;font-weight:700;">1.643</td>
-          <td style="text-align:center;">1.387</td>
-          <td style="text-align:center;font-weight:800;color:var(--green);">+256 ★</td>
+          <td style="text-align:center;">1.402</td>
+          <td style="text-align:center;font-weight:800;color:var(--green);">+241 ★</td>
           <td style="text-align:center;font-weight:700;color:var(--rose-deep);">+161</td>
-          <td style="text-align:center;color:var(--rose-deep);">−290</td>
+          <td style="text-align:center;color:var(--rose-deep);">−248</td>
           <td style="text-align:center;">375</td>
-          <td style="text-align:center;font-weight:700;color:var(--rose-deep);">−119</td>
+          <td style="text-align:center;font-weight:700;color:var(--rose-deep);">−134</td>
         </tr>
-        <!-- T7: LN+ · Cost=1.414, NOI=1.951-1.414=+537, Cum=+247 -->
+        <!-- T7: LN+ · NOI=1.951-1.430=+521, Cum=+273 -->
         <tr style="background:rgba(74,124,89,0.06);">
           <td style="text-align:center;font-weight:700;">T7</td>
           <td style="text-align:center;font-size:10px;color:var(--muted);">Vận hành</td>
@@ -146,14 +166,14 @@
           <td style="text-align:center;">1.465</td>
           <td style="text-align:center;">486</td>
           <td style="text-align:center;font-weight:700;">1.951</td>
-          <td style="text-align:center;">1.414</td>
-          <td style="text-align:center;font-weight:700;color:var(--green);">+537</td>
+          <td style="text-align:center;">1.430</td>
+          <td style="text-align:center;font-weight:700;color:var(--green);">+521</td>
           <td style="text-align:center;font-weight:700;color:var(--rose-deep);">+185</td>
-          <td style="text-align:center;color:var(--green);">+247</td>
+          <td style="text-align:center;color:var(--green);">+273</td>
           <td style="text-align:center;">375</td>
-          <td style="text-align:center;font-weight:800;color:var(--green);">+162 ★</td>
+          <td style="text-align:center;font-weight:800;color:var(--green);">+146 ★</td>
         </tr>
-        <!-- T8: Cost=1.434, NOI=2.235-1.434=+801, Cum=+1.048 -->
+        <!-- T8: NOI=2.235-1.384=+851, Cum=+1.124 -->
         <tr>
           <td style="text-align:center;font-weight:700;">T8</td>
           <td style="text-align:center;font-size:10px;color:var(--muted);">Vận hành</td>
@@ -161,14 +181,14 @@
           <td style="text-align:center;">1.603</td>
           <td style="text-align:center;">632</td>
           <td style="text-align:center;">2.235</td>
-          <td style="text-align:center;">1.434</td>
-          <td style="text-align:center;font-weight:700;color:var(--green);">+801</td>
+          <td style="text-align:center;">1.384</td>
+          <td style="text-align:center;font-weight:700;color:var(--green);">+851</td>
           <td style="text-align:center;font-weight:700;color:var(--rose-deep);">+118</td>
-          <td style="text-align:center;color:var(--green);">+1.048</td>
+          <td style="text-align:center;color:var(--green);">+1.124</td>
           <td style="text-align:center;">375</td>
-          <td style="text-align:center;font-weight:700;color:var(--green);">+426</td>
+          <td style="text-align:center;font-weight:700;color:var(--green);">+476</td>
         </tr>
-        <!-- T9: Cost=1.405, NOI=2.431-1.405=+1.026, Cum=+2.074 -->
+        <!-- T9: NOI=2.431-1.368=+1.063, Cum=+2.187 -->
         <tr>
           <td style="text-align:center;font-weight:700;">T9</td>
           <td style="text-align:center;font-size:10px;color:var(--muted);">Vận hành</td>
@@ -176,14 +196,14 @@
           <td style="text-align:center;">1.702</td>
           <td style="text-align:center;">729</td>
           <td style="text-align:center;">2.431</td>
-          <td style="text-align:center;">1.405</td>
-          <td style="text-align:center;font-weight:700;color:var(--green);">+1.026</td>
+          <td style="text-align:center;">1.368</td>
+          <td style="text-align:center;font-weight:700;color:var(--green);">+1.063</td>
           <td style="text-align:center;font-weight:700;color:var(--rose-deep);">+84</td>
-          <td style="text-align:center;color:var(--green);">+2.074</td>
+          <td style="text-align:center;color:var(--green);">+2.187</td>
           <td style="text-align:center;">375</td>
-          <td style="text-align:center;font-weight:700;color:var(--green);">+651</td>
+          <td style="text-align:center;font-weight:700;color:var(--green);">+688</td>
         </tr>
-        <!-- T10: Cost=1.373, NOI=2.589-1.373=+1.216, Cum=+3.290 -->
+        <!-- T10: NOI=2.589-1.351=+1.238, Cum=+3.425 -->
         <tr>
           <td style="text-align:center;font-weight:700;">T10</td>
           <td style="text-align:center;font-size:10px;color:var(--muted);">Vận hành</td>
@@ -191,14 +211,14 @@
           <td style="text-align:center;">1.762</td>
           <td style="text-align:center;">827</td>
           <td style="text-align:center;">2.589</td>
-          <td style="text-align:center;">1.373</td>
-          <td style="text-align:center;font-weight:700;color:var(--green);">+1.216</td>
+          <td style="text-align:center;">1.351</td>
+          <td style="text-align:center;font-weight:700;color:var(--green);">+1.238</td>
           <td style="text-align:center;font-weight:700;color:var(--rose-deep);">+51</td>
-          <td style="text-align:center;color:var(--green);">+3.290</td>
+          <td style="text-align:center;color:var(--green);">+3.425</td>
           <td style="text-align:center;">375</td>
-          <td style="text-align:center;font-weight:700;color:var(--green);">+841</td>
+          <td style="text-align:center;font-weight:700;color:var(--green);">+863</td>
         </tr>
-        <!-- T11: Cost=1.359, NOI=2.697-1.359=+1.338, Cum=+4.628 -->
+        <!-- T11: NOI=2.697-1.343=+1.354, Cum=+4.779 -->
         <tr>
           <td style="text-align:center;font-weight:700;">T11</td>
           <td style="text-align:center;font-size:10px;color:var(--muted);">Vận hành</td>
@@ -206,14 +226,14 @@
           <td style="text-align:center;">1.802</td>
           <td style="text-align:center;">895</td>
           <td style="text-align:center;">2.697</td>
-          <td style="text-align:center;">1.359</td>
-          <td style="text-align:center;font-weight:700;color:var(--green);">+1.338</td>
+          <td style="text-align:center;">1.343</td>
+          <td style="text-align:center;font-weight:700;color:var(--green);">+1.354</td>
           <td style="text-align:center;font-weight:700;color:var(--rose-deep);">+34</td>
-          <td style="text-align:center;color:var(--green);">+4.628</td>
+          <td style="text-align:center;color:var(--green);">+4.779</td>
           <td style="text-align:center;">375</td>
-          <td style="text-align:center;font-weight:700;color:var(--green);">+963</td>
+          <td style="text-align:center;font-weight:700;color:var(--green);">+979</td>
         </tr>
-        <!-- T12: Cost=1.340, NOI=2.794-1.340=+1.454, Cum=+6.082 -->
+        <!-- T12: NOI=2.794-1.332=+1.462, Cum=+6.241 -->
         <tr style="background:rgba(168,94,86,0.1);">
           <td style="text-align:center;font-weight:800;">T12</td>
           <td style="text-align:center;font-size:10px;color:var(--muted);">Vận hành</td>
@@ -221,259 +241,37 @@
           <td style="text-align:center;font-weight:700;">1.821</td>
           <td style="text-align:center;font-weight:700;">973</td>
           <td style="text-align:center;font-weight:800;font-size:14px;">2.794</td>
-          <td style="text-align:center;font-weight:700;">1.340</td>
-          <td style="text-align:center;font-weight:800;font-size:14px;color:var(--green);">+1.454</td>
+          <td style="text-align:center;font-weight:700;">1.332</td>
+          <td style="text-align:center;font-weight:800;font-size:14px;color:var(--green);">+1.462</td>
           <td style="text-align:center;font-weight:700;color:var(--rose-deep);">+17</td>
-          <td style="text-align:center;font-weight:800;font-size:14px;color:var(--green);">+6.082</td>
+          <td style="text-align:center;font-weight:800;font-size:14px;color:var(--green);">+6.241</td>
           <td style="text-align:center;font-weight:700;">375</td>
-          <td style="text-align:center;font-weight:800;font-size:14px;color:var(--green);">+1.079</td>
+          <td style="text-align:center;font-weight:800;font-size:14px;color:var(--green);">+1.087</td>
         </tr>
       </tbody>
     </table>
   </div>
   <p style="font-size:11px;color:var(--muted);margin-top:4px;text-align:right;line-height:1.7;">
-    Đơn vị: triệu VND · <b>Cost = Rent(T4+: 1.125) + OPEX(188×CS%) + S&amp;M biến động</b><br>
-    Commission phân bổ từ tổng phase sm.html (880/495/330 tr) theo tỷ lệ ΔCS trong phase · Digital = 28,5×vacancy%<br>
-    DT T1–T3 = PO pre-sales · T4+ = tất cả khu vực + Café 75 tr cố định · Cọc PO: 2th→1,5th→1th theo phase
+    Đơn vị: triệu VND · Cost = Rent(T4+: 1.125) + OPEX(188×CS%) + S&amp;M biến động theo vacancy &amp; phase<br>
+    DT T1–T3 = PO pre-sales · T4+ = tất cả khu vực + Café 75 tr cố định · Cọc PO: 2th→1,5th→1th
   </p>
-
-  <!-- DT Diện tích breakdown -->
-  <div style="margin-top:16px;margin-bottom:0;">
-    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:4px;">
-      <table class="summary-table" style="min-width:660px;font-size:12px;">
-        <thead>
-          <tr>
-            <th>Nguồn DT Diện tích</th>
-            <th style="text-align:center;">Seats/Đơn vị</th>
-            <th style="text-align:center;">Giá</th>
-            <th style="text-align:center;">Occ target</th>
-            <th style="text-align:center;">DT tối đa (88%)</th>
-            <th style="text-align:center;">Per 1%CS</th>
-            <th style="text-align:center;">Từ tháng</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="font-weight:700;">🏢 Private Office</td>
-            <td style="text-align:center;">500 seats</td>
-            <td style="text-align:center;">2,5 tr/seat</td>
-            <td style="text-align:center;">90%</td>
-            <td style="text-align:center;font-weight:700;color:var(--green);">1.125 tr</td>
-            <td style="text-align:center;font-weight:700;">12,78 tr</td>
-            <td style="text-align:center;">T1 ★</td>
-          </tr>
-          <tr>
-            <td style="font-weight:700;">💻 Hot Desk (CW)</td>
-            <td style="text-align:center;">96 seats</td>
-            <td style="text-align:center;">3,0 tr/seat</td>
-            <td style="text-align:center;">85%</td>
-            <td style="text-align:center;font-weight:700;color:var(--green);">246 tr</td>
-            <td style="text-align:center;font-weight:700;">2,80 tr</td>
-            <td style="text-align:center;">T4</td>
-          </tr>
-          <tr>
-            <td style="font-weight:700;">📋 Dedicated Desk</td>
-            <td style="text-align:center;">37 seats</td>
-            <td style="text-align:center;">4,0 tr/seat</td>
-            <td style="text-align:center;">88%</td>
-            <td style="text-align:center;font-weight:700;color:var(--green);">128 tr</td>
-            <td style="text-align:center;font-weight:700;">1,45 tr</td>
-            <td style="text-align:center;">T4</td>
-          </tr>
-          <tr>
-            <td style="font-weight:700;">🤝 Meeting + 🎤 Event + 📣 Showroom + 🛎 Anc</td>
-            <td style="text-align:center;">8p + 12ev + 10b + misc</td>
-            <td style="text-align:center;">—</td>
-            <td style="text-align:center;">var.</td>
-            <td style="text-align:center;font-weight:700;color:var(--green);">247 tr</td>
-            <td style="text-align:center;font-weight:700;">2,81 tr</td>
-            <td style="text-align:center;">T4</td>
-          </tr>
-          <tr>
-            <td style="font-weight:700;">☕ Café (lease out)</td>
-            <td style="text-align:center;">150m²</td>
-            <td style="text-align:center;">500K/m²</td>
-            <td style="text-align:center;">—</td>
-            <td style="text-align:center;font-weight:700;color:var(--green);">75 tr</td>
-            <td style="text-align:center;color:var(--muted);">cố định</td>
-            <td style="text-align:center;">T4</td>
-          </tr>
-          <tr style="background:rgba(168,94,86,0.1);">
-            <td style="font-weight:800;">TỔNG DT DIỆN TÍCH</td>
-            <td></td><td></td><td></td>
-            <td style="text-align:center;font-weight:900;color:var(--rose-deep);">1.821 tr</td>
-            <td style="text-align:center;font-size:10px;color:var(--muted);">~19,84 tr/1% + 75 tr</td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <!-- S&M breakdown table -->
-  <div style="margin-top:12px;margin-bottom:16px;overflow-x:auto;-webkit-overflow-scrolling:touch;">
-    <p style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">
-      Chi tiết S&amp;M biến động theo phase</p>
-    <table class="summary-table" style="min-width:820px;font-size:11px;">
-      <thead>
-        <tr>
-          <th>Th</th>
-          <th style="text-align:center;">Phase</th>
-          <th style="text-align:center;">ΔCS</th>
-          <th style="text-align:center;">Commission<br><span style="font-weight:400;">tổng phase × ΔCS/ΣΔCSphase</span></th>
-          <th style="text-align:center;">Digital<br><span style="font-weight:400;">28,5×vacancy%</span></th>
-          <th style="text-align:center;">Events+BD</th>
-          <th style="text-align:center;">Fixed</th>
-          <th style="text-align:center;font-weight:800;">S&amp;M tổng</th>
-          <th style="text-align:center;font-weight:800;">Cost<br><span style="font-weight:400;">Rent+OPEX+S&M</span></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="background:rgba(0,0,0,0.03);">
-          <td style="font-weight:700;">T1</td>
-          <td style="text-align:center;font-size:10px;color:var(--rose-deep);">Aggressive</td>
-          <td style="text-align:center;">15%</td>
-          <td style="text-align:center;">377<br><span style="color:var(--muted);">880×15/35</span></td>
-          <td style="text-align:center;">24<br><span style="color:var(--muted);">85% vac</span></td>
-          <td style="text-align:center;">20</td><td style="text-align:center;">22</td>
-          <td style="text-align:center;font-weight:800;color:var(--rose-deep);">443</td>
-          <td style="text-align:center;font-weight:800;">471</td>
-        </tr>
-        <tr style="background:rgba(0,0,0,0.03);">
-          <td style="font-weight:700;">T2</td>
-          <td style="text-align:center;font-size:10px;color:var(--rose-deep);">Aggressive</td>
-          <td style="text-align:center;">10%</td>
-          <td style="text-align:center;">251<br><span style="color:var(--muted);">880×10/35</span></td>
-          <td style="text-align:center;">21<br><span style="color:var(--muted);">75% vac</span></td>
-          <td style="text-align:center;">20</td><td style="text-align:center;">22</td>
-          <td style="text-align:center;font-weight:800;color:var(--rose-deep);">314</td>
-          <td style="text-align:center;font-weight:800;">361</td>
-        </tr>
-        <tr style="background:rgba(0,0,0,0.03);">
-          <td style="font-weight:700;">T3</td>
-          <td style="text-align:center;font-size:10px;color:var(--rose-deep);">Aggressive</td>
-          <td style="text-align:center;">10%</td>
-          <td style="text-align:center;">251<br><span style="color:var(--muted);">880×10/35</span></td>
-          <td style="text-align:center;">19<br><span style="color:var(--muted);">65% vac</span></td>
-          <td style="text-align:center;">20</td><td style="text-align:center;">22</td>
-          <td style="text-align:center;font-weight:800;color:var(--rose-deep);">312</td>
-          <td style="text-align:center;font-weight:800;">378</td>
-        </tr>
-        <tr>
-          <td style="font-weight:700;">T4</td>
-          <td style="text-align:center;font-size:10px;color:var(--orange);">Growth</td>
-          <td style="text-align:center;">10%</td>
-          <td style="text-align:center;">141<br><span style="color:var(--muted);">495×10/35</span></td>
-          <td style="text-align:center;">16<br><span style="color:var(--muted);">55% vac</span></td>
-          <td style="text-align:center;">13</td><td style="text-align:center;">22</td>
-          <td style="text-align:center;font-weight:800;color:var(--orange);">192</td>
-          <td style="text-align:center;font-weight:800;">1.402</td>
-        </tr>
-        <tr>
-          <td style="font-weight:700;">T5</td>
-          <td style="text-align:center;font-size:10px;color:var(--orange);">Growth</td>
-          <td style="text-align:center;">10%</td>
-          <td style="text-align:center;">141<br><span style="color:var(--muted);">495×10/35</span></td>
-          <td style="text-align:center;">13<br><span style="color:var(--muted);">45% vac</span></td>
-          <td style="text-align:center;">13</td><td style="text-align:center;">22</td>
-          <td style="text-align:center;font-weight:800;color:var(--orange);">189</td>
-          <td style="text-align:center;font-weight:800;">1.417</td>
-        </tr>
-        <tr>
-          <td style="font-weight:700;">T6</td>
-          <td style="text-align:center;font-size:10px;color:var(--orange);">Growth</td>
-          <td style="text-align:center;">7%</td>
-          <td style="text-align:center;">99<br><span style="color:var(--muted);">495×7/35</span></td>
-          <td style="text-align:center;">11<br><span style="color:var(--muted);">38% vac</span></td>
-          <td style="text-align:center;">13</td><td style="text-align:center;">22</td>
-          <td style="text-align:center;font-weight:800;color:var(--orange);">145</td>
-          <td style="text-align:center;font-weight:800;">1.387</td>
-        </tr>
-        <tr>
-          <td style="font-weight:700;">T7</td>
-          <td style="text-align:center;font-size:10px;color:var(--orange);">Growth</td>
-          <td style="text-align:center;">8%</td>
-          <td style="text-align:center;">113<br><span style="color:var(--muted);">495×8/35</span></td>
-          <td style="text-align:center;">9<br><span style="color:var(--muted);">30% vac</span></td>
-          <td style="text-align:center;">13</td><td style="text-align:center;">22</td>
-          <td style="text-align:center;font-weight:800;color:var(--orange);">157</td>
-          <td style="text-align:center;font-weight:800;">1.414</td>
-        </tr>
-        <tr>
-          <td style="font-weight:700;">T8</td>
-          <td style="text-align:center;font-size:10px;color:var(--green);">Retention</td>
-          <td style="text-align:center;">7%</td>
-          <td style="text-align:center;">128<br><span style="color:var(--muted);">330×7/18</span></td>
-          <td style="text-align:center;">7<br><span style="color:var(--muted);">23% vac</span></td>
-          <td style="text-align:center;">6,5</td><td style="text-align:center;">22</td>
-          <td style="text-align:center;font-weight:800;color:var(--green);">164</td>
-          <td style="text-align:center;font-weight:800;">1.434</td>
-        </tr>
-        <tr>
-          <td style="font-weight:700;">T9</td>
-          <td style="text-align:center;font-size:10px;color:var(--green);">Retention</td>
-          <td style="text-align:center;">5%</td>
-          <td style="text-align:center;">92<br><span style="color:var(--muted);">330×5/18</span></td>
-          <td style="text-align:center;">5<br><span style="color:var(--muted);">18% vac</span></td>
-          <td style="text-align:center;">6,5</td><td style="text-align:center;">22</td>
-          <td style="text-align:center;font-weight:800;color:var(--green);">126</td>
-          <td style="text-align:center;font-weight:800;">1.405</td>
-        </tr>
-        <tr>
-          <td style="font-weight:700;">T10</td>
-          <td style="text-align:center;font-size:10px;color:var(--green);">Retention</td>
-          <td style="text-align:center;">3%</td>
-          <td style="text-align:center;">55<br><span style="color:var(--muted);">330×3/18</span></td>
-          <td style="text-align:center;">4<br><span style="color:var(--muted);">15% vac</span></td>
-          <td style="text-align:center;">6,5</td><td style="text-align:center;">22</td>
-          <td style="text-align:center;font-weight:800;color:var(--green);">88</td>
-          <td style="text-align:center;font-weight:800;">1.373</td>
-        </tr>
-        <tr>
-          <td style="font-weight:700;">T11</td>
-          <td style="text-align:center;font-size:10px;color:var(--green);">Retention</td>
-          <td style="text-align:center;">2%</td>
-          <td style="text-align:center;">37<br><span style="color:var(--muted);">330×2/18</span></td>
-          <td style="text-align:center;">4<br><span style="color:var(--muted);">13% vac</span></td>
-          <td style="text-align:center;">6,5</td><td style="text-align:center;">22</td>
-          <td style="text-align:center;font-weight:800;color:var(--green);">70</td>
-          <td style="text-align:center;font-weight:800;">1.359</td>
-        </tr>
-        <tr style="background:rgba(168,94,86,0.08);">
-          <td style="font-weight:700;">T12</td>
-          <td style="text-align:center;font-size:10px;color:var(--green);">Retention</td>
-          <td style="text-align:center;">1%</td>
-          <td style="text-align:center;">18<br><span style="color:var(--muted);">330×1/18</span></td>
-          <td style="text-align:center;">3<br><span style="color:var(--muted);">12% vac</span></td>
-          <td style="text-align:center;">6,5</td><td style="text-align:center;">22</td>
-          <td style="text-align:center;font-weight:800;color:var(--green);">50</td>
-          <td style="text-align:center;font-weight:800;">1.340</td>
-        </tr>
-        <tr style="background:rgba(242,224,220,0.6);">
-          <td style="font-weight:800;" colspan="3">Tổng Commission năm 1</td>
-          <td style="text-align:center;font-weight:800;color:var(--rose-deep);">1.705 tr<br><span style="font-size:10px;font-weight:400;">Agg 880 + Gr 495 + Ret 330</span></td>
-          <td colspan="5" style="font-size:11px;color:var(--muted);padding-left:8px;">khớp sm.html · Retention 330 tr = budget CS 70→100% (incl. Year 2)</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
 
   <!-- Metrics row 1 -->
   <div class="zones-metrics" style="margin-top:20px;margin-bottom:16px;">
     <div class="zones-metric zones-metric--highlight">
       <div class="zones-metric__label">Hòa vốn VH</div>
       <div class="zones-metric__value" style="color:var(--green);">T6</div>
-      <div class="zones-metric__note">NOI +256 tr · CS 62% · BEP khi có Rent (T4+)</div>
+      <div class="zones-metric__note">NOI +241 tr · CS 62% · BEP khi có Rent (T4+)</div>
     </div>
     <div class="zones-metric">
       <div class="zones-metric__label">LN sau KH dương</div>
       <div class="zones-metric__value" style="color:var(--green);">T7</div>
-      <div class="zones-metric__note">LN +162 tr · CS 70% · Lãi kế toán</div>
+      <div class="zones-metric__note">LN +146 tr · CS 70% · Lãi kế toán</div>
     </div>
     <div class="zones-metric">
       <div class="zones-metric__label">NOI lũy kế năm 1</div>
-      <div class="zones-metric__value">+6,1 tỷ</div>
-      <div class="zones-metric__note">Commission 1.705 tr khớp sm.html · Tổng 3 phase</div>
+      <div class="zones-metric__value">+6,2 tỷ</div>
+      <div class="zones-metric__note">S&amp;M 5 thành phần · mỗi tháng/phase độc lập</div>
     </div>
   </div>
 
@@ -490,9 +288,12 @@
             <th style="text-align:center;">Th</th>
             <th style="text-align:center;">ΔCS</th>
             <th style="text-align:center;">NOI</th>
-            <th style="text-align:center;">Cọc PO<br><span style="font-size:10px;font-weight:400;">2/1,5/1 tháng</span></th>
-            <th style="text-align:center;">Cọc HD<br><span style="font-size:10px;font-weight:400;">96s·3tr·1th</span></th>
-            <th style="text-align:center;">Cọc DD<br><span style="font-size:10px;font-weight:400;">37s·4tr·1th</span></th>
+            <th style="text-align:center;">Cọc PO<br><span style="font-size:10px;font-weight:400;">2/1,5/1 tháng</span>
+            </th>
+            <th style="text-align:center;">Cọc HD<br><span style="font-size:10px;font-weight:400;">96s·3tr·1th</span>
+            </th>
+            <th style="text-align:center;">Cọc DD<br><span style="font-size:10px;font-weight:400;">37s·4tr·1th</span>
+            </th>
             <th style="text-align:center;">Cọc Total</th>
             <th style="text-align:center;">Cash tháng</th>
             <th style="text-align:center;">Cash lũy kế</th>
@@ -502,134 +303,146 @@
           <tr style="background:rgba(0,0,0,0.03);">
             <td style="text-align:center;font-weight:700;">T1</td>
             <td style="text-align:center;color:var(--muted);font-size:11px;">+15%</td>
-            <td style="text-align:center;color:var(--rose-deep);">−279</td>
-            <td style="text-align:center;color:var(--rose-deep);">+375<br><span style="font-size:10px;color:var(--muted);">2 tháng</span></td>
+            <td style="text-align:center;color:var(--rose-deep);">−234</td>
+            <td style="text-align:center;color:var(--rose-deep);">+375<br><span
+                style="font-size:10px;color:var(--muted);">2 tháng</span></td>
             <td style="text-align:center;color:var(--muted);">—</td>
             <td style="text-align:center;color:var(--muted);">—</td>
             <td style="text-align:center;font-weight:700;color:var(--rose-deep);">+375</td>
-            <td style="text-align:center;font-weight:700;color:var(--green);">+96</td>
-            <td style="text-align:center;font-weight:700;color:var(--green);">+96</td>
+            <td style="text-align:center;font-weight:700;color:var(--green);">+141</td>
+            <td style="text-align:center;font-weight:700;color:var(--green);">+141</td>
           </tr>
           <tr style="background:rgba(0,0,0,0.03);">
             <td style="text-align:center;font-weight:700;">T2</td>
             <td style="text-align:center;color:var(--muted);font-size:11px;">+10%</td>
-            <td style="text-align:center;color:var(--rose-deep);">−41</td>
-            <td style="text-align:center;color:var(--rose-deep);">+250<br><span style="font-size:10px;color:var(--muted);">2 tháng</span></td>
+            <td style="text-align:center;color:var(--rose-deep);">−10</td>
+            <td style="text-align:center;color:var(--rose-deep);">+250<br><span
+                style="font-size:10px;color:var(--muted);">2 tháng</span></td>
             <td style="text-align:center;color:var(--muted);">—</td>
             <td style="text-align:center;color:var(--muted);">—</td>
             <td style="text-align:center;font-weight:700;color:var(--rose-deep);">+250</td>
-            <td style="text-align:center;font-weight:700;color:var(--green);">+209</td>
-            <td style="text-align:center;font-weight:700;color:var(--green);">+305</td>
+            <td style="text-align:center;font-weight:700;color:var(--green);">+240</td>
+            <td style="text-align:center;font-weight:700;color:var(--green);">+381</td>
           </tr>
           <tr style="background:rgba(0,0,0,0.03);">
             <td style="text-align:center;font-weight:700;">T3</td>
             <td style="text-align:center;color:var(--muted);font-size:11px;">+10%</td>
-            <td style="text-align:center;color:var(--green);">+69</td>
-            <td style="text-align:center;color:var(--rose-deep);">+250<br><span style="font-size:10px;color:var(--muted);">2 tháng</span></td>
+            <td style="text-align:center;color:var(--green);">+102</td>
+            <td style="text-align:center;color:var(--rose-deep);">+250<br><span
+                style="font-size:10px;color:var(--muted);">2 tháng</span></td>
             <td style="text-align:center;color:var(--muted);">—</td>
             <td style="text-align:center;color:var(--muted);">—</td>
             <td style="text-align:center;font-weight:700;color:var(--rose-deep);">+250</td>
-            <td style="text-align:center;font-weight:700;color:var(--green);">+319</td>
-            <td style="text-align:center;font-weight:700;color:var(--green);">+624</td>
+            <td style="text-align:center;font-weight:700;color:var(--green);">+352</td>
+            <td style="text-align:center;font-weight:700;color:var(--green);">+733</td>
           </tr>
           <tr>
             <td style="text-align:center;font-weight:700;">T4</td>
             <td style="text-align:center;color:var(--muted);font-size:11px;">+10%</td>
-            <td style="text-align:center;color:var(--rose-deep);">−289</td>
-            <td style="text-align:center;color:var(--rose-deep);">+188<br><span style="font-size:10px;color:var(--muted);">1,5 tháng</span></td>
+            <td style="text-align:center;color:var(--rose-deep);">−316</td>
+            <td style="text-align:center;color:var(--rose-deep);">+188<br><span
+                style="font-size:10px;color:var(--muted);">1,5 tháng</span></td>
             <td style="text-align:center;color:var(--rose-deep);">+29</td>
             <td style="text-align:center;color:var(--rose-deep);">+15</td>
             <td style="text-align:center;font-weight:700;color:var(--rose-deep);">+232</td>
-            <td style="text-align:center;font-weight:700;color:var(--rose-deep);">−57</td>
-            <td style="text-align:center;font-weight:700;color:var(--green);">+567</td>
+            <td style="text-align:center;font-weight:700;color:var(--rose-deep);">−84</td>
+            <td style="text-align:center;font-weight:700;color:var(--green);">+649</td>
           </tr>
           <tr>
             <td style="text-align:center;font-weight:700;">T5</td>
             <td style="text-align:center;color:var(--muted);font-size:11px;">+10%</td>
-            <td style="text-align:center;color:var(--rose-deep);">−6</td>
-            <td style="text-align:center;color:var(--rose-deep);">+188<br><span style="font-size:10px;color:var(--muted);">1,5 tháng</span></td>
+            <td style="text-align:center;color:var(--rose-deep);">−31</td>
+            <td style="text-align:center;color:var(--rose-deep);">+188<br><span
+                style="font-size:10px;color:var(--muted);">1,5 tháng</span></td>
             <td style="text-align:center;color:var(--rose-deep);">+29</td>
             <td style="text-align:center;color:var(--rose-deep);">+15</td>
             <td style="text-align:center;font-weight:700;color:var(--rose-deep);">+232</td>
-            <td style="text-align:center;font-weight:700;color:var(--green);">+226</td>
-            <td style="text-align:center;font-weight:700;color:var(--green);">+793</td>
+            <td style="text-align:center;font-weight:700;color:var(--green);">+201</td>
+            <td style="text-align:center;font-weight:700;color:var(--green);">+850</td>
           </tr>
           <tr>
             <td style="text-align:center;font-weight:700;">T6</td>
             <td style="text-align:center;color:var(--muted);font-size:11px;">+7%</td>
-            <td style="text-align:center;color:var(--green);">+256</td>
-            <td style="text-align:center;color:var(--rose-deep);">+131<br><span style="font-size:10px;color:var(--muted);">1,5 tháng</span></td>
+            <td style="text-align:center;color:var(--green);">+241</td>
+            <td style="text-align:center;color:var(--rose-deep);">+131<br><span
+                style="font-size:10px;color:var(--muted);">1,5 tháng</span></td>
             <td style="text-align:center;color:var(--rose-deep);">+20</td>
             <td style="text-align:center;color:var(--rose-deep);">+10</td>
             <td style="text-align:center;font-weight:700;color:var(--rose-deep);">+161</td>
-            <td style="text-align:center;font-weight:700;color:var(--green);">+417</td>
-            <td style="text-align:center;font-weight:700;color:var(--green);">+1.210</td>
+            <td style="text-align:center;font-weight:700;color:var(--green);">+402</td>
+            <td style="text-align:center;font-weight:700;color:var(--green);">+1.252</td>
           </tr>
           <tr>
             <td style="text-align:center;font-weight:700;">T7</td>
             <td style="text-align:center;color:var(--muted);font-size:11px;">+8%</td>
-            <td style="text-align:center;color:var(--green);">+537</td>
-            <td style="text-align:center;color:var(--rose-deep);">+150<br><span style="font-size:10px;color:var(--muted);">1,5 tháng</span></td>
+            <td style="text-align:center;color:var(--green);">+521</td>
+            <td style="text-align:center;color:var(--rose-deep);">+150<br><span
+                style="font-size:10px;color:var(--muted);">1,5 tháng</span></td>
             <td style="text-align:center;color:var(--rose-deep);">+23</td>
             <td style="text-align:center;color:var(--rose-deep);">+12</td>
             <td style="text-align:center;font-weight:700;color:var(--rose-deep);">+185</td>
-            <td style="text-align:center;font-weight:700;color:var(--green);">+722</td>
-            <td style="text-align:center;font-weight:700;color:var(--green);">+1.932</td>
+            <td style="text-align:center;font-weight:700;color:var(--green);">+706</td>
+            <td style="text-align:center;font-weight:700;color:var(--green);">+1.958</td>
           </tr>
           <tr>
             <td style="text-align:center;font-weight:700;">T8</td>
             <td style="text-align:center;color:var(--muted);font-size:11px;">+7%</td>
-            <td style="text-align:center;color:var(--green);">+801</td>
-            <td style="text-align:center;color:var(--rose-deep);">+88<br><span style="font-size:10px;color:var(--muted);">1 tháng</span></td>
+            <td style="text-align:center;color:var(--green);">+851</td>
+            <td style="text-align:center;color:var(--rose-deep);">+88<br><span
+                style="font-size:10px;color:var(--muted);">1 tháng</span></td>
             <td style="text-align:center;color:var(--rose-deep);">+20</td>
             <td style="text-align:center;color:var(--rose-deep);">+10</td>
             <td style="text-align:center;font-weight:700;color:var(--rose-deep);">+118</td>
-            <td style="text-align:center;font-weight:700;color:var(--green);">+919</td>
-            <td style="text-align:center;font-weight:700;color:var(--green);">+2.851</td>
+            <td style="text-align:center;font-weight:700;color:var(--green);">+969</td>
+            <td style="text-align:center;font-weight:700;color:var(--green);">+2.927</td>
           </tr>
           <tr>
             <td style="text-align:center;font-weight:700;">T9</td>
             <td style="text-align:center;color:var(--muted);font-size:11px;">+5%</td>
-            <td style="text-align:center;color:var(--green);">+1.026</td>
-            <td style="text-align:center;color:var(--rose-deep);">+63<br><span style="font-size:10px;color:var(--muted);">1 tháng</span></td>
+            <td style="text-align:center;color:var(--green);">+1.063</td>
+            <td style="text-align:center;color:var(--rose-deep);">+63<br><span
+                style="font-size:10px;color:var(--muted);">1 tháng</span></td>
             <td style="text-align:center;color:var(--rose-deep);">+14</td>
             <td style="text-align:center;color:var(--rose-deep);">+7</td>
             <td style="text-align:center;font-weight:700;color:var(--rose-deep);">+84</td>
-            <td style="text-align:center;font-weight:700;color:var(--green);">+1.110</td>
-            <td style="text-align:center;font-weight:700;color:var(--green);">+3.961</td>
+            <td style="text-align:center;font-weight:700;color:var(--green);">+1.147</td>
+            <td style="text-align:center;font-weight:700;color:var(--green);">+4.074</td>
           </tr>
           <tr>
             <td style="text-align:center;font-weight:700;">T10</td>
             <td style="text-align:center;color:var(--muted);font-size:11px;">+3%</td>
-            <td style="text-align:center;color:var(--green);">+1.216</td>
-            <td style="text-align:center;color:var(--rose-deep);">+38<br><span style="font-size:10px;color:var(--muted);">1 tháng</span></td>
+            <td style="text-align:center;color:var(--green);">+1.238</td>
+            <td style="text-align:center;color:var(--rose-deep);">+38<br><span
+                style="font-size:10px;color:var(--muted);">1 tháng</span></td>
             <td style="text-align:center;color:var(--rose-deep);">+9</td>
             <td style="text-align:center;color:var(--rose-deep);">+4</td>
             <td style="text-align:center;font-weight:700;color:var(--rose-deep);">+51</td>
-            <td style="text-align:center;font-weight:700;color:var(--green);">+1.267</td>
-            <td style="text-align:center;font-weight:700;color:var(--green);">+5.228</td>
+            <td style="text-align:center;font-weight:700;color:var(--green);">+1.289</td>
+            <td style="text-align:center;font-weight:700;color:var(--green);">+5.363</td>
           </tr>
           <tr>
             <td style="text-align:center;font-weight:700;">T11</td>
             <td style="text-align:center;color:var(--muted);font-size:11px;">+2%</td>
-            <td style="text-align:center;color:var(--green);">+1.338</td>
-            <td style="text-align:center;color:var(--rose-deep);">+25<br><span style="font-size:10px;color:var(--muted);">1 tháng</span></td>
+            <td style="text-align:center;color:var(--green);">+1.354</td>
+            <td style="text-align:center;color:var(--rose-deep);">+25<br><span
+                style="font-size:10px;color:var(--muted);">1 tháng</span></td>
             <td style="text-align:center;color:var(--rose-deep);">+6</td>
             <td style="text-align:center;color:var(--rose-deep);">+3</td>
             <td style="text-align:center;font-weight:700;color:var(--rose-deep);">+34</td>
-            <td style="text-align:center;font-weight:700;color:var(--green);">+1.372</td>
-            <td style="text-align:center;font-weight:700;color:var(--green);">+6.600</td>
+            <td style="text-align:center;font-weight:700;color:var(--green);">+1.388</td>
+            <td style="text-align:center;font-weight:700;color:var(--green);">+6.751</td>
           </tr>
           <tr style="background:rgba(168,94,86,0.1);">
             <td style="text-align:center;font-weight:800;">T12</td>
             <td style="text-align:center;color:var(--muted);font-size:11px;">+1%</td>
-            <td style="text-align:center;font-weight:800;color:var(--green);">+1.454</td>
-            <td style="text-align:center;color:var(--rose-deep);">+13<br><span style="font-size:10px;color:var(--muted);">1 tháng</span></td>
+            <td style="text-align:center;font-weight:800;color:var(--green);">+1.462</td>
+            <td style="text-align:center;color:var(--rose-deep);">+13<br><span
+                style="font-size:10px;color:var(--muted);">1 tháng</span></td>
             <td style="text-align:center;color:var(--rose-deep);">+3</td>
             <td style="text-align:center;color:var(--rose-deep);">+1</td>
             <td style="text-align:center;font-weight:700;color:var(--rose-deep);">+17</td>
-            <td style="text-align:center;font-weight:800;font-size:14px;color:var(--green);">+1.471</td>
-            <td style="text-align:center;font-weight:800;font-size:14px;color:var(--green);">+8.071</td>
+            <td style="text-align:center;font-weight:800;font-size:14px;color:var(--green);">+1.479</td>
+            <td style="text-align:center;font-weight:800;font-size:14px;color:var(--green);">+8.230</td>
           </tr>
         </tbody>
       </table>
@@ -643,12 +456,12 @@
     <div class="zones-metric zones-metric--highlight">
       <div class="zones-metric__label">Cash dương từ</div>
       <div class="zones-metric__value" style="color:var(--green);">T1 ★</div>
-      <div class="zones-metric__note">Kèm Cọc KH · T4 âm −57 tr nhưng Cum +567 tr</div>
+      <div class="zones-metric__note">Kèm Cọc KH · T4 âm −84 tr nhưng Cum +649 tr</div>
     </div>
     <div class="zones-metric">
       <div class="zones-metric__label">Cash lũy kế năm 1</div>
-      <div class="zones-metric__value" style="color:var(--green);">+8,1 tỷ</div>
-      <div class="zones-metric__note">NOI +6,1 tỷ + Cọc ~2,0 tỷ</div>
+      <div class="zones-metric__value" style="color:var(--green);">+8,2 tỷ</div>
+      <div class="zones-metric__note">NOI +6,2 tỷ + Cọc ~2,0 tỷ</div>
     </div>
     <div class="zones-metric">
       <div class="zones-metric__label">Cọc PO / HD / DD</div>
@@ -658,10 +471,11 @@
   </div>
 
   <div class="be-note be-note--highlight">
-    <b>Commission phân bổ đúng theo tổng phase sm.html:</b>
-    Aggressive 880 tr (CS 0–40%) · Growth 495 tr (CS 40–70%) · Retention 330 tr (CS 70–100%) = <b>1.705 tr</b> tổng năm 1.
-    Phân bổ theo tỷ lệ ΔCS thực trong từng phase (Agg ΣΔ=35%, Gr ΣΔ=35%, Ret ΣΔ=18%). Retention 330 tr dùng budget sm.html
-    cho CS 70→100% — bao gồm cả Year 2 signings (88→100%), tiếp cận conservative.<br>
-    <b>Cost = Rent 1.125 (T4+) + OPEX 188×CS% + S&amp;M biến động · Digital = 28,5×vacancy%.</b>
+    <b>S&amp;M — 5 thành phần độc lập, mỗi tháng một giá trị riêng:</b><br>
+    ① Commission = ΔCS_area×733K×Xth (Agg 2th/Gr 1,5th/Ret 1th) — trả khi KH ký, tỷ lệ diện tích mới tháng đó.<br>
+    ② Digital Brand = 3.000m²×vacancy%×2,5K · ③ Digital Lead Gen = 3.000m²×vacancy%×7K → tổng 28,5×vacancy%.<br>
+    ④ Events (8–12/5–8/3–5 tr) · ⑤ BD push (8–12/5–8/2–3 tr) — nội suy vacancy% trong range phase từ sm.html ②
+    Variable.<br>
+    Fixed CRM+SEO+BD base+KOL = 22 tr/th. <b>Cost = Rent(T4+: 1.125) + OPEX(188×CS%) + S&amp;M tổng.</b>
   </div>
 </div>
