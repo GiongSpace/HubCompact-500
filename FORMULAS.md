@@ -374,29 +374,33 @@ Tại CS ≈ 62% (T6):
 ### NOI ổn định (Steady State — CS = 88%)
 
 ```
-DT Gross     = 916 + 273 = 1.189 tr/th
-Rent         = −563 tr
-OPEX Location= −94 tr
-OPEX Sys     = −5% × 1.189 = −59 tr   [chỉ khi Franchise]
-Royalty      = −7% × 1.189 = −83 tr   [chỉ khi Franchise]
-S&M ổn định = −22 tr (Fixed only, không commission)
+DT Gross      = 916 + 273 = 1.189 tr/th
+Rent          = −563 tr
+OPEX Location = −94 tr
+OPEX Sys      = −5% × 1.189 = −59 tr   [chỉ khi Franchise]
+Royalty       = −7% × 1.189 = −83 tr   [chỉ khi Franchise]
+S&M ổn định  = −22 tr (Fixed only, không commission)
 ─────────────────────────────────────
-NOI (Tự mở) = 1.189 − 563 − 94 − 22 = 390 tr/th = **4,68 tỷ/năm**
-NOI (Franchise) = 1.189 − 563 − 94 − 59 − 83 − 22 = 368 tr [Giong HQ nhận]
+NOI (Tự mở, không Sys/Roy)  = 1.189 − 563 − 94 − 22          = 510 tr/th = 6,12 tỷ/năm
+NOI (Baseline incl. Sys+Roy) = 1.189 − 563 − 94 − 59 − 83 − 22 = 368 tr/th = 4,42 tỷ/năm
+
+Ghi chú: Bảng P&L ổn định bên dưới dùng NOI = 390 tr (không trừ S&M 22 tr — benchmark)
 ```
 
 ### BEP số liệu trên P&L
 
 ```
 DT Gross ổn định   = 1.189 tr/th (14,27 tỷ/năm)
-Tổng chi phí       = 799 tr/th   (9,59 tỷ/năm)
+Tổng chi phí (Baseline 4 lớp) = 799 tr/th (9,59 tỷ/năm)
   Rent               563 tr
   OPEX Location       94 tr
-  OPEX Sys (5%)        59 tr
-  Royalty (7%)         83 tr
-NOI ổn định        = 390 tr/th   (4,68 tỷ/năm)
-Khấu hao           = 115 tr/th   (1,375 tỷ/năm)
-LN sau KH          = 275 tr/th   (3,3 tỷ/năm)
+  OPEX Sys (5%)        59 tr   [Franchise only]
+  Royalty (7%)         83 tr   [Franchise only]
+NOI Baseline (incl.Sys+Roy)  = 390 tr/th  (4,68 tỷ/năm) — dùng cho payback chuẩn
+NOI Giong tự mở (no Sys/Roy) = 510 tr/th  (6,12 tỷ/năm) — sau trừ S&M 22tr
+Khấu hao                     = 115 tr/th  (1,375 tỷ/năm)
+LN sau KH (Baseline)         = 275 tr/th  (3,3 tỷ/năm)
+LN sau KH (Tự mở)            = 395 tr/th  (4,74 tỷ/năm)
 ```
 
 ---
@@ -407,7 +411,7 @@ LN sau KH          = 275 tr/th   (3,3 tỷ/năm)
 
 ```
 NOI Giong = DT Gross − Rent − OPEX − S&M
-           = 1.189 − 563 − 94 − 22 = 390 tr/th
+           = 1.189 − 563 − 94 − 22 = 510 tr/th = 6,12 tỷ/năm
 CapEx      = 7,785 tỷ (Giong tự mở, no IFF) hoặc 8,085 tỷ (Baseline)
 ```
 
@@ -442,16 +446,21 @@ CapEx Chủ nhà     = 4,705 tỷ (Fit-out 4,125 + IFF 0,3 + Buffer 0,28 − C�
 ```
 Payback_period = CapEx / NOI_bình_quân_năm
 
-Năm 1 (ramp-up): NOI lũy kế = +2,76 tỷ (từ bảng cashflow T1–T12)
-Năm 2+ (ổn định): NOI/năm = 390 tr/th × 12 = 4,68 tỷ
+Năm 1 (ramp-up): NOI lũy kế = +2,57 tỷ (tổng NOI T1–T12 từ bảng cashflow)
+Năm 2+ (ổn định): NOI/năm = 390 tr/th × 12 = 4,68 tỷ  (Baseline Sys+Roy)
+                   NOI/năm = 510 tr/th × 12 = 6,12 tỷ  (Giong tự mở, no Sys/Roy)
 
-NOI lũy kế:
-  Cuối Y1  : 2,76 tỷ
-  Cuối Y2  : 2,76 + 4,68 = 7,44 tỷ
-  Cuối Y2  : 2,76 + 4,68 = 7,44 tỷ   ← Vượt CapEx thuần 7,785 → HÒA VỐN (Tự mở)
-  Cuối Y3  : 7,44 + 4,68 = 12,12 tỷ  ← Vượt CapEx+S&M 9,1 tỷ (Baseline)
-  Cuối Y4  : 16,80 tỷ
-  Cuối Y5  : 21,48 tỷ
+NOI lũy kế (Baseline — Tổng vốn ban đầu 9,1 tỷ):
+  Cuối Y1  : 2,57 tỷ
+  Cuối Y2  : 2,57 + 4,68 = 7,25 tỷ
+  Cuối Y3  : 7,25 + 4,68 = 11,93 tỷ  ← Vượt 9,1 tỷ → HÒA VỐN (~2,5 năm)
+  Cuối Y4  : 11,93 + 4,68 = 16,61 tỷ
+  Cuối Y5  : 21,29 tỷ
+
+NOI lũy kế (Giong tự mở — Tổng vốn ban đầu 8,8 tỷ):
+  Cuối Y1  : 2,57 tỷ
+  Cuối Y2  : 2,57 + 6,12 = 8,69 tỷ   ← Gần đạt 8,8 tỷ → HÒA VỐN (~2,1 năm)
+  Cuối Y3  : 8,69 + 6,12 = 14,81 tỷ
 ```
 
 ### ROI
