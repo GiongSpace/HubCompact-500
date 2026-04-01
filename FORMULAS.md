@@ -69,12 +69,17 @@ OPEX Location/th = $2,5/m² × 1.500m² × 25.000 = 93.750.000 ≈ 94 tr/th
 | Tiền cọc MB 3th | **1,69 tỷ** | **1,69 tỷ** | ~~0~~ (chủ MB) |
 | Thuê setup 3th | **1,69 tỷ** | **1,69 tỷ** | ~~0~~ (chủ MB) |
 | Buffer OPEX 3th | 0,28 tỷ | 0,28 tỷ | 0,28 tỷ |
-| **TỔNG** | **8,085 tỷ** | **7,785 tỷ** | **4,705 tỷ** |
+| **S&M năm đầu** | **~1,05 tỷ** | **~1,05 tỷ** | **~1,05 tỷ** |
+| **TỔNG** | **~9,1 tỷ** | **~8,8 tỷ** | **~5,72 tỷ** |
 
 ```
-Baseline  = 4,125 + 0,30 + 1,69 + 1,69 + 0,28 = 8,085 tỷ
-Tự mở    = 4,125 + 0    + 1,69 + 1,69 + 0,28 = 7,785 tỷ
-NĐT      = 4,125 + 0,30 + 0    + 0    + 0,28 = 4,705 tỷ
+Baseline  = 4,125 + 0,30 + 1,69 + 1,69 + 0,28 + 1,05 ≈ 9,1 tỷ
+Tự mở    = 4,125 + 0    + 1,69 + 1,69 + 0,28 + 1,05 ≈ 8,8 tỷ
+NĐT      = 4,125 + 0,30 + 0    + 0    + 0,28 + 1,05 ≈ 5,72 tỷ
+
+Lưu ý: S&M năm đầu (~1.017–1.090 tr, dùng trung vị ~1.050 tr = ~1,05 tỷ) là chi
+ phí vận hành nhưng được đưa vào “vốn đầu tư ban đầu” để giúp NDĐT thấy
+ tổng vốn cần chuẩn bị trước khi vận hành (Pitch Deck convention).
 ```
 
 ---
@@ -445,16 +450,16 @@ Năm 1 (ramp-up): NOI lũy kế = +2,57 tỷ (tổng NOI T1–T12 từ bảng ca
 Năm 2+ (ổn định): NOI/năm = 390 tr/th × 12 = 4,68 tỷ  (Baseline Sys+Roy)
                    NOI/năm = 510 tr/th × 12 = 6,12 tỷ  (Giong tự mở, no Sys/Roy)
 
-NOI lũy kế (Baseline — payback chuẩn, CapEx 8,085 tỷ):
+NOI lũy kế (Baseline — Tổng vốn ban đầu 9,1 tỷ):
   Cuối Y1  : 2,57 tỷ
   Cuối Y2  : 2,57 + 4,68 = 7,25 tỷ
-  Cuối Y3  : 7,25 + 4,68 = 11,93 tỷ  ← Vượt CapEx 8,085 → HÒA VỐN (Baseline)
+  Cuối Y3  : 7,25 + 4,68 = 11,93 tỷ  ← Vượt 9,1 tỷ → HÒA VỐN (~2,5 năm)
   Cuối Y4  : 11,93 + 4,68 = 16,61 tỷ
   Cuối Y5  : 21,29 tỷ
 
-NOI lũy kế (Giong tự mở — CapEx 7,785 tỷ):
+NOI lũy kế (Giong tự mở — Tổng vốn ban đầu 8,8 tỷ):
   Cuối Y1  : 2,57 tỷ
-  Cuối Y2  : 2,57 + 6,12 = 8,69 tỷ   ← Vượt CapEx 7,785 → HÒA VỐN (~1,9 năm)
+  Cuối Y2  : 2,57 + 6,12 = 8,69 tỷ   ← Gần đạt 8,8 tỷ → HÒA VỐN (~2,1 năm)
   Cuối Y3  : 8,69 + 6,12 = 14,81 tỷ
 ```
 
@@ -482,10 +487,16 @@ Tổng thông số cốt lõi:
   Digital coeff = 14,25 × vac%
   BEP VH        = ~CS 62% (T6)
   NOI ổn định   = 390 tr/th
-  Payback       = ~2 năm (Baseline) / ~1,7 năm (Tự mở)
-  ROI           = ~58% (NOI/y ÷ CapEx)
+  NOI lũy kế Y1 = +2,76 tỷ
+  Payback       = ~2,2 năm (Baseline incl. S&M) / ~2 năm (Tự mở)
+  ROI           = ~58% (NOI/y ÷ CapEx thuần)
 
-CapEx tổng:
+Vốn đầu tư ban đầu (incl. S&M năm đầu ~1,05 tỷ):
+  Baseline       = ~9,1 tỷ
+  Giong tự mở   = ~8,8 tỷ
+  NĐT+Franchise  = ~5,72 tỷ
+
+CapEx thuần (không S&M):
   Baseline       = 8,085 tỷ
   Giong tự mở   = 7,785 tỷ
   NĐT+Franchise  = 4,705 tỷ
@@ -495,6 +506,7 @@ Cọc MB           = 1,69 tỷ (3th × 563tr)
 Thuê setup       = 1,69 tỷ (3th × 563tr)
 Buffer           = 0,28 tỷ (3th × 94tr)
 IFF              = 0,30 tỷ (cố định)
+S&M năm đầu     = ~1,05 tỷ (mid-range 1.017–1.090 tr)
 ```
 
 ---
