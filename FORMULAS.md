@@ -28,8 +28,13 @@ Phiên bản: 2026-03-30 · Tỷ giá: $1 USD = 25.000 VNĐ
 | **Café diện tích** | 75 m² | Cho thuê cố định (trong Common) |
 | **Tỷ giá USD** | 25.000 VNĐ | $1 USD = 25K VNĐ |
 | **VPA** | 450 DN | = NLA × 0,3 = 1.500 × 0,3 |
-| **Phễu DN** | ~546 DN | 450 VPA + 66 Hub + 30 Network |
-| **HH PO** | ~33 Hub DN | PO + CW + DD ≈ 33 đơn vị |
+| **Hub DN** | ~71 DN | PO 31 + (CW+DD)×0,6 = 40 |
+| **Phễu DN** | ~521 DN | 450 VPA + 71 Hub |
+
+**Công thức Hub DN** (dẫn xuất từ PO + CW + DD):
+- **PO**: 250 seats ÷ 8 avg seats/phòng = **31 DN** (midpoint của range 6–10 seats/phòng)
+- **(CW + DD) × 0,6**: (48 + 19) × 0,6 = **40 DN** (hệ số 0,6 vì đa số là cá nhân, không phải DN)
+- **Tổng Hub DN**: 31 + 40 = **71 DN**
 
 ---
 
@@ -69,17 +74,17 @@ OPEX Location/th = $2,5/m² × 1.500m² × 25.000 = 93.750.000 ≈ 94 tr/th
 | Tiền cọc MB 3th | **1,69 tỷ** | **1,69 tỷ** | ~~0~~ (chủ MB) |
 | Thuê setup 3th | **1,69 tỷ** | **1,69 tỷ** | ~~0~~ (chủ MB) |
 | Buffer OPEX 3th | 0,28 tỷ | 0,28 tỷ | 0,28 tỷ |
-| **S&M năm đầu** | **~1,05 tỷ** | **~1,05 tỷ** | **~1,05 tỷ** |
-| **TỔNG** | **~9,1 tỷ** | **~8,8 tỷ** | **~5,72 tỷ** |
+| **S&M năm đầu** | **~1,26 tỷ** | **~1,26 tỷ** | **~1,26 tỷ** |
+| **TỔNG** | **~9,3 tỷ** | **~9,0 tỷ** | **~5,96 tỷ** |
 
 ```
-Baseline  = 4,125 + 0,30 + 1,69 + 1,69 + 0,28 + 1,05 ≈ 9,1 tỷ
-Tự mở    = 4,125 + 0    + 1,69 + 1,69 + 0,28 + 1,05 ≈ 8,8 tỷ
-NĐT      = 4,125 + 0,30 + 0    + 0    + 0,28 + 1,05 ≈ 5,72 tỷ
+Baseline  = 4,125 + 0,30 + 1,69 + 1,69 + 0,28 + 1,26 ≈ 9,3 tỷ
+Tự mở    = 4,125 + 0    + 1,69 + 1,69 + 0,28 + 1,26 ≈ 9,0 tỷ
+NĐT      = 4,125 + 0,30 + 0    + 0    + 0,28 + 1,26 ≈ 5,96 tỷ
 
-Lưu ý: S&M năm đầu (~1.017–1.090 tr, dùng trung vị ~1.050 tr = ~1,05 tỷ) là chi
- phí vận hành nhưng được đưa vào “vốn đầu tư ban đầu” để giúp NDĐT thấy
- tổng vốn cần chuẩn bị trước khi vận hành (Pitch Deck convention).
+Lưu ý: S&M năm đầu (1.258 tr ≈ 1,26 tỷ, theo per-month T1–T12 thực tế với CS đạt 88%
+ cuối Năm 1) là chi phí vận hành nhưng được đưa vào “vốn đầu tư ban đầu” để
+ giúp NDĐT thấy tổng vốn cần chuẩn bị trước khi vận hành (Pitch Deck convention).
 ```
 
 ---
@@ -146,7 +151,9 @@ Ví dụ:
 
 ```
 VPA = NLA × 0,3 = 1.500 × 0,3 = 450 DN
-Phễu tổng = 450 VPA + 66 Hub DN + 30 Network ≈ 546 DN tham chiếu
+Hub DN = PO (250÷8 = 31) + (CW+DD)×0,6 = (48+19)×0,6 = 40
+       = 31 + 40 = 71 DN
+Phễu tổng = 450 VPA + 71 Hub = 521 DN
 ```
 
 ### 7 nhóm dịch vụ Add-on
@@ -154,25 +161,32 @@ Phễu tổng = 450 VPA + 66 Hub DN + 30 Network ≈ 546 DN tham chiếu
 | Dịch vụ | Pool | Conversion | Đơn giá HH | DT/th |
 |---------|------|-----------|-----------|------|
 | **Membership** | 450 VPA | 30% = 135 DN | 450K/DN/th | **61 tr** |
-| **Giong Tax** | 450 VPA + 33 Hub | 30%+50% = 153 DN | 2tr/th × 15% HH | **58 tr** |
-| **Giong Grow** | 450+33 | 10%+20% = 52 DN | 4-10tr × 20% HH | **74 tr** |
+| **Giong Tax** | 450 VPA + 71 Hub | 30%+50% = 171 DN | 2tr/th × 15% HH | **51 tr** |
+| **Giong Grow** | 450 + 71 | 10%+20% = 59 DN | 4-10tr × 20% HH | **83 tr** |
 | **Giong Promote** | Hub+Network | 4 events/th | 3-15tr/event | **35 tr** |
 | **Giong Legal** | 450 VPA | 50% ĐKKD + 20%/năm | 3-5tr × 15% HH | **18 tr** |
-| **Giong AI** | 450+33 | 8%+15% = 41 DN | 1,2tr × 25% HH | **72 tr** |
-| **Giong Connect** | 283 ecosystem | 8% = 23 deal | 15tr × 15% HH | **12 tr** |
-| **TỔNG** | | | | **~273 tr/th** |
+| **Giong AI** | 450 + 71 | 8%+15% = 47 DN | 1,2tr × 25% HH | **14 tr** |
+| **Giong Connect** | 521 phễu | 8% = 42 deals | 15tr × 15% HH | **94 tr** |
+| **TỔNG** | | | | **~356 tr/th** |
 
-> **Lưu ý:** Tổng cộng lẻ = 330 tr. File dùng 273 tr (= 546 VPA pool ÷ 2 theo tỷ lệ 1.500m²) — phương pháp bảo thủ hơn.
+> **Verify từng row** (đúng công thức với phễu mới = 521 = 450 VPA + 71 Hub):
+> - Membership: 135 × 450K = 60,75 ≈ 61 ✓
+> - Tax: 30%×450 + 50%×71 = 171 DN · 171 × 2tr × 15% = 51,3 ≈ 51 ✓
+> - Grow: 10%×450 + 20%×71 = 59 DN · 59 × 7tr × 20% = 82,6 ≈ 83 ✓
+> - Promote: 4 × ~9tr ≈ 35 ✓
+> - AI: 8%×450 + 15%×71 = 47 DN · 47 × 1,2tr × 25% = 14,1 ≈ 14 ✓
+> - Connect: 521 × 8% = 42 deals · 42 × 15tr × 15% = 93,78 ≈ 94 ✓
+> - **Tổng: 61+51+83+35+18+14+94 = 356 tr/th**
 
 ### DT Add-on theo tháng
 
 ```
-DT_Add-on(CS%) = 273 × (CS% / 88%)     [T1–T3: Add-on = 0 vì chưa vận hành VPA]
-  T4 (CS=45%): 273 × 45/88 = 140 tr
-  T7 (CS=70%): 273 × 70/88 = 217 tr
-  T12(CS=88%): 273 tr
+DT_Add-on(CS%) = 356 × (CS% / 88%)     [T1–T3: Add-on = 0 vì chưa vận hành VPA]
+  T4 (CS=45%): 356 × 45/88 = 182 tr
+  T7 (CS=70%): 356 × 70/88 = 283 tr
+  T12(CS=88%): 356 tr
 
-DT GROSS (ổn định) = 916 + 273 = 1.189 tr/th
+DT GROSS (ổn định) = 916 + 356 = 1.272 tr/th
 ```
 
 ---
@@ -215,11 +229,11 @@ Ví dụ:
 ### Chi phí Franchise (khi áp dụng)
 
 ```
-OPEX Hệ thống (Sys Fee) = 5% × DT Gross = 5% × 1.189 = 59 tr/th
-Royalty Fee             = 7% × DT Gross = 7% × 1.189 = 83 tr/th
+OPEX Hệ thống (Sys Fee) = 5% × DT Gross = 5% × 1.272 = 64 tr/th
+Royalty Fee             = 7% × DT Gross = 7% × 1.272 = 89 tr/th
 OPEX Markup (HQ+0,5$/m²)= ($3-$2,5) × 1.500 × 25K = 19 tr/th ≈ 38 tr/th (làm tròn)
 
-Tổng Franchise fees ổn định = 59 + 83 + 38 = 180 tr/th ≈ 181 tr/th
+Tổng Franchise fees ổn định = 64 + 89 + 38 = 191 tr/th
 ```
 
 ---
@@ -236,16 +250,20 @@ Trong đó:
   Giá_PO   = 2.500.000 VNĐ/seat/th, 1 seat = 3m² → 733.333 VNĐ/m²/th ≈ 733K/m²/th
   X_th HH  = 2 th (Aggressive) / 1,5 th (Growth) / 1 th (Retention)
 
-Phase Aggressive (CS 0→40%, ΔCS=40%):
-  = 750 × 40% × 733K × 2th = 300 × 733K × 2 = 439.800.000 ≈ 440 tr
+Tính theo CS thực tế đạt 88% cuối Năm 1 (T1→T12):
 
-Phase Growth (CS 40→70%, ΔCS=30%):
-  = 750 × 30% × 733K × 1,5th = 225 × 733K × 1,5 = 247.387.500 ≈ 247 tr
+Phase Aggressive (T1–T3, CS 0→35%, ΔCS=35%):
+  = 750 × 35% × 733K × 2th = 262,5 × 733K × 2 = 384.825.000 ≈ 385 tr
 
-Phase Retention (CS 70→100%, ΔCS=30%):
-  = 750 × 30% × 733K × 1th = 225 × 733K × 1 = 165.000.000 ≈ 165 tr
+Phase Growth (T4–T7, CS 35→70%, ΔCS=35%):
+  = 750 × 35% × 733K × 1,5th = 262,5 × 733K × 1,5 = 288.618.750 ≈ 289 tr
+  (per-month sum chính xác: 83+83+58+66 = 290 tr)
 
-Tổng Commission Năm 1 = 440 + 247 + 165 = 852 tr
+Phase Retention (T8–T12, CS 70→88%, ΔCS=18%):
+  = 750 × 18% × 733K × 1th = 135 × 733K × 1 = 98.955.000 ≈ 99 tr
+  (per-month sum chính xác: 39+28+17+11+6 = 101 tr)
+
+Tổng Commission Năm 1 (per-month thực tế) = 385 + 290 + 101 = 776 tr
 ```
 
 ### Commission per tháng (theo ΔCS từng tháng)
@@ -301,14 +319,15 @@ Nội suy tuyến tính trong range theo vacancy% thực tế từng tháng.
 Fixed = CRM 2,5 tr + Content/SEO 6 tr + BD base 10 tr + KOL/PR 3 tr = 22 tr/th
 ```
 
-### Tổng S&M Năm đầu theo phase
+### Tổng S&M Năm đầu theo phase (per-month T1–T12 thực tế)
 
 ```
-Phase Aggressive (~3,5 th) : ~513–540 tr  (commission 440 + variable + fixed)
-Phase Growth     (~4 th)   : ~304–330 tr
-Phase Retention  (~3 th)   : ~200–220 tr
-TỔNG NĂM ĐẦU              : ~1.017–1.090 tr
-  Trong đó: Commission 852 tr (trả 1 lần) + Fixed 264 tr + Variable ~100 tr
+Phase Aggressive (T1–T3, 3 th)   : 544 tr  (Fixed 66 + Variable 478)
+Phase Growth     (T4–T7, 4 th)   : 456 tr  (Fixed 88 + Variable 368)
+Phase Retention  (T8–T12, 5 th)  : 258 tr  (Fixed 110 + Variable 148)
+TỔNG NĂM ĐẦU                    : 1.258 tr (~1,26 tỷ)
+  Trong đó: Commission 776 tr (trả 1 lần) + Fixed 264 tr (22×12) + Variable khác ~218 tr
+  Avg: 1.258 ÷ 12 tháng = 105 tr/th · %DT avg ~13%
 ```
 
 ---
@@ -335,15 +354,15 @@ Trong đó:
 | T1 | 15% | 156 tr | 0 | 156 | 235 | −79 | −79 |
 | T2 | 25% | 260 tr | 0 | 260 | 187 | +73 | −6 |
 | T3 | 35% | 365 tr | 0 | 365 | 193 | +172 | +166 |
-| T4 | 45% | 469 tr | 140 | 609 | 734 | −125 | +41 |
-| T5 | 55% | 573 tr | 171 | 744 | 741 | **+3** | +44 |
-| **T6** | **62%** | 646 tr | 193 | 839 | 719 | **+120 ★BEP** | +164 |
-| T7 | 70% | 730 tr | 218 | 948 | 732 | +216 | +380 |
-| T8 | 77% | 803 tr | 239 | 1.042 | 708 | +334 | +714 |
-| T9 | 82% | 851 tr | 254 | 1.105 | 700 | +405 | +1.119 |
-| T10 | 85% | 884 tr | 264 | 1.148 | 691 | +457 | +1.576 |
-| T11 | 87% | 905 tr | 270 | 1.175 | 686 | +489 | +2.065 |
-| T12 | 88% | 916 tr | 273 | 1.189 | 682 | +507 | +2.572 |
+| T4 | 45% | 469 tr | 182 | 651 | 734 | −83 | +83 |
+| T5 | 55% | 573 tr | 223 | 796 | 741 | **+55** | +138 |
+| **T6** | **62%** | 646 tr | 251 | 897 | 719 | **+178 ★BEP** | +316 |
+| T7 | 70% | 730 tr | 283 | 1.013 | 732 | +281 | +597 |
+| T8 | 77% | 803 tr | 312 | 1.115 | 708 | +407 | +1.004 |
+| T9 | 82% | 851 tr | 332 | 1.183 | 700 | +483 | +1.487 |
+| T10 | 85% | 884 tr | 344 | 1.228 | 691 | +537 | +2.024 |
+| T11 | 87% | 905 tr | 352 | 1.257 | 686 | +571 | +2.595 |
+| T12 | 88% | 916 tr | 356 | 1.272 | 682 | +590 | +3.185 |
 
 > ★ **T6 = Hòa vốn Vận hành** (BEP)  
 > ★★ **T7 = Lợi nhuận kế toán dương**
@@ -366,41 +385,41 @@ BEP_VH xảy ra khi: DT_Gross(t) = Cost(t)
                    DT(t) = Rent + OPEX(CS%) + SM_min
 
 Tại CS ≈ 62% (T6):
-  DT = 839 tr
-  Cost = 563 + 58 + 98 + 80 = 719 tr (gần BEP, NOI +120)
-  → BEP nằm trong khoảng CS 55–62%
+  DT = 897 tr
+  Cost = 563 + 58 + 98 = 719 tr → NOI +178 (vượt BEP xa)
+  → BEP Tự mở (no Sys/Roy): CS ~51% (giữa T4 NOI −83 và T5 NOI +55)
+  → BEP Baseline (incl. Sys+Roy 12%): CS ~58% (giữa T5 NOI −41 và T6 NOI +70)
 ```
 
 ### NOI ổn định (Steady State — CS = 88%)
 
 ```
-DT Gross      = 916 + 273 = 1.189 tr/th
+DT Gross      = 916 + 356 = 1.272 tr/th
 Rent          = −563 tr
 OPEX Location = −94 tr
-OPEX Sys      = −5% × 1.189 = −59 tr   [chỉ khi Franchise]
-Royalty       = −7% × 1.189 = −83 tr   [chỉ khi Franchise]
+OPEX Sys      = −5% × 1.272 = −64 tr   [chỉ khi Franchise]
+Royalty       = −7% × 1.272 = −89 tr   [chỉ khi Franchise]
 S&M ổn định  = −22 tr (Fixed only, không commission)
 ─────────────────────────────────────
-NOI (Tự mở, không Sys/Roy)  = 1.189 − 563 − 94 − 22          = 510 tr/th = 6,12 tỷ/năm
-NOI (Baseline incl. Sys+Roy) = 1.189 − 563 − 94 − 59 − 83 − 22 = 368 tr/th = 4,42 tỷ/năm
-
-Ghi chú: Bảng P&L ổn định bên dưới dùng NOI = 390 tr (không trừ S&M 22 tr — benchmark)
+NOI (Tự mở, không Sys/Roy)  = 1.272 − 563 − 94 − 22          = 593 tr/th = 7,12 tỷ/năm
+NOI (Baseline incl. Sys+Roy) = 1.272 − 563 − 94 − 64 − 89 − 22 = 440 tr/th = 5,28 tỷ/năm
 ```
 
 ### BEP số liệu trên P&L
 
 ```
-DT Gross ổn định   = 1.189 tr/th (14,27 tỷ/năm)
-Tổng chi phí (Baseline 4 lớp) = 799 tr/th (9,59 tỷ/năm)
+DT Gross ổn định   = 1.272 tr/th (15,26 tỷ/năm)
+Tổng chi phí (Baseline 4 lớp + S&M) = 832 tr/th (9,98 tỷ/năm)
   Rent               563 tr
   OPEX Location       94 tr
-  OPEX Sys (5%)        59 tr   [Franchise only]
-  Royalty (7%)         83 tr   [Franchise only]
-NOI Baseline (incl.Sys+Roy)  = 390 tr/th  (4,68 tỷ/năm) — dùng cho payback chuẩn
-NOI Giong tự mở (no Sys/Roy) = 510 tr/th  (6,12 tỷ/năm) — sau trừ S&M 22tr
+  OPEX Sys (5%)        64 tr   [Franchise only]
+  Royalty (7%)         89 tr   [Franchise only]
+  S&M Fixed            22 tr
+NOI Baseline (incl.Sys+Roy)  = 440 tr/th  (5,28 tỷ/năm) — dùng cho payback chuẩn
+NOI Giong tự mở (no Sys/Roy) = 593 tr/th  (7,12 tỷ/năm) — sau trừ S&M 22tr
 Khấu hao                     = 115 tr/th  (1,375 tỷ/năm)
-LN sau KH (Baseline)         = 275 tr/th  (3,3 tỷ/năm)
-LN sau KH (Tự mở)            = 395 tr/th  (4,74 tỷ/năm)
+LN sau KH (Baseline)         = 325 tr/th  (3,90 tỷ/năm)
+LN sau KH (Tự mở)            = 478 tr/th  (5,74 tỷ/năm)
 ```
 
 ---
@@ -411,7 +430,7 @@ LN sau KH (Tự mở)            = 395 tr/th  (4,74 tỷ/năm)
 
 ```
 NOI Giong = DT Gross − Rent − OPEX − S&M
-           = 1.189 − 563 − 94 − 22 = 510 tr/th = 6,12 tỷ/năm
+           = 1.272 − 563 − 94 − 22 = 593 tr/th = 7,12 tỷ/năm
 CapEx      = 7,785 tỷ (Giong tự mở, no IFF) hoặc 8,085 tỷ (Baseline)
 ```
 
@@ -419,7 +438,7 @@ CapEx      = 7,785 tỷ (Giong tự mở, no IFF) hoặc 8,085 tỷ (Baseline)
 
 ```
 Giong HQ nhận/th = Sys(5%) + Roy(7%) + OPEX markup(0,5$/m²)
-                 = 59 + 83 + 38 = 180 tr/th ≈ 181 tr/th
+                 = 64 + 89 + 38 = 191 tr/th
 CapEx Giong      = 0 (Franchisee đầu tư)
 IFF              = 300 tr (1 lần khi ký)
 ```
@@ -428,13 +447,14 @@ IFF              = 300 tr (1 lần khi ký)
 
 ```
 Chủ nhà hưởng:
-  NOI Franchisee = DT Gross − OPEX − Sys − Roy = 1.402 × (1 − 5% − 7%) − 94 ≈ 1.057 tr/th *
+  NOI Franchisee = DT Gross − OPEX − Sys − Roy
+                 ≈ 1.272 × (1 − 5% − 7%) − 94 ≈ 1.025 tr/th *
   Không trả rent → tiết kiệm 563 tr/th
 
-Giong HQ vẫn nhận = 181 tr/th (Sys + Roy + markup)
+Giong HQ vẫn nhận = 191 tr/th (Sys + Roy + markup)
 CapEx Chủ nhà     = 4,705 tỷ (Fit-out 4,125 + IFF 0,3 + Buffer 0,28 − Cọc/Thuê 0)
 
-* DT Gross ở mức CS ổn định ~75%: 1.189 × 75/88 ≈ 1.013 tr → ước tính 927 NOI
+* DT Gross ở mức CS ổn định ~75%: 1.272 × 75/88 ≈ 1.084 tr → ước tính ~860 NOI
 ```
 
 ---
@@ -446,31 +466,33 @@ CapEx Chủ nhà     = 4,705 tỷ (Fit-out 4,125 + IFF 0,3 + Buffer 0,28 − C�
 ```
 Payback_period = CapEx / NOI_bình_quân_năm
 
-Năm 1 (ramp-up): NOI lũy kế = +2,57 tỷ (tổng NOI T1–T12 từ bảng cashflow)
-Năm 2+ (ổn định): NOI/năm = 390 tr/th × 12 = 4,68 tỷ  (Baseline Sys+Roy)
-                   NOI/năm = 510 tr/th × 12 = 6,12 tỷ  (Giong tự mở, no Sys/Roy)
+Năm 1 (ramp-up): NOI lũy kế = +3,19 tỷ (tổng NOI T1–T12 từ bảng cashflow)
+Năm 2+ (ổn định): NOI/năm = 440 tr/th × 12 = 5,28 tỷ  (Baseline Sys+Roy)
+                   NOI/năm = 593 tr/th × 12 = 7,12 tỷ  (Giong tự mở, no Sys/Roy)
 
-NOI lũy kế (Baseline — Tổng vốn ban đầu 9,1 tỷ):
-  Cuối Y1  : 2,57 tỷ
-  Cuối Y2  : 2,57 + 4,68 = 7,25 tỷ
-  Cuối Y3  : 7,25 + 4,68 = 11,93 tỷ  ← Vượt 9,1 tỷ → HÒA VỐN (~2,5 năm)
-  Cuối Y4  : 11,93 + 4,68 = 16,61 tỷ
-  Cuối Y5  : 21,29 tỷ
+NOI lũy kế (Baseline — Tổng vốn ban đầu 9,3 tỷ):
+  Cuối Y1  : 3,19 tỷ
+  Cuối Y2  : 3,19 + 5,28 = 8,47 tỷ   ← Còn 0,83 tỷ
+  Cuối Y3  : 8,47 + 5,28 = 13,75 tỷ  ← Vượt 9,3 tỷ → HÒA VỐN (~2,2 năm)
+  Cuối Y4  : 13,75 + 5,28 = 19,03 tỷ
+  Cuối Y5  : 24,31 tỷ
 
-NOI lũy kế (Giong tự mở — Tổng vốn ban đầu 8,8 tỷ):
-  Cuối Y1  : 2,57 tỷ
-  Cuối Y2  : 2,57 + 6,12 = 8,69 tỷ   ← Gần đạt 8,8 tỷ → HÒA VỐN (~2,1 năm)
-  Cuối Y3  : 8,69 + 6,12 = 14,81 tỷ
+NOI lũy kế (Giong tự mở — Tổng vốn ban đầu 9,0 tỷ):
+  Cuối Y1  : 3,19 tỷ
+  Cuối Y2  : 3,19 + 7,12 = 10,31 tỷ  ← Vượt 9,0 tỷ → HÒA VỐN (~1,8 năm)
+  Cuối Y3  : 10,31 + 7,12 = 17,43 tỷ
 ```
 
 ### ROI
 
 ```
-ROI = NOI_ổn_định/năm ÷ CapEx
-    = 4,68 tỷ ÷ 8,085 tỷ = 57,9% ≈ 58%
+ROI = NOI_ổn_định/năm ÷ CapEx_thuần
+    = 5,28 tỷ ÷ 8,085 tỷ = 65,3%        (Baseline)
+    = 7,12 tỷ ÷ 7,785 tỷ = 91,5%        (Giong tự mở)
 
-ROI thực = LN_sau_KH/năm ÷ CapEx
-         = 3,3 tỷ ÷ 8,085 tỷ = 40,8%
+ROI thực = LN_sau_KH/năm ÷ CapEx_thuần
+         = 3,90 tỷ ÷ 8,085 tỷ = 48,2%   (Baseline)
+         = 5,74 tỷ ÷ 7,785 tỷ = 73,7%   (Giong tự mở)
 ```
 
 ---
@@ -482,19 +504,19 @@ Tổng thông số cốt lõi:
   NLA           = 1.500m²        PO = 750m²
   Rent          = 563 tr/th      = $15/m²
   OPEX          = 94 tr/th       = $2,5/m²
-  DT max        = 1.189 tr/th    tại CS 88%
-  Commission    = 852 tr/năm 1   trả khi KH ký
+  DT max        = 1.272 tr/th    tại CS 88% (916 + 356 add-on)
+  Commission    = 776 tr/năm 1   trả khi KH ký (CS thực tế đạt 88%)
   Digital coeff = 14,25 × vac%
-  BEP VH        = ~CS 62% (T6)
-  NOI ổn định   = 390 tr/th
-  NOI lũy kế Y1 = +2,76 tỷ
-  Payback       = ~2,2 năm (Baseline incl. S&M) / ~2 năm (Tự mở)
-  ROI           = ~58% (NOI/y ÷ CapEx thuần)
+  BEP VH        = ~CS 51% (Tự mở) · ~CS 58% (Baseline incl. Sys+Roy)
+  NOI ổn định   = 440 tr/th (Baseline) · 593 tr/th (Tự mở)
+  NOI lũy kế Y1 = +3,19 tỷ
+  Payback       = ~2,2 năm (Baseline) / ~1,8 năm (Tự mở)
+  ROI           = ~65% (Baseline) / ~92% (Tự mở) — NOI/y ÷ CapEx thuần
 
-Vốn đầu tư ban đầu (incl. S&M năm đầu ~1,05 tỷ):
-  Baseline       = ~9,1 tỷ
-  Giong tự mở   = ~8,8 tỷ
-  NĐT+Franchise  = ~5,72 tỷ
+Vốn đầu tư ban đầu (incl. S&M năm đầu ~1,26 tỷ):
+  Baseline       = ~9,3 tỷ
+  Giong tự mở   = ~9,0 tỷ
+  NĐT+Franchise  = ~5,96 tỷ
 
 CapEx thuần (không S&M):
   Baseline       = 8,085 tỷ
@@ -506,7 +528,7 @@ Cọc MB           = 1,69 tỷ (3th × 563tr)
 Thuê setup       = 1,69 tỷ (3th × 563tr)
 Buffer           = 0,28 tỷ (3th × 94tr)
 IFF              = 0,30 tỷ (cố định)
-S&M năm đầu     = ~1,05 tỷ (mid-range 1.017–1.090 tr)
+S&M năm đầu     = ~1,26 tỷ (per-month T1–T12 thực tế · 1.258 tr)
 ```
 
 ---
