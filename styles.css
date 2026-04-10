@@ -192,7 +192,7 @@ body {
 /* ── COMPARE HEADER ── */
 .compare-header {
   display: grid;
-  grid-template-columns: 200px 1fr 1fr;
+  grid-template-columns: 200px 1fr;
   gap: 0;
   margin-bottom: 0;
 }
@@ -264,7 +264,7 @@ body {
 
 .zone-row {
   display: grid;
-  grid-template-columns: 200px 1fr 1fr;
+  grid-template-columns: 160px 1fr;
   border-bottom: 1px solid var(--border);
 }
 
@@ -273,7 +273,7 @@ body {
 }
 
 .zone-name {
-  padding: 16px 0;
+  padding: 22px 0;
   font-size: 13px;
   font-weight: 600;
   display: flex;
@@ -293,7 +293,7 @@ body {
 }
 
 .zone-cell {
-  padding: 16px 28px;
+  padding: 22px 28px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -408,7 +408,7 @@ body {
 .fp-zones {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 14px;
 }
 
 .fp-zone {
@@ -1075,7 +1075,7 @@ body {
 
   .compare-header,
   .zone-row {
-    grid-template-columns: 140px 1fr 1fr;
+    grid-template-columns: 140px 1fr;
   }
 
   .capex-grid,
@@ -1095,7 +1095,7 @@ body {
 
   .compare-header,
   .zone-row {
-    grid-template-columns: 100px 1fr 1fr;
+    grid-template-columns: 100px 1fr;
   }
 
   .metrics-grid {

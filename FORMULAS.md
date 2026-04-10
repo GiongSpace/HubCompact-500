@@ -1,6 +1,6 @@
-# 📐 GIONG SPACE — Tài liệu Công thức & Cách tính
-**Hub Flagship · 1.500m² NLA**  
-Phiên bản: 2026-03-30 · Tỷ giá: $1 USD = 25.000 VNĐ
+# GIONG SPACE — Tài liệu Công thức & Cách tính
+**Hub Compact · 500m² NLA**  
+Phiên bản: 2026-04-10 · Tỷ giá: $1 USD = 25.000 VNĐ
 
 ---
 
@@ -22,19 +22,35 @@ Phiên bản: 2026-03-30 · Tỷ giá: $1 USD = 25.000 VNĐ
 
 | Tham số | Giá trị | Ghi chú |
 |---------|---------|---------|
-| **NLA tổng** | 1.500 m² | Net Leasable Area |
-| **PO area** | 750 m² | 50% NLA — Private Office |
-| **Hub/Common area** | 750 m² | 50% NLA — CW + Meeting + Event + Showroom |
-| **Café diện tích** | 75 m² | Cho thuê cố định (trong Common) |
+| **NLA tổng** | 500 m² | Net Leasable Area |
+| **PO area** | 250 m² | 50% NLA — Private Office |
+| **Common area** | 250 m² | 50% NLA — CW + Meeting + Event + Reception + Biz |
+| **F&B/Café diện tích** | 25 m² | Trong Reception area |
 | **Tỷ giá USD** | 25.000 VNĐ | $1 USD = 25K VNĐ |
-| **VPA** | 450 DN | = NLA × 0,3 = 1.500 × 0,3 |
-| **Hub DN** | ~71 DN | PO 31 + (CW+DD)×0,6 = 40 |
-| **Phễu DN** | ~521 DN | 450 VPA + 71 Hub |
+| **VPA** | 150 DN | = NLA × 0,3 = 500 × 0,3 |
+| **Hub DN** | ~23 DN | PO 10 + CW×0,6 = 13 |
+| **Phễu DN** | ~173 DN | 150 VPA + 23 Hub |
 
-**Công thức Hub DN** (dẫn xuất từ PO + CW + DD):
-- **PO**: 250 seats ÷ 8 avg seats/phòng = **31 DN** (midpoint của range 6–10 seats/phòng)
-- **(CW + DD) × 0,6**: (48 + 19) × 0,6 = **40 DN** (hệ số 0,6 vì đa số là cá nhân, không phải DN)
-- **Tổng Hub DN**: 31 + 40 = **71 DN**
+**Công thức Hub DN** (dẫn xuất từ PO + CW):
+- **PO**: 83 seats ÷ 8 avg seats/phòng = **~10 DN**
+- **CW × 0,6**: 21 × 0,6 = **~13 DN** (hệ số 0,6 vì đa số là cá nhân)
+- **Tổng Hub DN**: 10 + 13 = **23 DN**
+
+**Phân khu diện tích (PO = 50%):**
+
+| Zone | m² | % | Ghi chú |
+|------|-----|---|---------|
+| Private Office | 250 | 50% | 8–12 phòng · anchor revenue |
+| Coworking/Hot Desk | 65 | 13% | 21 seats |
+| Event/Workshop | 45 | 9% | 30–40 người |
+| Meeting Rooms | 30 | 6% | 3 phòng |
+| Reception/Lounge | 25 | 5% | Tiếp đón + café nhỏ |
+| Biz Services | 15 | 3% | Góc tư vấn |
+| Back Office | 15 | 3% | Kho + admin |
+| Circulation/WC | 55 | 11% | Hành lang, WC |
+| **Tổng** | **500** | **100%** | |
+
+Không triển khai: Dedicated Desk, Biz Promote/Showroom, Wellness/Gym
 
 ---
 
@@ -43,48 +59,44 @@ Phiên bản: 2026-03-30 · Tỷ giá: $1 USD = 25.000 VNĐ
 ### Công thức đơn giá fit-out
 
 ```
-Fit-out PO      = $1,5/m² × 750m²  × 25.000 VNĐ = 28.125.000 VNĐ/m² → 1,125 tỷ
-Fit-out Common  = $4/m²   × 750m²  × 25.000 VNĐ = 75.000.000 VNĐ  → 3,0 tỷ
-Fit-out tổng    = 1,125 + 3,0 = 4,125 tỷ VNĐ
+Fit-out PO      = 1,5 tr/m² × 250m² = 375 tr = 0,375 tỷ
+Fit-out Common  = 4,0 tr/m² × 250m² = 1.000 tr = 1,0 tỷ
+Fit-out tổng    = 0,375 + 1,0 = 1,375 tỷ VNĐ
 ```
 
 ### Công thức tiền cọc & thuê setup
 
 ```
-Tiền cọc MB (3th) = 3 × Rent/th = 3 × 563 tr = 1.689 tr ≈ 1,69 tỷ
-Tiền thuê Setup   = 3 × Rent/th = 3 × 563 tr = 1.689 tr ≈ 1,69 tỷ
+Tiền cọc MB (3th) = 3 × Rent/th = 3 × 188 tr = 564 tr ≈ 0,56 tỷ
+Tiền thuê Setup   = 3 × Rent/th = 3 × 188 tr = 564 tr ≈ 0,56 tỷ
   (3 tháng fit-out trước khi mở cửa — chưa có doanh thu)
 
-Rent/th = $15/m² × 1.500m² × 25.000 VNĐ = 562.500.000 ≈ 563 tr/th
+Rent/th = $15/m² × 500m² × 25.000 VNĐ = 187.500.000 ≈ 188 tr/th
 ```
 
 ### Công thức vốn buffer
 
 ```
-Buffer = 3 tháng × OPEX Location = 3 × 94 tr = 282 tr ≈ 0,28 tỷ
-OPEX Location/th = $2,5/m² × 1.500m² × 25.000 = 93.750.000 ≈ 94 tr/th
+Buffer = 3 tháng × OPEX Location = 3 × 31 tr = 93 tr ≈ 0,09 tỷ
+OPEX Location/th = $2,5/m² × 500m² × 25.000 = 31.250.000 ≈ 31 tr/th
 ```
 
 ### 3 Kịch bản CapEx tổng
 
-| Hạng mục | Baseline (IFF) | Giong tự mở | NĐT + Franchise |
-|----------|---------------|-------------|-----------------|
-| Fit-out tổng | 4,125 tỷ | 4,125 tỷ | 4,125 tỷ |
+| Hạng mục | Baseline (Franchise) | Giong tự mở | NĐT + Franchise |
+|----------|---------------------|-------------|-----------------|
+| Fit-out tổng | 1,375 tỷ | 1,375 tỷ | 1,375 tỷ |
 | IFF | **0,30 tỷ** | ~~0~~ | **0,30 tỷ** |
-| Tiền cọc MB 3th | **1,69 tỷ** | **1,69 tỷ** | ~~0~~ (chủ MB) |
-| Thuê setup 3th | **1,69 tỷ** | **1,69 tỷ** | ~~0~~ (chủ MB) |
-| Buffer OPEX 3th | 0,28 tỷ | 0,28 tỷ | 0,28 tỷ |
-| **S&M năm đầu** | **~1,26 tỷ** | **~1,26 tỷ** | **~1,26 tỷ** |
-| **TỔNG** | **~9,3 tỷ** | **~9,0 tỷ** | **~5,96 tỷ** |
+| Tiền cọc MB 3th | **0,56 tỷ** | **0,56 tỷ** | ~~0~~ (chủ MB) |
+| Thuê setup 3th | **0,56 tỷ** | **0,56 tỷ** | ~~0~~ (chủ MB) |
+| Buffer OPEX 3th | 0,09 tỷ | 0,09 tỷ | 0,09 tỷ |
+| **S&M năm đầu** | **~0,55 tỷ** | **~0,55 tỷ** | **~0,55 tỷ** |
+| **TỔNG** | **~3,4 tỷ** | **~3,1 tỷ** | **~2,3 tỷ** |
 
 ```
-Baseline  = 4,125 + 0,30 + 1,69 + 1,69 + 0,28 + 1,26 ≈ 9,3 tỷ
-Tự mở    = 4,125 + 0    + 1,69 + 1,69 + 0,28 + 1,26 ≈ 9,0 tỷ
-NĐT      = 4,125 + 0,30 + 0    + 0    + 0,28 + 1,26 ≈ 5,96 tỷ
-
-Lưu ý: S&M năm đầu (1.258 tr ≈ 1,26 tỷ, theo per-month T1–T12 thực tế với CS đạt 88%
- cuối Năm 1) là chi phí vận hành nhưng được đưa vào “vốn đầu tư ban đầu” để
- giúp NDĐT thấy tổng vốn cần chuẩn bị trước khi vận hành (Pitch Deck convention).
+Baseline  = 1,375 + 0,30 + 0,56 + 0,56 + 0,09 + 0,55 ≈ 3,4 tỷ
+Tự mở    = 1,375 + 0    + 0,56 + 0,56 + 0,09 + 0,55 ≈ 3,1 tỷ
+NĐT      = 1,375 + 0,30 + 0    + 0    + 0,09 + 0,55 ≈ 2,3 tỷ
 ```
 
 ---
@@ -96,51 +108,44 @@ Lưu ý: S&M năm đầu (1.258 tr ≈ 1,26 tỷ, theo per-month T1–T12 thực
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
 │ PRIVATE OFFICE (PO)                                                 │
-│   Số ghế = 750m² ÷ 3m²/seat = 250 seats                           │
-│   DT = 250 seats × 90% occ × 2.500.000 VNĐ/seat/th               │
-│       = 225 seats × 2,5 tr = 562,5 tr ≈ 563 tr/th                 │
+│   Số ghế = 250m² ÷ 3m²/seat = 83 seats                           │
+│   DT = 83 seats × 90% occ × 2.500.000 VNĐ/seat/th               │
+│       = 75 seats × 2,5 tr = 186,75 tr ≈ 187 tr/th                │
 ├─────────────────────────────────────────────────────────────────────┤
-│ COWORKING TEAM (CW, nhóm ≥5)                                        │
-│   Diện tích CW = 150m² (trong Common 750m²)                        │
-│   Số ghế = 150m² ÷ 5m²/seat × 1,6 (hệ số) = 48 seats             │
-│   DT = 48 × 85% occ × 3.000.000 = 40,8 × 3 tr = 122,4 ≈ 123 tr  │
-├─────────────────────────────────────────────────────────────────────┤
-│ DEDICATED DESK (DD, cá nhân)                                         │
-│   Số ghế = 19 seats (trong Common)                                  │
-│   DT = 19 × 88% occ × 4.000.000 = 16,7 × 4 tr ≈ 68 tr            │
+│ COWORKING (CW, nhóm ≥5)                                            │
+│   Diện tích CW = 65m²                                              │
+│   Số ghế = 65m² ÷ 5m²/seat × 1,6 (hệ số) = 20,8 ≈ 21 seats     │
+│   DT = 21 × 85% occ × 3.000.000 = 17,85 × 3 tr ≈ 54 tr          │
 ├─────────────────────────────────────────────────────────────────────┤
 │ MEETING ROOM                                                         │
-│   Số phòng = 4 phòng (trong Common 750m²)                          │
-│   DT = 4 phòng × 55% occ × 110 giờ booking/th × 250K/h            │
-│       = 4 × 0,55 × 110 × 250K = 60,5 tr ≈ 61 tr                  │
+│   Số phòng = 3 phòng (trong 30m²)                                  │
+│   DT = 3 phòng × 55% occ × 110 giờ booking/th × 250K/h            │
+│       = 3 × 0,55 × 110 × 250K = 45,375 tr ≈ 45 tr                │
 │   (110h = ~5h/ngày × 22 ngày làm việc)                            │
 ├─────────────────────────────────────────────────────────────────────┤
-│ EVENT HALL                                                           │
-│   DT = 6 events/th × 3.000.000/event = 18 tr                       │
+│ EVENT / WORKSHOP                                                     │
+│   DT = 4 events/th × 2.500.000/event = 10 tr                       │
 ├─────────────────────────────────────────────────────────────────────┤
-│ BIZ PROMOTE / SHOWROOM                                               │
-│   DT = 5 booths × 70% occ × 10.000.000/booth/th = 35 tr           │
+│ F&B / CAFÉ (trong reception)                                         │
+│   DT = 25m² × 300.000 VNĐ/m²/th = 7,5 tr ≈ 8 tr                  │
 ├─────────────────────────────────────────────────────────────────────┤
-│ F&B / CAFÉ (cho thuê mặt bằng)                                      │
-│   DT = 75m² × 500.000 VNĐ/m²/th = 37,5 tr ≈ 38 tr                │
-├─────────────────────────────────────────────────────────────────────┤
-│ ANCILLARY (Print, Locker, Printing…)                                 │
-│   DT = 10 tr/th (ước tính cố định)                                  │
+│ ANCILLARY (Print, Locker...)                                         │
+│   DT = 5 tr/th (ước tính cố định)                                  │
 └─────────────────────────────────────────────────────────────────────┘
 
-TỔNG DT DIỆN TÍCH = 563+123+68+61+18+35+38+10 = 916 tr/th (tại CS 88%)
+TỔNG DT DIỆN TÍCH = 187+54+45+10+8+5 = 309 tr/th (tại CS 88%)
 ```
 
 ### Công thức DT theo tháng (tỷ lệ Occupancy)
 
 ```
-DT_Diện_tích(CS%) = 916 × (CS% / 88%)
+DT_Diện_tích(CS%) = 309 × (CS% / 88%)
 
 Ví dụ:
-  T1 (CS=15%): 916 × 15/88 = 156 tr
-  T4 (CS=45%): 916 × 45/88 = 469 tr
-  T7 (CS=70%): 916 × 70/88 = 729 tr
-  T12(CS=88%): 916 tr (không đổi)
+  T1 (CS=15%): 309 × 15/88 = 53 tr
+  T4 (CS=45%): 309 × 45/88 = 158 tr
+  T7 (CS=70%): 309 × 70/88 = 246 tr
+  T12(CS=88%): 309 tr (không đổi)
 ```
 
 ---
@@ -150,43 +155,33 @@ Ví dụ:
 ### Phễu VPA
 
 ```
-VPA = NLA × 0,3 = 1.500 × 0,3 = 450 DN
-Hub DN = PO (250÷8 = 31) + (CW+DD)×0,6 = (48+19)×0,6 = 40
-       = 31 + 40 = 71 DN
-Phễu tổng = 450 VPA + 71 Hub = 521 DN
+VPA = NLA × 0,3 = 500 × 0,3 = 150 DN
+Hub DN = PO (83÷8 = 10) + CW×0,6 (21×0,6 = 13) = 23 DN
+Phễu tổng = 150 VPA + 23 Hub = 173 DN
 ```
 
 ### 7 nhóm dịch vụ Add-on
 
 | Dịch vụ | Pool | Conversion | Đơn giá HH | DT/th |
 |---------|------|-----------|-----------|------|
-| **Membership** | 450 VPA | 30% = 135 DN | 450K/DN/th | **61 tr** |
-| **Giong Tax** | 450 VPA + 71 Hub | 30%+50% = 171 DN | 2tr/th × 15% HH | **51 tr** |
-| **Giong Grow** | 450 + 71 | 10%+20% = 59 DN | 4-10tr × 20% HH | **83 tr** |
-| **Giong Promote** | Hub+Network | 4 events/th | 3-15tr/event | **35 tr** |
-| **Giong Legal** | 450 VPA | 50% ĐKKD + 20%/năm | 3-5tr × 15% HH | **18 tr** |
-| **Giong AI** | 450 + 71 | 8%+15% = 47 DN | 1,2tr × 25% HH | **14 tr** |
-| **Giong Connect** | 521 phễu | 8% = 42 deals | 15tr × 15% HH | **94 tr** |
-| **TỔNG** | | | | **~356 tr/th** |
-
-> **Verify từng row** (đúng công thức với phễu mới = 521 = 450 VPA + 71 Hub):
-> - Membership: 135 × 450K = 60,75 ≈ 61 ✓
-> - Tax: 30%×450 + 50%×71 = 171 DN · 171 × 2tr × 15% = 51,3 ≈ 51 ✓
-> - Grow: 10%×450 + 20%×71 = 59 DN · 59 × 7tr × 20% = 82,6 ≈ 83 ✓
-> - Promote: 4 × ~9tr ≈ 35 ✓
-> - AI: 8%×450 + 15%×71 = 47 DN · 47 × 1,2tr × 25% = 14,1 ≈ 14 ✓
-> - Connect: 521 × 8% = 42 deals · 42 × 15tr × 15% = 93,78 ≈ 94 ✓
-> - **Tổng: 61+51+83+35+18+14+94 = 356 tr/th**
+| **Membership** | 150 VPA | 30% = 45 DN | 450K/DN/th | **20 tr** |
+| **Giong Tax** | 150 VPA + 23 Hub | 30%+50% = 57 DN | 2tr/th × 15% HH | **17 tr** |
+| **Giong Grow** | 150 + 23 | 10%+20% = 20 DN | 7tr × 20% HH | **28 tr** |
+| **Giong Promote** | Hub+Network | 2 events/th | ~8tr/event | **16 tr** |
+| **Giong Legal** | 150 VPA | conversion | 3-5tr × 15% HH | **6 tr** |
+| **Giong AI** | 150 + 23 | 8%+15% = 16 DN | 1,2tr × 25% HH | **5 tr** |
+| **Giong Connect** | 173 phễu | 8% = 14 deals | 15tr × 15% HH | **32 tr** |
+| **TỔNG** | | | | **~124 tr/th** |
 
 ### DT Add-on theo tháng
 
 ```
-DT_Add-on(CS%) = 356 × (CS% / 88%)     [T1–T3: Add-on = 0 vì chưa vận hành VPA]
-  T4 (CS=45%): 356 × 45/88 = 182 tr
-  T7 (CS=70%): 356 × 70/88 = 283 tr
-  T12(CS=88%): 356 tr
+DT_Add-on(CS%) = 124 × (CS% / 88%)     [T1–T3: Add-on = 0 vì chưa vận hành VPA]
+  T4 (CS=45%): 124 × 45/88 = 63 tr
+  T7 (CS=70%): 124 × 70/88 = 99 tr
+  T12(CS=88%): 124 tr
 
-DT GROSS (ổn định) = 916 + 356 = 1.272 tr/th
+DT GROSS (ổn định) = 309 + 124 = 433 tr/th = 5,2 tỷ/năm
 ```
 
 ---
@@ -196,10 +191,10 @@ DT GROSS (ổn định) = 916 + 356 = 1.272 tr/th
 ### Công thức Rent
 
 ```
-Rent/th = $15/m²/th × 1.500m² × 25.000 VNĐ
-        = 15 × 1.500 × 25.000
-        = 562.500.000 VNĐ ≈ 563 tr/th
-        = 6,76 tỷ/năm
+Rent/th = $15/m²/th × 500m² × 25.000 VNĐ
+        = 15 × 500 × 25.000
+        = 187.500.000 VNĐ ≈ 188 tr/th
+        = 2,26 tỷ/năm
 
 Giá $15/m² = mức thị trường văn phòng hạng B–C tại TP.HCM
 ```
@@ -207,10 +202,10 @@ Giá $15/m² = mức thị trường văn phòng hạng B–C tại TP.HCM
 ### Công thức OPEX Location
 
 ```
-OPEX Location/th = $2,5/m²/th × 1.500m² × 25.000 VNĐ
-                 = 2,5 × 1.500 × 25.000
-                 = 93.750.000 VNĐ ≈ 94 tr/th
-                 = 1,13 tỷ/năm
+OPEX Location/th = $2,5/m²/th × 500m² × 25.000 VNĐ
+                 = 2,5 × 500 × 25.000
+                 = 31.250.000 VNĐ ≈ 31 tr/th
+                 = 0,37 tỷ/năm
 
 Bao gồm: NS nhân viên + điện nước + bảo trì + PCCC
 ```
@@ -218,22 +213,21 @@ Bao gồm: NS nhân viên + điện nước + bảo trì + PCCC
 ### OPEX theo CS%
 
 ```
-OPEX_variable(CS%) = 94 × CS%
+OPEX_variable(CS%) = 31 × CS%
 
 Ví dụ:
-  CS=45%: 94 × 0,45 = 42 tr/th
-  CS=70%: 94 × 0,70 = 66 tr/th
-  CS=88%: 94 × 0,88 = 83 tr/th (ổn định)
+  CS=45%: 31 × 0,45 = 14 tr/th
+  CS=70%: 31 × 0,70 = 22 tr/th
+  CS=88%: 31 × 0,88 = 27 tr/th (ổn định)
 ```
 
 ### Chi phí Franchise (khi áp dụng)
 
 ```
-OPEX Hệ thống (Sys Fee) = 5% × DT Gross = 5% × 1.272 = 64 tr/th
-Royalty Fee             = 7% × DT Gross = 7% × 1.272 = 89 tr/th
-OPEX Markup (HQ+0,5$/m²)= ($3-$2,5) × 1.500 × 25K = 19 tr/th ≈ 38 tr/th (làm tròn)
+OPEX Hệ thống (Sys Fee) = 5% × DT Gross = 5% × 433 = 22 tr/th
+Royalty Fee             = 7% × DT Gross = 7% × 433 = 30 tr/th
 
-Tổng Franchise fees ổn định = 64 + 89 + 38 = 191 tr/th
+Tổng Franchise fees ổn định = 22 + 30 = 52 tr/th
 ```
 
 ---
@@ -246,88 +240,71 @@ Tổng Franchise fees ổn định = 64 + 89 + 38 = 191 tr/th
 Commission = PO_area × ΔCS% × Giá_PO/m²/th × Xth_hoa_hồng
 
 Trong đó:
-  PO_area  = 750 m² (50% NLA, chỉ tính PO sinh commission Agency)
+  PO_area  = 250 m² (50% NLA, chỉ tính PO sinh commission Agency)
   Giá_PO   = 2.500.000 VNĐ/seat/th, 1 seat = 3m² → 733.333 VNĐ/m²/th ≈ 733K/m²/th
   X_th HH  = 2 th (Aggressive) / 1,5 th (Growth) / 1 th (Retention)
 
-Tính theo CS thực tế đạt 88% cuối Năm 1 (T1→T12):
-
 Phase Aggressive (T1–T3, CS 0→35%, ΔCS=35%):
-  = 750 × 35% × 733K × 2th = 262,5 × 733K × 2 = 384.825.000 ≈ 385 tr
+  = 250 × 35% × 733K × 2th = 87,5 × 733K × 2 ≈ 128 tr
 
 Phase Growth (T4–T7, CS 35→70%, ΔCS=35%):
-  = 750 × 35% × 733K × 1,5th = 262,5 × 733K × 1,5 = 288.618.750 ≈ 289 tr
-  (per-month sum chính xác: 83+83+58+66 = 290 tr)
+  = 250 × 35% × 733K × 1,5th ≈ 96 tr
 
 Phase Retention (T8–T12, CS 70→88%, ΔCS=18%):
-  = 750 × 18% × 733K × 1th = 135 × 733K × 1 = 98.955.000 ≈ 99 tr
-  (per-month sum chính xác: 39+28+17+11+6 = 101 tr)
+  = 250 × 18% × 733K × 1th ≈ 33 tr
 
-Tổng Commission Năm 1 (per-month thực tế) = 385 + 290 + 101 = 776 tr
+Tổng Commission Năm 1 ≈ 128 + 96 + 33 = 260 tr
 ```
 
-### Commission per tháng (theo ΔCS từng tháng)
+### Commission per tháng
 
 ```
-T1 (ΔCS=15%, Agg, 2th): 750×15%×733K×2 = 112,5×733K×2 ≈ 165 tr
-T2 (ΔCS=10%, Agg, 2th): 750×10%×733K×2 = 75×733K×2  ≈ 110 tr
-T3 (ΔCS=10%, Agg, 2th): ≈ 110 tr
-T4 (ΔCS=10%, Gr,1,5th): 750×10%×733K×1,5 = 75×733K×1,5 ≈ 83 tr
-T5 (ΔCS=10%, Gr,1,5th): ≈ 83 tr
-T6 (ΔCS=7%,  Gr,1,5th): 750×7%×733K×1,5 = 52,5×733K×1,5 ≈ 58 tr
-T7 (ΔCS=8%,  Gr,1,5th): 750×8%×733K×1,5 = 60×733K×1,5 ≈ 66 tr
-T8 (ΔCS=7%,  Ret,1th):  750×7%×733K×1 = 52,5×733K ≈ 39 tr
-T9 (ΔCS=5%,  Ret,1th):  750×5%×733K = 27 tr
-T10(ΔCS=3%,  Ret,1th):  ≈ 17 tr
-T11(ΔCS=2%,  Ret,1th):  ≈ 11 tr
-T12(ΔCS=1%,  Ret,1th):  ≈ 6 tr
+T1 (ΔCS=15%, Agg, 2th): 250×15%×733K×2 ≈ 55 tr
+T2 (ΔCS=10%, Agg, 2th): ≈ 37 tr
+T3 (ΔCS=10%, Agg, 2th): ≈ 37 tr
+T4 (ΔCS=10%, Gr,1,5th): ≈ 28 tr
+T5 (ΔCS=10%, Gr,1,5th): ≈ 28 tr
+T6 (ΔCS=7%,  Gr,1,5th): ≈ 19 tr
+T7 (ΔCS=8%,  Gr,1,5th): ≈ 22 tr
+T8 (ΔCS=7%,  Ret,1th):  ≈ 13 tr
+T9 (ΔCS=5%,  Ret,1th):  ≈ 9 tr
+T10(ΔCS=3%,  Ret,1th):  ≈ 6 tr
+T11(ΔCS=2%,  Ret,1th):  ≈ 4 tr
+T12(ΔCS=1%,  Ret,1th):  ≈ 2 tr
 ```
 
-### Digital Marketing (Brand + Lead Gen)
+### Digital Marketing
 
 ```
 Digital = NLA_total × vacancy% × Rate/m²
-        = 1.500m² × vac% × 9.500 VNĐ/m²
-        = 14,25 × vac%  (đơn vị: triệu VNĐ)
+        = 500m² × vac% × 9.500 VNĐ/m²
+        = 4,75 × vac%  (đơn vị: triệu VNĐ)
 
 Trong đó:
-  Brand   = 1.500 × vac% × 2.500 VNĐ/m²
-  Lead Gen= 1.500 × vac% × 7.000 VNĐ/m²
-
-Vacancy % = (1 - CS%)
+  Brand   = 500 × vac% × 2.500 VNĐ/m²
+  Lead Gen= 500 × vac% × 7.000 VNĐ/m²
 
 Ví dụ:
-  T1 (vac=85%): 14,25 × 0,85 = 12 tr
-  T4 (vac=55%): 14,25 × 0,55 = 8 tr
-  T7 (vac=30%): 14,25 × 0,30 = 4 tr
-  T12(vac=12%): 14,25 × 0,12 = 2 tr
+  T1 (vac=85%): 4,75 × 0,85 = 4 tr
+  T4 (vac=55%): 4,75 × 0,55 = 3 tr
+  T7 (vac=30%): 4,75 × 0,30 = 1 tr
+  T12(vac=12%): 4,75 × 0,12 = 1 tr
 ```
 
-### Events + BD Push (biến động theo vacancy phase)
+### Fixed S&M
 
 ```
-Phase Aggressive (vac 60-100%): Events 8–12tr, BD 8–12tr
-Phase Growth     (vac 30-60%):  Events 5–8tr,  BD 5–8tr
-Phase Retention  (vac <30%):    Events 3–5tr,  BD 2–3tr
-
-Nội suy tuyến tính trong range theo vacancy% thực tế từng tháng.
+Fixed = CRM 2 tr + Content/SEO 4 tr + BD base 6 tr + KOL/PR 2 tr = 14 tr/th
 ```
 
-### Fixed S&M (không đổi theo phase)
+### Tổng S&M Năm đầu
 
 ```
-Fixed = CRM 2,5 tr + Content/SEO 6 tr + BD base 10 tr + KOL/PR 3 tr = 22 tr/th
-```
-
-### Tổng S&M Năm đầu theo phase (per-month T1–T12 thực tế)
-
-```
-Phase Aggressive (T1–T3, 3 th)   : 544 tr  (Fixed 66 + Variable 478)
-Phase Growth     (T4–T7, 4 th)   : 456 tr  (Fixed 88 + Variable 368)
-Phase Retention  (T8–T12, 5 th)  : 258 tr  (Fixed 110 + Variable 148)
-TỔNG NĂM ĐẦU                    : 1.258 tr (~1,26 tỷ)
-  Trong đó: Commission 776 tr (trả 1 lần) + Fixed 264 tr (22×12) + Variable khác ~218 tr
-  Avg: 1.258 ÷ 12 tháng = 105 tr/th · %DT avg ~13%
+Phase Aggressive (T1–T3, 3 th)   : 223 tr  (Fixed 42 + Variable 181)
+Phase Growth     (T4–T7, 4 th)   : 193 tr  (Fixed 56 + Variable 137)
+Phase Retention  (T8–T12, 5 th)  : 132 tr  (Fixed 70 + Variable 62)
+TỔNG NĂM ĐẦU                    : ~550 tr (~0,55 tỷ)
+  Trong đó: Commission 260 tr + Fixed 168 tr (14×12) + Variable khác ~122 tr
 ```
 
 ---
@@ -342,119 +319,106 @@ Cost(t)      = Rent(t) + OPEX(t) + SM(t)
 NOI(t)       = DT_Gross(t) - Cost(t)
 
 Trong đó:
-  Rent(t)    = 563 tr     (T4+ mới có; T1–T3 = 0 vì đã tính trong CapEx)
-  OPEX(t)    = 94 × CS%(t)
-  SM(t)      = Commission(t) + Digital(t) + Events(t) + BD(t) + Fixed(22)
+  Rent(t)    = 188 tr     (T4+ mới có; T1–T3 = 0 vì đã tính trong CapEx)
+  OPEX(t)    = 31 × CS%(t)
+  SM(t)      = Commission(t) + Digital(t) + Events(t) + BD(t) + Fixed(14)
 ```
 
 ### Bảng 12 tháng tóm tắt
 
 | Tháng | CS% | DT Diện tích | Add-on | DT Gross | Cost | NOI | NOI Lũy kế |
 |-------|-----|-------------|--------|----------|------|-----|-----------|
-| T1 | 15% | 156 tr | 0 | 156 | 235 | −79 | −79 |
-| T2 | 25% | 260 tr | 0 | 260 | 187 | +73 | −6 |
-| T3 | 35% | 365 tr | 0 | 365 | 193 | +172 | +166 |
-| T4 | 45% | 469 tr | 182 | 651 | 734 | −83 | +83 |
-| T5 | 55% | 573 tr | 223 | 796 | 741 | **+55** | +138 |
-| **T6** | **62%** | 646 tr | 251 | 897 | 719 | **+178 ★BEP** | +316 |
-| T7 | 70% | 730 tr | 283 | 1.013 | 732 | +281 | +597 |
-| T8 | 77% | 803 tr | 312 | 1.115 | 708 | +407 | +1.004 |
-| T9 | 82% | 851 tr | 332 | 1.183 | 700 | +483 | +1.487 |
-| T10 | 85% | 884 tr | 344 | 1.228 | 691 | +537 | +2.024 |
-| T11 | 87% | 905 tr | 352 | 1.257 | 686 | +571 | +2.595 |
-| T12 | 88% | 916 tr | 356 | 1.272 | 682 | +590 | +3.185 |
+| T1 | 15% | 53 tr | 0 | 53 | 93 | −40 | −40 |
+| T2 | 25% | 88 tr | 0 | 88 | 78 | +10 | −30 |
+| T3 | 35% | 123 tr | 0 | 123 | 78 | +45 | +15 |
+| T4 | 45% | 158 tr | 63 | 221 | 256 | −35 | −20 |
+| T5 | 55% | 193 tr | 78 | 271 | 258 | +13 | −7 |
+| **T6** | **62%** | 218 tr | 87 | 305 | 249 | **+56 ★BEP** | +49 |
+| T7 | 70% | 246 tr | 99 | 345 | 254 | +91 | +140 |
+| T8 | 77% | 270 tr | 109 | 379 | 246 | +133 | +273 |
+| T9 | 82% | 288 tr | 115 | 403 | 242 | +161 | +434 |
+| T10 | 85% | 298 tr | 120 | 418 | 239 | +179 | +613 |
+| T11 | 87% | 305 tr | 123 | 428 | 238 | +190 | +803 |
+| T12 | 88% | 309 tr | 124 | 433 | 236 | +197 | +1.000 |
 
 > ★ **T6 = Hòa vốn Vận hành** (BEP)  
-> ★★ **T7 = Lợi nhuận kế toán dương**
+> ★★ **T6 = Lợi nhuận kế toán dương** (LN sau KH +18 tr)
 
 ### Khấu hao (Depreciation)
 
 ```
-Khấu hao/th = Fit-out ÷ 36 tháng = 4,125 tỷ ÷ 36 = 114,6 tr ≈ 115 tr/th
-LN sau KH(t) = NOI(t) - 115 tr
+Khấu hao/th = Fit-out ÷ 36 tháng = 1,375 tỷ ÷ 36 = 38,2 tr ≈ 38 tr/th
+LN sau KH(t) = NOI(t) - 38 tr
 ```
 
 ---
 
 ## 8. Breakeven & NOI ổn định
 
-### Breakeven vận hành
-
-```
-BEP_VH xảy ra khi: DT_Gross(t) = Cost(t)
-                   DT(t) = Rent + OPEX(CS%) + SM_min
-
-Tại CS ≈ 62% (T6):
-  DT = 897 tr
-  Cost = 563 + 58 + 98 = 719 tr → NOI +178 (vượt BEP xa)
-  → BEP Tự mở (no Sys/Roy): CS ~51% (giữa T4 NOI −83 và T5 NOI +55)
-  → BEP Baseline (incl. Sys+Roy 12%): CS ~58% (giữa T5 NOI −41 và T6 NOI +70)
-```
-
 ### NOI ổn định (Steady State — CS = 88%)
 
 ```
-DT Gross      = 916 + 356 = 1.272 tr/th
-Rent          = −563 tr
-OPEX Location = −94 tr
-OPEX Sys      = −5% × 1.272 = −64 tr   [chỉ khi Franchise]
-Royalty       = −7% × 1.272 = −89 tr   [chỉ khi Franchise]
-S&M ổn định  = −22 tr (Fixed only, không commission)
+DT Gross      = 309 + 124 = 433 tr/th
+Rent          = −188 tr
+OPEX Location = −31 × 0,88 = −27 tr
+OPEX Sys      = −5% × 433 = −22 tr   [chỉ khi Franchise]
+Royalty       = −7% × 433 = −30 tr   [chỉ khi Franchise]
+S&M ổn định  = −14 tr (Fixed only)
 ─────────────────────────────────────
-NOI (Tự mở, không Sys/Roy)  = 1.272 − 563 − 94 − 22          = 593 tr/th = 7,12 tỷ/năm
-NOI (Baseline incl. Sys+Roy) = 1.272 − 563 − 94 − 64 − 89 − 22 = 440 tr/th = 5,28 tỷ/năm
+NOI (Tự mở, không Sys/Roy)  = 433 − 188 − 27 − 14          = 203 tr/th = 2,44 tỷ/năm
+NOI (Baseline incl. Sys+Roy) = 433 − 188 − 27 − 22 − 30 − 14 = 151 tr/th = 1,81 tỷ/năm
+NOI (NĐT, không Rent)        = 433 − 0 − 27 − 22 − 30 − 14  = 339 tr/th = 4,07 tỷ/năm
 ```
 
-### BEP số liệu trên P&L
+### BEP số liệu
 
 ```
-DT Gross ổn định   = 1.272 tr/th (15,26 tỷ/năm)
-Tổng chi phí (Baseline 4 lớp + S&M) = 832 tr/th (9,98 tỷ/năm)
-  Rent               563 tr
-  OPEX Location       94 tr
-  OPEX Sys (5%)        64 tr   [Franchise only]
-  Royalty (7%)         89 tr   [Franchise only]
-  S&M Fixed            22 tr
-NOI Baseline (incl.Sys+Roy)  = 440 tr/th  (5,28 tỷ/năm) — dùng cho payback chuẩn
-NOI Giong tự mở (no Sys/Roy) = 593 tr/th  (7,12 tỷ/năm) — sau trừ S&M 22tr
-Khấu hao                     = 115 tr/th  (1,375 tỷ/năm)
-LN sau KH (Baseline)         = 325 tr/th  (3,90 tỷ/năm)
-LN sau KH (Tự mở)            = 478 tr/th  (5,74 tỷ/năm)
+DT Gross ổn định    = 433 tr/th (5,2 tỷ/năm)
+
+Chi phí ổn định (Baseline): Rent 188 + OPEX 27 + Sys 22 + Roy 30 + S&M 14 = 281 tr/th
+Chi phí ổn định (Tự mở):   Rent 188 + OPEX 27 + S&M 14 = 229 tr/th
+Chi phí ổn định (NĐT):     OPEX 27 + Sys 22 + Roy 30 + S&M 14 = 93 tr/th
+
+NOI Baseline  = 151 tr/th  (1,81 tỷ/năm)
+NOI Tự mở    = 203 tr/th  (2,44 tỷ/năm)
+NOI NĐT      = 339 tr/th  (4,07 tỷ/năm)
+Khấu hao     = 38 tr/th   (0,46 tỷ/năm)
+LN sau KH (Baseline)  = 113 tr/th  (1,36 tỷ/năm)
+LN sau KH (Tự mở)     = 165 tr/th  (1,98 tỷ/năm)
+LN sau KH (NĐT)       = 301 tr/th  (3,61 tỷ/năm)
 ```
 
 ---
 
 ## 9. Phân tích 3 phương thức phát triển
 
-### A. Giong đi thuê ($15/m²)
+### A. Giong tự mở ($15/m²)
 
 ```
 NOI Giong = DT Gross − Rent − OPEX − S&M
-           = 1.272 − 563 − 94 − 22 = 593 tr/th = 7,12 tỷ/năm
-CapEx      = 7,785 tỷ (Giong tự mở, no IFF) hoặc 8,085 tỷ (Baseline)
+           = 433 − 188 − 27 − 14 = 203 tr/th = 2,44 tỷ/năm
+CapEx      = 3,1 tỷ (Giong tự mở, no IFF)
 ```
 
 ### B. Franchise (Franchisee thuê MB)
 
 ```
-Giong HQ nhận/th = Sys(5%) + Roy(7%) + OPEX markup(0,5$/m²)
-                 = 64 + 89 + 38 = 191 tr/th
+Giong HQ nhận/th = Sys(5%) + Roy(7%)
+                 = 22 + 30 = 52 tr/th
 CapEx Giong      = 0 (Franchisee đầu tư)
 IFF              = 300 tr (1 lần khi ký)
 ```
 
-### C. Chủ nhà + Franchise ★ (Chủ nhà = Franchisee)
+### C. Chủ nhà + Franchise ★
 
 ```
 Chủ nhà hưởng:
-  NOI Franchisee = DT Gross − OPEX − Sys − Roy
-                 ≈ 1.272 × (1 − 5% − 7%) − 94 ≈ 1.025 tr/th *
-  Không trả rent → tiết kiệm 563 tr/th
+  NOI = DT Gross − OPEX − Sys − Roy − S&M
+      = 433 − 27 − 22 − 30 − 14 = 339 tr/th
+  Không trả rent → tiết kiệm 188 tr/th
 
-Giong HQ vẫn nhận = 191 tr/th (Sys + Roy + markup)
-CapEx Chủ nhà     = 4,705 tỷ (Fit-out 4,125 + IFF 0,3 + Buffer 0,28 − Cọc/Thuê 0)
-
-* DT Gross ở mức CS ổn định ~75%: 1.272 × 75/88 ≈ 1.084 tr → ước tính ~860 NOI
+Giong HQ vẫn nhận = 52 tr/th (Sys + Roy)
+CapEx Chủ nhà     = 2,3 tỷ (Fit-out + IFF + Buffer + S&M − Cọc/Thuê 0)
 ```
 
 ---
@@ -464,35 +428,24 @@ CapEx Chủ nhà     = 4,705 tỷ (Fit-out 4,125 + IFF 0,3 + Buffer 0,28 − C�
 ### Công thức payback
 
 ```
-Payback_period = CapEx / NOI_bình_quân_năm
+Năm 1 (ramp-up): NOI lũy kế = +1,0 tỷ
+Năm 2+ (ổn định):
+  NOI/năm (Baseline) = 151 tr × 12 = 1,81 tỷ
+  NOI/năm (Tự mở)    = 203 tr × 12 = 2,44 tỷ
+  NOI/năm (NĐT)      = 339 tr × 12 = 4,07 tỷ
 
-Năm 1 (ramp-up): NOI lũy kế = +3,19 tỷ (tổng NOI T1–T12 từ bảng cashflow)
-Năm 2+ (ổn định): NOI/năm = 440 tr/th × 12 = 5,28 tỷ  (Baseline Sys+Roy)
-                   NOI/năm = 593 tr/th × 12 = 7,12 tỷ  (Giong tự mở, no Sys/Roy)
-
-NOI lũy kế (Baseline — Tổng vốn ban đầu 9,3 tỷ):
-  Cuối Y1  : 3,19 tỷ
-  Cuối Y2  : 3,19 + 5,28 = 8,47 tỷ   ← Còn 0,83 tỷ
-  Cuối Y3  : 8,47 + 5,28 = 13,75 tỷ  ← Vượt 9,3 tỷ → HÒA VỐN (~2,2 năm)
-  Cuối Y4  : 13,75 + 5,28 = 19,03 tỷ
-  Cuối Y5  : 24,31 tỷ
-
-NOI lũy kế (Giong tự mở — Tổng vốn ban đầu 9,0 tỷ):
-  Cuối Y1  : 3,19 tỷ
-  Cuối Y2  : 3,19 + 7,12 = 10,31 tỷ  ← Vượt 9,0 tỷ → HÒA VỐN (~1,8 năm)
-  Cuối Y3  : 10,31 + 7,12 = 17,43 tỷ
+Payback Baseline (3,4 tỷ): Y1 1,0 + Y2 1,81 = 2,81 → còn 0,59 → ~28 tháng
+Payback Tự mở (3,1 tỷ):   Y1 1,0 + Y2 2,44 = 3,44 → vượt 3,1 → ~22 tháng
+Payback NĐT (2,3 tỷ):     Y1 1,0 + ~5 tháng Y2 → ~8 tháng (NOI rất cao do không rent)
 ```
 
 ### ROI
 
 ```
 ROI = NOI_ổn_định/năm ÷ CapEx_thuần
-    = 5,28 tỷ ÷ 8,085 tỷ = 65,3%        (Baseline)
-    = 7,12 tỷ ÷ 7,785 tỷ = 91,5%        (Giong tự mở)
-
-ROI thực = LN_sau_KH/năm ÷ CapEx_thuần
-         = 3,90 tỷ ÷ 8,085 tỷ = 48,2%   (Baseline)
-         = 5,74 tỷ ÷ 7,785 tỷ = 73,7%   (Giong tự mở)
+    = 1,81 tỷ ÷ 3,4 tỷ = 53%         (Baseline)
+    = 2,44 tỷ ÷ 3,1 tỷ = 79%         (Tự mở)
+    = 4,07 tỷ ÷ 2,3 tỷ = 177%        (NĐT)
 ```
 
 ---
@@ -501,37 +454,34 @@ ROI thực = LN_sau_KH/năm ÷ CapEx_thuần
 
 ```
 Tổng thông số cốt lõi:
-  NLA           = 1.500m²        PO = 750m²
-  Rent          = 563 tr/th      = $15/m²
-  OPEX          = 94 tr/th       = $2,5/m²
-  DT max        = 1.272 tr/th    tại CS 88% (916 + 356 add-on)
-  Commission    = 776 tr/năm 1   trả khi KH ký (CS thực tế đạt 88%)
-  Digital coeff = 14,25 × vac%
-  BEP VH        = ~CS 51% (Tự mở) · ~CS 58% (Baseline incl. Sys+Roy)
-  NOI ổn định   = 440 tr/th (Baseline) · 593 tr/th (Tự mở)
-  NOI lũy kế Y1 = +3,19 tỷ
-  Payback       = ~2,2 năm (Baseline) / ~1,8 năm (Tự mở)
-  ROI           = ~65% (Baseline) / ~92% (Tự mở) — NOI/y ÷ CapEx thuần
+  NLA           = 500m²          PO = 250m² (50%)
+  Rent          = 188 tr/th      = $15/m²
+  OPEX          = 31 tr/th       = $2,5/m²
+  DT max        = 433 tr/th      tại CS 88% (309 + 124 add-on)
+  Commission    = 260 tr/năm 1
+  Digital coeff = 4,75 × vac%
+  Fixed S&M     = 14 tr/th
+  BEP VH        = ~CS 51% (Tự mở) · ~CS 55-58% (Baseline)
+  NOI ổn định   = 151 tr/th (Baseline) · 203 tr/th (Tự mở) · 339 tr/th (NĐT)
+  NOI lũy kế Y1 = +1,0 tỷ
+  Payback       = ~28th (Baseline) / ~22th (Tự mở) / ~8th (NĐT)
+  ROI           = ~53% / ~79% / ~177%
 
-Vốn đầu tư ban đầu (incl. S&M năm đầu ~1,26 tỷ):
-  Baseline       = ~9,3 tỷ
-  Giong tự mở   = ~9,0 tỷ
-  NĐT+Franchise  = ~5,96 tỷ
+Vốn đầu tư ban đầu (incl. S&M năm đầu ~0,55 tỷ):
+  Baseline       = ~3,4 tỷ
+  Giong tự mở   = ~3,1 tỷ
+  NĐT+Franchise  = ~2,3 tỷ
 
-CapEx thuần (không S&M):
-  Baseline       = 8,085 tỷ
-  Giong tự mở   = 7,785 tỷ
-  NĐT+Franchise  = 4,705 tỷ
-
-Fit-out          = 4,125 tỷ (750m²×$1,5 + 750m²×$4)
-Cọc MB           = 1,69 tỷ (3th × 563tr)
-Thuê setup       = 1,69 tỷ (3th × 563tr)
-Buffer           = 0,28 tỷ (3th × 94tr)
+Fit-out          = 1,375 tỷ (250m²×1,5tr + 250m²×4,0tr)
+Cọc MB           = 0,56 tỷ (3th × 188tr)
+Thuê setup       = 0,56 tỷ (3th × 188tr)
+Buffer           = 0,09 tỷ (3th × 31tr)
 IFF              = 0,30 tỷ (cố định)
-S&M năm đầu     = ~1,26 tỷ (per-month T1–T12 thực tế · 1.258 tr)
+S&M năm đầu     = ~0,55 tỷ
+Khấu hao         = 38 tr/th (1,375 tỷ ÷ 36th)
 ```
 
 ---
 
-*Tài liệu này là nguồn tham chiếu duy nhất cho toàn bộ tính toán tài chính dự án Giong Space 1.500m².*  
-*Cập nhật: 2026-03-30*
+*Tài liệu này là nguồn tham chiếu duy nhất cho toàn bộ tính toán tài chính dự án Giong Space Hub Compact 500m².*  
+*Cập nhật: 2026-04-10*

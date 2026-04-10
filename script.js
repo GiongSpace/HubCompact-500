@@ -86,38 +86,21 @@ function switchTab(id, evt) {
 
 var zones = [
   { icon:'🏠', name:'Private Office', color:'#A85E56',
-    m500:190, pct500:38, note500:'6–10 phòng (15–25m²/phòng) · recurring revenue cố định hàng tháng',
-    m3000:750, pct3000:50, note3000:'18–30 phòng · anchor dòng tiền toàn hub · ưu tiên mở rộng tối đa' },
+    m:250, pct:50, note:'8–12 phòng (20–30m²/phòng) · anchor revenue cố định hàng tháng · 83 seats' },
   { icon:'💼', name:'Coworking / Hot Desk', color:'#E8B4AC',
-    m500:80, pct500:16, note500:'20–28 desks · tạo cộng đồng, funnel lên Private Office',
-    m3000:150, pct3000:10, note3000:'38–50 desks · cộng đồng rộng, upsell membership & PO' },
-  { icon:'🤝', name:'Dedicated Desk', color:'#C97B72',
-    m500:0, pct500:0, note500:'Không triển khai — tích hợp vào coworking',
-    m3000:75, pct3000:5, note3000:'15–20 desk cố định theo tháng · bridge giữa flex và PO' },
-  { icon:'🎤', name:'Event / Workshop / Hall', color:'#7A3F3C',
-    m500:60, pct500:12, note500:'40–60 người · doanh thu biến phí + marketing cộng đồng',
-    m3000:120, pct3000:8, note3000:'Hội trường 60–100 người · pitching day, hội thảo doanh nghiệp' },
+    m:65, pct:13, note:'21 desks · tạo cộng đồng, funnel lên Private Office' },
+  { icon:'🎤', name:'Event / Workshop', color:'#7A3F3C',
+    m:45, pct:9, note:'30–40 người · doanh thu biến phí + marketing cộng đồng' },
   { icon:'📋', name:'Meeting Rooms', color:'#D4857A',
-    m500:35, pct500:7, note500:'3 phòng (8–12m²) · phục vụ thành viên, không phải trọng tâm',
-    m3000:60, pct3000:4, note3000:'4 phòng nhỏ · tiện ích đi kèm membership, nhỏ hơn Event Hall' },
-  { icon:'🛎️', name:'Reception / Lounge / Café', color:'#F2E0DC',
-    m500:30, pct500:6, note500:'Tiếp đón + sitting area nhỏ gọn',
-    m3000:75, pct3000:5, note3000:'Café kinh doanh + lounge đại diện thương hiệu' },
+    m:30, pct:6, note:'3 phòng (8–10m²) · phục vụ thành viên & khách ngoài' },
+  { icon:'🛎️', name:'Reception / Lounge', color:'#F2E0DC',
+    m:25, pct:5, note:'Tiếp đón + sitting area + café nhỏ gọn' },
   { icon:'📊', name:'Biz Services (Tax, Legal, Grow)', color:'#9A7F7C',
-    m500:20, pct500:4, note500:'Góc tư vấn kiêm nhiệm · hoa hồng add-on',
-    m3000:60, pct3000:4, note3000:'Phòng chuyên biệt từng nhóm dịch vụ · 84+ add-ons' },
-  { icon:'📣', name:'Biz Promote / Pitching / Showroom', color:'#5C2E2C',
-    m500:0, pct500:0, note500:'Không triển khai — quy mô quá nhỏ',
-    m3000:60, pct3000:4, note3000:'Pitching zone + showroom + kết nối M&A, đầu tư' },
-  { icon:'🏋️', name:'Wellness / Gym / Relax', color:'#B0856A',
-    m500:0, pct500:0, note500:'Không có',
-    m3000:45, pct3000:3, note3000:'Giá trị gia tăng cho thành viên dài hạn, giảm churn PO' },
-  { icon:'⚙️', name:'Back Office / Admin / IT', color:'#7A5E5C',
-    m500:20, pct500:4, note500:'Kho + server + quản lý gọn nhẹ',
-    m3000:45, pct3000:3, note3000:'IT room + kho + admin vận hành' },
+    m:15, pct:3, note:'Góc tư vấn kiêm nhiệm · hoa hồng add-on' },
+  { icon:'⚙️', name:'Back Office / Admin', color:'#7A5E5C',
+    m:15, pct:3, note:'Kho + server + quản lý gọn nhẹ' },
   { icon:'🚪', name:'Circulation / WC / Storage', color:'#EDE0DE',
-    m500:65, pct500:13, note500:'Hành lang, cầu thang, WC, kho · tối ưu để nhường cho PO',
-    m3000:60, pct3000:4, note3000:'Corridors + WC · tối ưu lưu thông' },
+    m:55, pct:11, note:'Hành lang, WC, kho · tối ưu lưu thông' },
 ];
 
 function renderZones() {
@@ -131,21 +114,11 @@ function renderZones() {
         '<div class="zone-icon" style="background:' + z.color + '22;">' + z.icon + '</div>' +
         z.name +
       '</div>' +
-      '<div class="zone-cell c500 ' + (z.m500 > 0 ? 'active-500' : '') + '">' +
-        (z.m500 > 0
-          ? '<div class="zone-m2">' + z.m500 + 'm²</div>' +
-            '<div class="zone-pct">' + z.pct500 + '% tổng diện tích</div>' +
-            '<div class="zone-bar-bg"><div class="zone-bar" style="--w:' + (z.pct500 * 3.33) + '%;"></div></div>'
-          : '<div style="font-size:12px;color:var(--muted);font-style:italic;">—</div>') +
-        '<div class="zone-note">' + z.note500 + '</div>' +
-      '</div>' +
-      '<div class="zone-cell c3000 ' + (z.m3000 > 0 ? 'active-3000' : '') + '">' +
-        (z.m3000 > 0
-          ? '<div class="zone-m2">' + z.m3000 + 'm²</div>' +
-            '<div class="zone-pct">' + z.pct3000 + '% tổng diện tích</div>' +
-            '<div class="zone-bar-bg"><div class="zone-bar bar-3000" style="--w:' + (z.pct3000 * 3.33) + '%;"></div></div>'
-          : '<div style="font-size:12px;color:var(--muted);font-style:italic;">—</div>') +
-        '<div class="zone-note">' + z.note3000 + '</div>' +
+      '<div class="zone-cell active-500">' +
+        '<div class="zone-m2">' + z.m + 'm²</div>' +
+        '<div class="zone-pct">' + z.pct + '% tổng diện tích</div>' +
+        '<div class="zone-bar-bg"><div class="zone-bar" style="--w:' + (z.pct * 2) + '%;"></div></div>' +
+        '<div class="zone-note">' + z.note + '</div>' +
       '</div>';
     zoneContainer.appendChild(row);
   });
